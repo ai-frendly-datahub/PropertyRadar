@@ -324,10 +324,13 @@ def _collect_single(
                         if isinstance(value, str):
                             summary = value
 
+            title_text = html.unescape(_entry_text(entry, "title").strip()) or "(no title)"
+            if not summary or not summary.strip():
+                summary = f"[부동산] {title_text}"
+
             items.append(
                 Article(
-                    title=html.unescape(_entry_text(entry, "title").strip())
-                    or "(no title)",
+                    title=title_text,
                     link=_entry_text(entry, "link").strip(),
                     summary=html.unescape(summary.strip()),
                     published=published,

@@ -4,10 +4,11 @@ import argparse
 from pathlib import Path
 from typing import cast
 
+from radar_core.date_storage import apply_date_storage_policy
+
 from propertyradar.analyzer import apply_entity_rules
 from propertyradar.collector import collect_sources
 from propertyradar.config_loader import load_category_config, load_settings
-from radar_core.date_storage import apply_date_storage_policy
 from propertyradar.logger import configure_logging, get_logger
 from propertyradar.reporter import generate_index_html, generate_report
 from propertyradar.storage import RadarStorage

@@ -1,372 +1,451 @@
-category_name: "property"
-display_name: "부동산 레이더"
-
+category_name: property
+display_name: 부동산 레이더
 sources:
-  # === 국내 부동산 뉴스 ===
-  - name: "한경 부동산"
-    type: "rss"
-    url: "https://www.hankyung.com/feed/realestate"
+- name: 한경 부동산
+  type: rss
+  url: https://www.hankyung.com/feed/realestate
+- name: 매일경제 부동산
+  type: rss
+  url: https://www.mk.co.kr/rss/50300009/
+- name: 서울경제 부동산
+  type: rss
+  url: https://m.sedaily.com/rss/realestate
+# NOTE: 2026-04-02 테스트에서 동작하지 않음 (404)
+# - name: 아시아경제 부동산
+#   type: rss
+#   url: https://www.asiae.co.kr/rss/estate.xml
+# NOTE: 2026-04-02 품질점검 - RSS가 아닌 HTML 반환 (F등급)
+# - name: 뉴스1 부동산
+#   type: rss
+#   url: https://www.news1.kr/rss/realestate
+# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (410/404/timeout)
+# - name: 머니투데이 부동산
+#   type: rss
+#   url: https://news.mt.co.kr/rss/estate.xml
 
-  - name: "매일경제 부동산"
-    type: "rss"
-    url: "https://www.mk.co.kr/rss/50300009/"
+# - name: 조선비즈 부동산
+#   type: rss
+#   url: https://biz.chosun.com/rss/estate.xml
 
-  - name: "서울경제 부동산"
-    type: "rss"
-    url: "https://m.sedaily.com/rss/realestate"
+# - name: 국토교통부 보도자료
+#   type: rss
+#   url: https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS
+# NOTE: 2026-04-02 URL 리다이렉트 수정
+- name: LH 공사
+  type: javascript
+  url: https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003
+  config:
+    wait_for: .board_list
+# NOTE: 2026-04-02 SH 공사 URL 307 리다이렉트 - Playwright에서 자동 처리됨
+- name: SH 서울주택도시공사
+  type: javascript
+  url: https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do
+  config:
+    wait_for: .board_list
+# NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Forbidden)
+# - name: 직방 매거진
+#   type: rss
+#   url: https://www.zigbang.com/blog/feed
+- name: 아파트실거래가
+  type: javascript
+  url: https://hogangnono.com/
+  config:
+    wait_for: .news_list
+- name: 부동산114
+  type: javascript
+  url: https://www.r114.com/?_c=Research&_m=ReportNews
+  config:
+    wait_for: .news_list
+# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (401/404)
+# - name: Reuters Real Estate
+#   type: rss
+#   url: https://www.reuters.com/news/archive/propertyNews?view=rss
 
-  - name: "아시아경제 부동산"
-    type: "rss"
-    url: "https://www.asiae.co.kr/rss/estate.xml"
+# - name: Bloomberg Real Estate
+#   type: rss
+#   url: https://feeds.bloomberg.com/real-estate/news.rss
 
-  - name: "뉴스1 부동산"
-    type: "rss"
-    url: "https://www.news1.kr/rss/realestate"
+- name: r/RealEstate
+  type: reddit
+  url: https://www.reddit.com/r/RealEstate/
+- name: r/realestateinvesting
+  type: reddit
+  url: https://www.reddit.com/r/realestateinvesting/
+- name: r/FirstTimeHomeBuyer
+  type: reddit
+  url: https://www.reddit.com/r/FirstTimeHomeBuyer/
+- name: r/REBubble
+  type: reddit
+  url: https://www.reddit.com/r/REBubble/
+- name: r/korea
+  type: reddit
+  url: https://www.reddit.com/r/korea/
+- name: r/landlord
+  type: reddit
+  url: https://www.reddit.com/r/landlord/
+# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
+# - name: BiggerPockets Podcast
+#   type: rss
+#   url: https://www.biggerpockets.com/blog/real-estate-podcast?format=rss
 
-  - name: "머니투데이 부동산"
-    type: "rss"
-    url: "https://news.mt.co.kr/rss/estate.xml"
+# - name: Freakonomics Real Estate
+#   type: rss
+#   url: https://freakonomics.com/series/freakonomics-radio/feed/
 
-  - name: "조선비즈 부동산"
-    type: "rss"
-    url: "https://biz.chosun.com/rss/estate.xml"
+- name: Realtor.com News
+  type: rss
+  url: https://www.realtor.com/news/feed/
+# NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
+# - name: Zillow Research
+#   type: rss
+#   url: https://www.zillow.com/research/feed/
+- name: PropertyWire UK
+  type: rss
+  url: https://www.propertywire.com/feed/
+# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (timeout/403)
+# - name: Domain Australia
+#   type: rss
+#   url: https://www.domain.com.au/news/feed/
 
-  # === 정부/공공 ===
-  - name: "국토교통부 보도자료"
-    type: "rss"
-    url: "https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS"
+# - name: CBRE Research
+#   type: rss
+#   url: https://www.cbre.com/insights/rss
 
-  - name: "LH 공사"
-    type: "javascript"
-    url: "https://www.lh.or.kr/contents/cont.do?sCode=user&mId=23&mPid=22"
-    config:
-      wait_for: ".board_list"
-
-  - name: "SH 서울주택도시공사"
-    type: "javascript"
-    url: "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do"
-    config:
-      wait_for: ".board_list"
-
-  # === 부동산 전문 매체 ===
-  - name: "직방 매거진"
-    type: "rss"
-    url: "https://www.zigbang.com/blog/feed"
-
-  - name: "아파트실거래가"
-    type: "javascript"
-    url: "https://hogangnono.com/"
-    config:
-      wait_for: ".news_list"
-
-  - name: "부동산114"
-    type: "javascript"
-    url: "https://www.r114.com/?_c=news&_m=newsMain"
-    config:
-      wait_for: ".news_list"
-
-  # === 글로벌 ===
-  - name: "Reuters Real Estate"
-    type: "rss"
-    url: "https://www.reuters.com/news/archive/propertyNews?view=rss"
-
-  - name: "Bloomberg Real Estate"
-    type: "rss"
-    url: "https://feeds.bloomberg.com/real-estate/news.rss"
-
-  # === Reddit 부동산 커뮤니티 ===
-  - name: "r/RealEstate"
-    type: "rss"
-    url: "https://www.reddit.com/r/RealEstate/.rss"
-
-  - name: "r/realestateinvesting"
-    type: "rss"
-    url: "https://www.reddit.com/r/realestateinvesting/.rss"
-
-  - name: "r/FirstTimeHomeBuyer"
-    type: "rss"
-    url: "https://www.reddit.com/r/FirstTimeHomeBuyer/.rss"
-
-  - name: "r/REBubble"
-    type: "rss"
-    url: "https://www.reddit.com/r/REBubble/.rss"
-
-  - name: "r/korea"
-    type: "rss"
-    url: "https://www.reddit.com/r/korea/.rss"
-
-  - name: "r/landlords"
-    type: "rss"
-    url: "https://www.reddit.com/r/landlords/.rss"
-
-  # === 부동산 팟캐스트 ===
-  - name: "BiggerPockets Podcast"
-    type: "rss"
-    url: "https://www.biggerpockets.com/blog/real-estate-podcast?format=rss"
-
-  - name: "Freakonomics Real Estate"
-    type: "rss"
-    url: "https://freakonomics.com/series/freakonomics-radio/feed/"
-
-  # === 국제 부동산 뉴스 ===
-  - name: "Realtor.com News"
-    type: "rss"
-    url: "https://www.realtor.com/news/feed/"
-
-  - name: "Zillow Research"
-    type: "rss"
-    url: "https://www.zillow.com/research/feed/"
-
-  - name: "PropertyWire UK"
-    type: "rss"
-    url: "https://www.propertywire.com/feed/"
-
-  - name: "Domain Australia"
-    type: "rss"
-    url: "https://www.domain.com.au/news/feed/"
-
-  - name: "CBRE Research"
-    type: "rss"
-    url: "https://www.cbre.com/insights/rss"
-
-  - name: "JLL Research"
-    type: "rss"
-    url: "https://www.jll.com/rss/research"
-
+# - name: JLL Research
+#   type: rss
+#   url: https://www.jll.com/rss/research
+# === MCP 서버 소스 (한국 부동산 데이터) ===
+# NOTE: mcp-kr-realestate 저장소가 존재하지 않음 - real-estate-mcp로 통합
+- name: 부동산 실거래가 MCP
+  type: mcp
+  url: https://github.com/tae0y/real-estate-mcp
+  config:
+    transport: stdio
+    command: uvx
+    args: ["--from", "git+https://github.com/tae0y/real-estate-mcp", "real-estate-mcp"]
+    env:
+      DATA_GO_KR_API_KEY: "${DATA_GO_KR_API_KEY}"
+    tool: get_apartment_trades
+    arguments:
+      lawdCd: "11680"
+      dealYmd: "202603"
+    transform:
+      title_field: aptNm
+      link_field: null
+      summary_fields: ["dealAmount", "excluUseAr", "floor", "dealDay"]
+      published_field: dealDay
+- name: 청약정보 MCP
+  type: mcp
+  url: https://github.com/tae0y/real-estate-mcp
+  config:
+    transport: stdio
+    command: uvx
+    args: ["--from", "git+https://github.com/tae0y/real-estate-mcp", "real-estate-mcp"]
+    env:
+      DATA_GO_KR_API_KEY: "${DATA_GO_KR_API_KEY}"
+    tool: get_apt_subscription_info
+    arguments:
+      startmonth: "202603"
+      endmonth: "202604"
+    transform:
+      title_field: houseNm
+      summary_fields: ["bsnsMbyNm", "rcritPblancDe", "totSuplyHshldco"]
+      published_field: rcritPblancDe
 entities:
-  - name: "Location"
-    display_name: "지역"
-    keywords:
-      # 서울 주요 지역
-      - "강남"
-      - "서초"
-      - "송파"
-      - "마포"
-      - "용산"
-      - "강북"
-      - "성동"
-      - "광진"
-      - "영등포"
-      - "동작"
-      - "관악"
-      - "강서"
-      - "목동"
-      - "잠실"
-      - "여의도"
-      - "왕십리"
-      - "청담"
-      - "압구정"
-      - "논현"
-      - "역삼"
-      - "삼성"
-      - "대치"
-      - "도곡"
-      # 수도권
-      - "분당"
-      - "판교"
-      - "일산"
-      - "수원"
-      - "용인"
-      - "화성"
-      - "성남"
-      - "고양"
-      - "인천"
-      - "광명"
-      - "과천"
-      - "안양"
-      - "평택"
-      - "김포"
-      - "하남"
-      - "위례"
-      - "동탄"
-      - "광교"
-      - "마곡"
-      # 지방 광역시
-      - "세종"
-      - "대전"
-      - "부산"
-      - "대구"
-      - "광주"
-      - "울산"
-      - "제주"
-      - "청주"
-      - "천안"
-
-  - name: "PropertyType"
-    display_name: "부동산 유형"
-    keywords:
-      # 주거용
-      - "아파트"
-      - "오피스텔"
-      - "빌라"
-      - "주택"
-      - "단독주택"
-      - "다세대"
-      - "다가구"
-      - "타운하우스"
-      - "연립주택"
-      - "원룸"
-      - "투룸"
-      - "쓰리룸"
-      - "펜트하우스"
-      # 상업/산업용
-      - "상가"
-      - "오피스"
-      - "사무실"
-      - "지식산업센터"
-      - "공장"
-      - "물류센터"
-      - "창고"
-      # 토지
-      - "토지"
-      - "나대지"
-      - "농지"
-      - "임야"
-      # 거래 유형
-      - "신축"
-      - "분양"
-      - "임대"
-      - "전세"
-      - "월세"
-      - "매매"
-      - "경매"
-      - "공매"
-      # 개발
-      - "재건축"
-      - "재개발"
-      - "리모델링"
-      - "정비사업"
-      - "입주권"
-      - "분양권"
-
-  - name: "Policy"
-    display_name: "정책"
-    keywords:
-      # 대출 규제
-      - "규제"
-      - "완화"
-      - "대출"
-      - "LTV"
-      - "DTI"
-      - "DSR"
-      - "스트레스DSR"
-      - "총부채원리금상환비율"
-      - "담보대출"
-      - "주담대"
-      - "신용대출"
-      - "금리"
-      - "기준금리"
-      # 세금
-      - "세금"
-      - "양도세"
-      - "양도소득세"
-      - "취득세"
-      - "종부세"
-      - "종합부동산세"
-      - "재산세"
-      - "보유세"
-      - "중과세"
-      - "비과세"
-      # 청약
-      - "청약"
-      - "특별공급"
-      - "공공분양"
-      - "일반분양"
-      - "사전청약"
-      - "무순위"
-      - "당첨"
-      - "가점"
-      - "추첨제"
-      # 임대차
-      - "임대차"
-      - "전월세상한제"
-      - "계약갱신청구권"
-      - "임대차3법"
-      - "전세보증금"
-      - "보증보험"
-      - "깡통전세"
-      - "역전세"
-      # 기타 정책
-      - "투기지역"
-      - "조정대상지역"
-      - "분양가상한제"
-      - "전매제한"
-      - "실거주의무"
-
-  - name: "Market"
-    display_name: "시장동향"
-    keywords:
-      # 가격 동향
-      - "시세"
-      - "상승"
-      - "하락"
-      - "보합"
-      - "급등"
-      - "급락"
-      - "안정"
-      - "회복"
-      - "조정"
-      - "폭락"
-      # 거래
-      - "거래량"
-      - "거래절벽"
-      - "매물"
-      - "급매"
-      - "급매물"
-      - "호가"
-      - "실거래가"
-      - "공시가격"
-      - "감정가"
-      - "시가"
-      # 공급/수요
-      - "미분양"
-      - "입주"
-      - "공급"
-      - "수요"
-      - "과잉공급"
-      - "공급부족"
-      - "착공"
-      - "준공"
-      - "분양물량"
-      # 투자
-      - "투자"
-      - "갭투자"
-      - "레버리지"
-      - "수익률"
-      - "임대수익"
-      - "시세차익"
-
-  - name: "Developer"
-    display_name: "건설사/시행사"
-    keywords:
-      # 주요 건설사
-      - "삼성물산"
-      - "현대건설"
-      - "GS건설"
-      - "대우건설"
-      - "포스코건설"
-      - "롯데건설"
-      - "SK에코플랜트"
-      - "DL이앤씨"
-      - "HDC현대산업개발"
-      - "호반건설"
-      - "대림산업"
-      - "두산건설"
-      - "태영건설"
-      - "한화건설"
-      - "금호건설"
-      # 브랜드 아파트
-      - "래미안"
-      - "자이"
-      - "힐스테이트"
-      - "아이파크"
-      - "더샵"
-      - "푸르지오"
-      - "롯데캐슬"
-      - "e편한세상"
-      - "호반써밋"
-      # 일반
-      - "건설사"
-      - "시행사"
-      - "시공사"
-      - "분양대행사"
+- name: Location
+  display_name: 지역
+  keywords:
+  - 강남
+  - 서초
+  - 송파
+  - 마포
+  - 용산
+  - 강북
+  - 성동
+  - 광진
+  - 영등포
+  - 동작
+  - 관악
+  - 강서
+  - 목동
+  - 잠실
+  - 여의도
+  - 왕십리
+  - 청담
+  - 압구정
+  - 논현
+  - 역삼
+  - 삼성
+  - 대치
+  - 도곡
+  - 분당
+  - 판교
+  - 일산
+  - 수원
+  - 용인
+  - 화성
+  - 성남
+  - 고양
+  - 인천
+  - 광명
+  - 과천
+  - 안양
+  - 평택
+  - 김포
+  - 하남
+  - 위례
+  - 동탄
+  - 광교
+  - 마곡
+  - 세종
+  - 대전
+  - 부산
+  - 대구
+  - 광주
+  - 울산
+  - 제주
+  - 청주
+  - 천안
+- name: PropertyType
+  display_name: 부동산 유형
+  keywords:
+  - 아파트
+  - 오피스텔
+  - 빌라
+  - 주택
+  - 단독주택
+  - 다세대
+  - 다가구
+  - 타운하우스
+  - 연립주택
+  - 원룸
+  - 투룸
+  - 쓰리룸
+  - 펜트하우스
+  - 상가
+  - 오피스
+  - 사무실
+  - 지식산업센터
+  - 공장
+  - 물류센터
+  - 창고
+  - 토지
+  - 나대지
+  - 농지
+  - 임야
+  - 신축
+  - 분양
+  - 임대
+  - 전세
+  - 월세
+  - 매매
+  - 경매
+  - 공매
+  - 재건축
+  - 재개발
+  - 리모델링
+  - 정비사업
+  - 입주권
+  - 분양권
+- name: Policy
+  display_name: 정책
+  keywords:
+  - 규제
+  - 완화
+  - 대출
+  - LTV
+  - DTI
+  - DSR
+  - 스트레스DSR
+  - 총부채원리금상환비율
+  - 담보대출
+  - 주담대
+  - 신용대출
+  - 금리
+  - 기준금리
+  - 세금
+  - 양도세
+  - 양도소득세
+  - 취득세
+  - 종부세
+  - 종합부동산세
+  - 재산세
+  - 보유세
+  - 중과세
+  - 비과세
+  - 청약
+  - 특별공급
+  - 공공분양
+  - 일반분양
+  - 사전청약
+  - 무순위
+  - 당첨
+  - 가점
+  - 추첨제
+  - 임대차
+  - 전월세상한제
+  - 계약갱신청구권
+  - 임대차3법
+  - 전세보증금
+  - 보증보험
+  - 깡통전세
+  - 역전세
+  - 투기지역
+  - 조정대상지역
+  - 분양가상한제
+  - 전매제한
+  - 실거주의무
+- name: Market
+  display_name: 시장동향
+  keywords:
+  - 시세
+  - 상승
+  - 하락
+  - 보합
+  - 급등
+  - 급락
+  - 안정
+  - 회복
+  - 조정
+  - 폭락
+  - 거래량
+  - 거래절벽
+  - 매물
+  - 급매
+  - 급매물
+  - 호가
+  - 실거래가
+  - 공시가격
+  - 감정가
+  - 시가
+  - 미분양
+  - 입주
+  - 공급
+  - 수요
+  - 과잉공급
+  - 공급부족
+  - 착공
+  - 준공
+  - 분양물량
+  - 투자
+  - 갭투자
+  - 레버리지
+  - 수익률
+  - 임대수익
+  - 시세차익
+  - 침체
+  - 호황
+  - 약세
+  - 강세
+  - 관망
+  - 대기
+  - 반등
+  - 바닥
+  - 고점
+  - 저점
+  - 전망
+  - 예측
+  - 동향
+  - 트렌드
+  - price
+  - housing
+  - market
+  - mortgage
+  - interest rate
+  - home
+  - property
+  - real estate
+  - rent
+  - lease
+  - buy
+  - sell
+  - affordability
+  - inventory
+  - listing
+  - sale
+  - buyer
+  - seller
+- name: Developer
+  display_name: 건설사/시행사
+  keywords:
+  - 삼성물산
+  - 현대건설
+  - GS건설
+  - 대우건설
+  - 포스코건설
+  - 롯데건설
+  - SK에코플랜트
+  - DL이앤씨
+  - HDC현대산업개발
+  - 호반건설
+  - 대림산업
+  - 두산건설
+  - 태영건설
+  - 한화건설
+  - 금호건설
+  - 래미안
+  - 자이
+  - 힐스테이트
+  - 아이파크
+  - 더샵
+  - 푸르지오
+  - 롯데캐슬
+  - e편한세상
+  - 호반써밋
+  - 건설사
+  - 시행사
+  - 시공사
+  - 분양대행사
+- name: PropertyGeneral
+  display_name: 부동산 일반
+  keywords:
+  # 핵심 부동산 용어
+  - property
+  - real estate
+  - housing market
+  - home buying
+  - home selling
+  - apartment
+  - condo
+  - residential
+  - commercial property
+  # 거래 유형
+  - buy home
+  - sell home
+  - rent apartment
+  - lease property
+  - mortgage
+  - closing
+  - escrow
+  # 시장 동향
+  - housing price
+  - market trend
+  - property value
+  - appreciation
+  - depreciation
+  # 한국어 핵심 용어
+  - 부동산
+  - 집
+  - 아파트
+  - 주택
+  - 매매
+  - 전세
+  - 월세
+  - 가격
+  - 시세
+  - 빌라
+  - 오피스텔
+  - 상가
+  - 토지
+  - 분양
+  - 청약
+  - 계약
+  - 등기
+  - 실거래가
+  - 공시가격
+  - 대출
+  - 담보
+  - 금리
+  - 재개발
+  - 재건축
+  - 입주

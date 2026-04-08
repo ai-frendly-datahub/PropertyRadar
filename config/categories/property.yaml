@@ -4,12 +4,27 @@ sources:
 - name: 한경 부동산
   type: rss
   url: https://www.hankyung.com/feed/realestate
+  language: ko
+  country: KR
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: news
 - name: 매일경제 부동산
   type: rss
   url: https://www.mk.co.kr/rss/50300009/
+  language: ko
+  country: KR
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: news
 - name: 서울경제 부동산
   type: rss
   url: https://m.sedaily.com/rss/realestate
+  language: ko
+  country: KR
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: news
 # NOTE: 2026-04-02 테스트에서 동작하지 않음 (404)
 # - name: 아시아경제 부동산
 #   type: rss
@@ -34,12 +49,22 @@ sources:
 - name: LH 공사
   type: javascript
   url: https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003
+  language: ko
+  country: KR
+  trust_tier: T1_official
+  collection_tier: C2_js
+  content_type: policy
   config:
     wait_for: .board_list
 # NOTE: 2026-04-02 SH 공사 URL 307 리다이렉트 - Playwright에서 자동 처리됨
 - name: SH 서울주택도시공사
   type: javascript
   url: https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do
+  language: ko
+  country: KR
+  trust_tier: T1_official
+  collection_tier: C2_js
+  content_type: policy
   config:
     wait_for: .board_list
 # NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Forbidden)
@@ -49,11 +74,21 @@ sources:
 - name: 아파트실거래가
   type: javascript
   url: https://hogangnono.com/
+  language: ko
+  country: KR
+  trust_tier: T3_professional
+  collection_tier: C2_js
+  content_type: price
   config:
     wait_for: .news_list
 - name: 부동산114
   type: javascript
   url: https://www.r114.com/?_c=Research&_m=ReportNews
+  language: ko
+  country: KR
+  trust_tier: T3_professional
+  collection_tier: C2_js
+  content_type: news
   config:
     wait_for: .news_list
 # NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (401/404)
@@ -68,21 +103,51 @@ sources:
 - name: r/RealEstate
   type: reddit
   url: https://www.reddit.com/r/RealEstate/
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 - name: r/realestateinvesting
   type: reddit
   url: https://www.reddit.com/r/realestateinvesting/
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 - name: r/FirstTimeHomeBuyer
   type: reddit
   url: https://www.reddit.com/r/FirstTimeHomeBuyer/
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 - name: r/REBubble
   type: reddit
   url: https://www.reddit.com/r/REBubble/
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 - name: r/korea
   type: reddit
   url: https://www.reddit.com/r/korea/
+  language: en
+  country: KR
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 - name: r/landlord
   type: reddit
   url: https://www.reddit.com/r/landlord/
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
 # NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
 # - name: BiggerPockets Podcast
 #   type: rss
@@ -95,6 +160,11 @@ sources:
 - name: Realtor.com News
   type: rss
   url: https://www.realtor.com/news/feed/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: news
 # NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
 # - name: Zillow Research
 #   type: rss
@@ -102,6 +172,11 @@ sources:
 - name: PropertyWire UK
   type: rss
   url: https://www.propertywire.com/feed/
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
 # NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (timeout/403)
 # - name: Domain Australia
 #   type: rss
@@ -119,6 +194,11 @@ sources:
 - name: 부동산 실거래가 MCP
   type: mcp
   url: https://github.com/tae0y/real-estate-mcp
+  language: ko
+  country: KR
+  trust_tier: T1_official
+  collection_tier: C2_js
+  content_type: price
   config:
     transport: stdio
     command: uvx
@@ -137,6 +217,11 @@ sources:
 - name: 청약정보 MCP
   type: mcp
   url: https://github.com/tae0y/real-estate-mcp
+  language: ko
+  country: KR
+  trust_tier: T1_official
+  collection_tier: C2_js
+  content_type: policy
   config:
     transport: stdio
     command: uvx

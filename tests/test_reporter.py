@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 from propertyradar.models import Article, CategoryConfig
 from propertyradar.reporter import generate_index_html, generate_report
@@ -16,7 +16,7 @@ def _sample_category() -> CategoryConfig:
 
 
 def _sample_articles() -> list[Article]:
-    now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)
+    now = datetime(2024, 3, 15, 9, 30, tzinfo=timezone.utc)
     return [
         Article(
             title="테스트 부동산 기사",
@@ -33,7 +33,7 @@ def _sample_articles() -> list[Article]:
 
 def test_generate_report_creates_file(tmp_path, monkeypatch):
     """generate_report creates an HTML file at output_path."""
-    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)
+    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=timezone.utc)
 
     class FixedDateTime(datetime):
         @classmethod
@@ -58,7 +58,7 @@ def test_generate_report_creates_file(tmp_path, monkeypatch):
 
 def test_generate_report_html_content(tmp_path, monkeypatch):
     """Generated report contains expected HTML content."""
-    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)
+    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=timezone.utc)
 
     class FixedDateTime(datetime):
         @classmethod
@@ -98,7 +98,7 @@ def test_generate_index_html(tmp_path):
 
 def test_generate_report_with_errors(tmp_path, monkeypatch):
     """generate_report includes error messages in HTML."""
-    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)
+    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=timezone.utc)
 
     class FixedDateTime(datetime):
         @classmethod

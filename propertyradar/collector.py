@@ -15,6 +15,7 @@ import feedparser
 import requests
 from pybreaker import CircuitBreakerError
 from radar_core import AdaptiveThrottler, CrawlHealthStore
+from radar_core.url_extractor import extract_url_content_safe
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -32,7 +33,9 @@ _ACTIVE_THROTTLER: AdaptiveThrottler | None = None
 _ACTIVE_HEALTH_STORE: CrawlHealthStore | None = None
 
 
-def _set_collection_controls(throttler: AdaptiveThrottler, health_store: CrawlHealthStore) -> None:
+def _set_collection_controls(
+    throttler: AdaptiveThrottler, health_store: CrawlHealthStore
+) -> None:
     global _ACTIVE_THROTTLER, _ACTIVE_HEALTH_STORE
     with _COLLECTION_CONTROL_LOCK:
         _ACTIVE_THROTTLER = throttler
@@ -46,7 +49,9 @@ def _clear_collection_controls() -> None:
         _ACTIVE_HEALTH_STORE = None
 
 
-def _get_collection_controls() -> tuple[AdaptiveThrottler | None, CrawlHealthStore | None]:
+def _get_collection_controls() -> tuple[
+    AdaptiveThrottler | None, CrawlHealthStore | None
+]:
     with _COLLECTION_CONTROL_LOCK:
         return _ACTIVE_THROTTLER, _ACTIVE_HEALTH_STORE
 
@@ -144,7 +149,9 @@ def _fetch_url_with_retry(
                 if isinstance(exc, requests.exceptions.HTTPError):
                     response = exc.response
                     if response is not None and response.status_code == 429:
-                        retry_after = _parse_retry_after(response.headers.get("Retry-After"))
+                        retry_after = _parse_retry_after(
+                            response.headers.get("Retry-After")
+                        )
 
                 throttler.record_failure(source_name, retry_after=retry_after)
                 if health_store is not None:
@@ -200,21 +207,26 @@ def collect_sources(
     manager = get_circuit_breaker_manager()
     workers = _resolve_max_workers(max_workers)
     source_hosts: dict[str, str] = {
-        source.name: (urlparse(source.url).netloc.lower() or source.name) for source in sources
+        source.name: (urlparse(source.url).netloc.lower() or source.name)
+        for source in sources
     }
     rate_limiters: dict[str, RateLimiter] = {
-        host: RateLimiter(min_interval=min_interval_per_host) for host in set(source_hosts.values())
+        host: RateLimiter(min_interval=min_interval_per_host)
+        for host in set(source_hosts.values())
     }
     throttler = AdaptiveThrottler(min_delay=max(0.001, min_interval_per_host))
     health_store = CrawlHealthStore(
-        health_db_path or os.environ.get("RADAR_CRAWL_HEALTH_DB_PATH", _DEFAULT_HEALTH_DB_PATH)
+        health_db_path
+        or os.environ.get("RADAR_CRAWL_HEALTH_DB_PATH", _DEFAULT_HEALTH_DB_PATH)
     )
     _set_collection_controls(throttler, health_store)
     session = _create_session()
 
     def _collect_for_source(source: Source) -> tuple[list[Article], list[str]]:
         if health_store.is_disabled(source.name):
-            return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            return [], [
+                f"{source.name}: Source disabled (crawl health threshold reached)"
+            ]
 
         host = source_hosts[source.name]
         rate_limiters[host].acquire()
@@ -237,7 +249,9 @@ def collect_sources(
         except (NetworkError, ParseError) as exc:
             return [], [f"{source.name}: {exc}"]
         except Exception as exc:
-            return [], [f"{source.name}: Unexpected error - {type(exc).__name__}: {exc}"]
+            return [], [
+                f"{source.name}: Unexpected error - {type(exc).__name__}: {exc}"
+            ]
 
     try:
         if workers == 1:
@@ -290,7 +304,9 @@ def _collect_single(
         # Handle EUC-KR encoding for Korean .kr sites
         encoding = _detect_encoding(response)
         if encoding.lower().replace("-", "") == "euckr":
-            content = response.content.decode("euc-kr", errors="replace").encode("utf-8")
+            content = response.content.decode("euc-kr", errors="replace").encode(
+                "utf-8"
+            )
         else:
             content = response.content
 
@@ -309,14 +325,20 @@ def _collect_single(
                         if isinstance(value, str):
                             summary = value
 
-            title_text = html.unescape(_entry_text(entry, "title").strip()) or "(no title)"
-            if not summary or not summary.strip():
-                summary = f"[부동산] {title_text}"
+            # URL extraction fallback: fetch content if summary is short or empty
+            link = _entry_text(entry, "link").strip()
+            if len(summary.strip()) < 50 and link:
+                extracted = extract_url_content_safe(link, timeout=timeout)
+                if extracted and extracted.content:
+                    extracted_summary = extracted.content[:2000].strip()
+                    if len(extracted_summary) > len(summary.strip()):
+                        summary = extracted_summary
 
             items.append(
                 Article(
-                    title=title_text,
-                    link=_entry_text(entry, "link").strip(),
+                    title=html.unescape(_entry_text(entry, "title").strip())
+                    or "(no title)",
+                    link=link,
                     summary=html.unescape(summary.strip()),
                     published=published,
                     source=source.name,

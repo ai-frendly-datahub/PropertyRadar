@@ -77,20 +77,6 @@ extend-exclude = '''
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = [
-    ".git",
-    "__pycache__",
-    "venv",
-    ".venv",
-    "build",
-    "dist",
-    "*.egg-info",
-    ".pytest_cache",
-    ".mypy_cache",
-    ".ruff_cache",
-]
-
-[tool.ruff.lint]
 select = [
     "E",   # pycodestyle errors
     "W",   # pycodestyle warnings
@@ -105,11 +91,23 @@ select = [
 ignore = [
     "E501",  # line too long (handled by black)
 ]
+extend-exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    ".venv",
+    "build",
+    "dist",
+    "*.egg-info",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+]
 
-[tool.ruff.lint.per-file-ignores]
+[tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]
 
-[tool.ruff.lint.isort]
+[tool.ruff.isort]
 known-first-party = ["propertyradar"]
 force-single-line = false
 lines-after-imports = 2

@@ -74,6 +74,19 @@ jobs:
           cat quality_report.txt >> $GITHUB_STEP_SUMMARY
         continue-on-error: true
 
+      - name: Create dated data snapshots
+        if: always()
+        shell: bash
+        run: |
+          TODAY="${RADAR_DATE:-$(TZ=Asia/Seoul date +%F)}"
+          mkdir -p data/daily "data/snapshots/${TODAY}" "reports/daily/${TODAY}"
+          if [ -f data/radar_data.duckdb ]; then
+            cp -f data/radar_data.duckdb "data/daily/${TODAY}.duckdb"
+            cp -f data/radar_data.duckdb "data/snapshots/${TODAY}/propertyradar.duckdb"
+          fi
+          find reports -maxdepth 1 -type f \( -name '*.html' -o -name '*.json' \) -exec cp -f {} "reports/daily/${TODAY}/" \; 2>/dev/null || true
+          find data -maxdepth 3 -type f | sort
+
       - name: Archive Quality Report
         if: always()
         uses: actions/upload-artifact@v4
@@ -90,7 +103,6 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git fetch origin "${GITHUB_REF_NAME}" || true
-          git rebase "origin/${GITHUB_REF_NAME}" || true
           git add -f data/** reports/** 2>/dev/null || true
           git status --short
           if git diff --cached --quiet; then

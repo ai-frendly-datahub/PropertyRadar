@@ -84,7 +84,10 @@ jobs:
             cp -f data/radar_data.duckdb "data/daily/${TODAY}.duckdb"
             cp -f data/radar_data.duckdb "data/snapshots/${TODAY}/propertyradar.duckdb"
           fi
-          find reports -maxdepth 1 -type f \( -name '*.html' -o -name '*.json' \) -exec cp -f {} "reports/daily/${TODAY}/" \; 2>/dev/null || true
+          cp -f reports/index.html "reports/daily/${TODAY}/" 2>/dev/null || true
+          cp -f reports/property_report.html "reports/daily/${TODAY}/" 2>/dev/null || true
+          cp -f reports/*"${TODAY//-/}"* "reports/daily/${TODAY}/" 2>/dev/null || true
+          cp -f reports/*"${TODAY}"* "reports/daily/${TODAY}/" 2>/dev/null || true
           find data -maxdepth 3 -type f | sort
 
       - name: Archive Quality Report

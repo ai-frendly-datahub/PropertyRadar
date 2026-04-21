@@ -61,7 +61,7 @@ jobs:
 
       - name: Run Radar
         run: |
-          python main.py --category "${{ env.RADAR_CATEGORY }}" --recent-days 7 --keep-days 90
+          python main.py --category "${{ env.RADAR_CATEGORY }}" --recent-days 7 --keep-days 90 --keep-raw-days 180 --keep-report-days 90 --snapshot-db
 
       - name: Generate index.html
         run: |
@@ -99,21 +99,12 @@ jobs:
           retention-days: 30
 
       - name: Auto-commit data updates
-        if: always()
-        continue-on-error: true
-        shell: bash
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git fetch origin "${GITHUB_REF_NAME}" || true
-          git add -f data/** reports/** 2>/dev/null || true
-          git status --short
-          if git diff --cached --quiet; then
-            echo "No data/report changes to commit."
-          else
-            git commit -m "chore: update dated radar data [skip ci]"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update radar data [skip ci]"
+          file_pattern: "data/snapshots/** reports/*.html reports/*_summary.json"
+          skip_fetch: false
+          skip_checkout: false
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -131,7 +122,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: radar-db-${{ github.run_number }}
-          path: data/radar_data.duckdb
+          path: |
+            data/radar_data.duckdb
+            data/snapshots/
           retention-days: 30
           if-no-files-found: ignore
 

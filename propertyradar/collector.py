@@ -19,6 +19,7 @@ from radar_core.url_extractor import extract_url_content_safe
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from .browser_collector import collect_browser_sources
 from .exceptions import NetworkError, ParseError, SourceError
 from .models import Article, Source
 from .resilience import get_circuit_breaker_manager
@@ -206,9 +207,22 @@ def collect_sources(
     errors: list[str] = []
     manager = get_circuit_breaker_manager()
     workers = _resolve_max_workers(max_workers)
+    enabled_sources = [source for source in sources if source.enabled]
+    js_types = {"browser", "html", "javascript", "js", "web"}
+    rss_sources = [source for source in enabled_sources if source.type.lower() == "rss"]
+    js_sources = [source for source in enabled_sources if source.type.lower() in js_types]
+    unsupported_sources = [
+        source
+        for source in enabled_sources
+        if source.type.lower() not in {"rss", *js_types}
+    ]
+    errors.extend(
+        f"{source.name}: Unsupported source type '{source.type}'"
+        for source in unsupported_sources
+    )
     source_hosts: dict[str, str] = {
         source.name: (urlparse(source.url).netloc.lower() or source.name)
-        for source in sources
+        for source in rss_sources
     }
     rate_limiters: dict[str, RateLimiter] = {
         host: RateLimiter(min_interval=min_interval_per_host)
@@ -224,9 +238,7 @@ def collect_sources(
 
     def _collect_for_source(source: Source) -> tuple[list[Article], list[str]]:
         if health_store.is_disabled(source.name):
-            return [], [
-                f"{source.name}: Source disabled (crawl health threshold reached)"
-            ]
+            return [], []
 
         host = source_hosts[source.name]
         rate_limiters[host].acquire()
@@ -255,20 +267,31 @@ def collect_sources(
 
     try:
         if workers == 1:
-            for source in sources:
+            for source in rss_sources:
                 source_articles, source_errors = _collect_for_source(source)
                 articles.extend(source_articles)
                 errors.extend(source_errors)
         else:
             with ThreadPoolExecutor(max_workers=workers) as executor:
                 future_map: list[Future[tuple[list[Article], list[str]]]] = [
-                    executor.submit(_collect_for_source, source) for source in sources
+                    executor.submit(_collect_for_source, source) for source in rss_sources
                 ]
 
                 for future in future_map:
                     source_articles, source_errors = future.result()
                     articles.extend(source_articles)
                     errors.extend(source_errors)
+
+        if js_sources:
+            js_articles, js_errors = collect_browser_sources(
+                js_sources,
+                category,
+                timeout=timeout * 1000,
+                health_db_path=health_db_path
+                or os.environ.get("RADAR_CRAWL_HEALTH_DB_PATH", _DEFAULT_HEALTH_DB_PATH),
+            )
+            articles.extend(js_articles)
+            errors.extend(js_errors)
     finally:
         session.close()
         health_store.close()
@@ -315,6 +338,7 @@ def _collect_single(
 
         for entry in feed.entries[:limit]:
             published = _extract_datetime(entry)
+            title_text = html.unescape(_entry_text(entry, "title").strip()) or "(no title)"
             summary = _entry_text(entry, "summary") or _entry_text(entry, "description")
             if not summary:
                 _content = entry.get("content", [])
@@ -333,13 +357,14 @@ def _collect_single(
                     extracted_summary = extracted.content[:2000].strip()
                     if len(extracted_summary) > len(summary.strip()):
                         summary = extracted_summary
+            link = _resolve_entry_link(entry, fallback_url=source.url)
+            summary_text = html.unescape(summary.strip()) if summary.strip() else title_text
 
             items.append(
                 Article(
-                    title=html.unescape(_entry_text(entry, "title").strip())
-                    or "(no title)",
+                    title=title_text,
                     link=link,
-                    summary=html.unescape(summary.strip()),
+                    summary=summary_text,
                     published=published,
                     source=source.name,
                     category=category,
@@ -349,6 +374,25 @@ def _collect_single(
         return items
     except Exception as exc:
         raise ParseError(f"Failed to parse feed from {source.name}: {exc}") from exc
+
+
+def _resolve_entry_link(entry: Mapping[str, Any], fallback_url: str) -> str:
+    primary_link = _entry_text(entry, "link").strip()
+    if _is_valid_http_url(primary_link):
+        return primary_link
+
+    entry_id = _entry_text(entry, "id").strip()
+    if _is_valid_http_url(entry_id):
+        return entry_id
+
+    return fallback_url
+
+
+def _is_valid_http_url(value: str) -> bool:
+    if not value:
+        return False
+    parsed = urlparse(value)
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
 def _extract_datetime(entry: Mapping[str, Any]) -> datetime | None:

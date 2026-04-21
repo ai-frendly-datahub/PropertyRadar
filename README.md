@@ -14,7 +14,7 @@
 
 ```bash
 pip install -e ".[dev]"
-python main.py --once
+python main.py --category property --recent-days 7 --snapshot-db
 ```
 
 ## 구조
@@ -24,6 +24,7 @@ PropertyRadar/
   propertyradar/
     collector.py    # 부동산 RSS 수집
     analyzer.py     # 엔티티 분석 (radar-core 위임)
+    raw_logger.py   # data/raw/YYYY-MM-DD/*.jsonl 원문 기록
     storage.py      # DuckDB 저장 (radar-core 위임)
     reporter.py     # HTML 리포트 생성 (radar-core 위임)
   config/
@@ -45,4 +46,19 @@ pytest tests/ -v
 
 ## 스케줄
 
-GitHub Actions로 매일 자동 수집 후 GitHub Pages 배포.
+GitHub Actions로 매일 자동 수집 후 `reports/property_report_YYYYMMDD.html`과
+`reports/property_report.html`을 생성하고, DuckDB는
+`data/snapshots/YYYY-MM-DD/radar_data.duckdb`에 날짜별로 보관합니다.
+수집 원문은 `data/raw/YYYY-MM-DD/<source>.jsonl`에 누적합니다.
+
+<!-- DATAHUB-OPS-AUDIT:START -->
+## DataHub Operations
+
+- CI/CD workflows: `deploy-pages.yml`, `radar-crawler.yml`.
+- GitHub Pages visualization: `reports/index.html` (valid HTML); root static pages: `index.html`; https://ai-frendly-datahub.github.io/PropertyRadar/.
+- Latest remote Pages check: HTTP 200, HTML.
+- Local workspace audit: 21 Python files parsed, 0 syntax errors.
+- Re-run audit from the workspace root: `python scripts/audit_ci_pages_readme.py --syntax-check --write`.
+- Latest audit report: `_workspace/2026-04-14_github_ci_pages_readme_audit.md`.
+- Latest Pages URL report: `_workspace/2026-04-14_github_pages_url_check.md`.
+<!-- DATAHUB-OPS-AUDIT:END -->

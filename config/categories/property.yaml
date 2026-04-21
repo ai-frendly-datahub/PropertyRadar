@@ -1,5 +1,96 @@
 category_name: property
 display_name: 부동산 레이더
+data_quality:
+  priority: P2
+  primary_motion: conversion
+  weakest_dimension: operational_depth
+  quality_outputs:
+    freshness_report: reports/property_quality.json
+    dated_freshness_report_pattern: reports/property_YYYYMMDD_quality.json
+    tracked_event_models:
+    - transaction_record
+    - presale_competition
+    - listing_inventory
+    - permit_completion
+  event_models:
+    transaction_record:
+      date_fields:
+      - deal_date
+      - report_date
+      - collected_at
+      required_fields:
+      - region_code
+      - complex_name
+      - area
+      - transaction_price
+      - source_url
+    presale_competition:
+      date_fields:
+      - application_date
+      - announcement_date
+      - collected_at
+      required_fields:
+      - project_id
+      - competition_rate
+      - region_code
+      - source_url
+    listing_inventory:
+      date_fields:
+      - observed_at
+      - collected_at
+      required_fields:
+      - region_code
+      - property_type
+      - listing_count
+      - source_url
+    permit_completion:
+      date_fields:
+      - permit_date
+      - completion_date
+      - collected_at
+      required_fields:
+      - project_id
+      - region_code
+      - source_url
+  canonical_keys:
+    property:
+    - region_code
+    - complex_name
+    - building
+    - area
+    transaction:
+    - property_id
+    - deal_date
+    - transaction_type
+    - area
+  freshness_sla:
+    transaction_record_days: 7
+    presale_competition_days: 3
+    listing_inventory_days: 1
+    permit_completion_days: 30
+  quality_gates:
+  - 거래일, 계약일, 신고일, 수집일을 별도 필드로 유지한다
+  - 뉴스와 실거래/재고 신호를 같은 품질 등급으로 병합하지 않는다
+  - 지역 코드와 단지명 alias를 추적한다
+  - 매물 inventory는 stale listing 여부와 source 기준 시각을 함께 기록한다
+source_backlog:
+  operational_candidates:
+  - id: molit_transaction_api
+    name: MOLIT real estate transaction API
+    signal_type: transaction_record
+    activation_gate: API key, lawd code mapping, deal/report date separation, and duplicate transaction handling
+  - id: applyhome_presale_competition
+    name: ApplyHome presale competition data
+    signal_type: presale_competition
+    activation_gate: parser/API access, project id normalization, and region code mapping
+  - id: property_listing_inventory
+    name: Property listing inventory snapshots
+    signal_type: listing_inventory
+    activation_gate: ToS review, anti-bot risk, stale listing policy, and listing dedupe
+  - id: permit_completion_public_data
+    name: Permit and completion public data
+    signal_type: permit_completion
+    activation_gate: public data API mapping, project id reconciliation, and date semantics
 sources:
 - name: 한경 부동산
   type: rss
@@ -66,7 +157,7 @@ sources:
   collection_tier: C2_js
   content_type: policy
   config:
-    wait_for: .board_list
+    wait_for: body
 # NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Forbidden)
 # - name: 직방 매거진
 #   type: rss
@@ -80,7 +171,8 @@ sources:
   collection_tier: C2_js
   content_type: price
   config:
-    wait_for: .news_list
+    wait_for: body
+    allow_source_context_event: true
 - name: 부동산114
   type: javascript
   url: https://www.r114.com/?_c=Research&_m=ReportNews
@@ -90,7 +182,7 @@ sources:
   collection_tier: C2_js
   content_type: news
   config:
-    wait_for: .news_list
+    wait_for: body
 # NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (401/404)
 # - name: Reuters Real Estate
 #   type: rss
@@ -103,6 +195,7 @@ sources:
 - name: r/RealEstate
   type: reddit
   url: https://www.reddit.com/r/RealEstate/
+  enabled: false
   language: en
   country: US
   trust_tier: T4_community
@@ -111,6 +204,7 @@ sources:
 - name: r/realestateinvesting
   type: reddit
   url: https://www.reddit.com/r/realestateinvesting/
+  enabled: false
   language: en
   country: US
   trust_tier: T4_community
@@ -119,6 +213,7 @@ sources:
 - name: r/FirstTimeHomeBuyer
   type: reddit
   url: https://www.reddit.com/r/FirstTimeHomeBuyer/
+  enabled: false
   language: en
   country: US
   trust_tier: T4_community
@@ -127,6 +222,7 @@ sources:
 - name: r/REBubble
   type: reddit
   url: https://www.reddit.com/r/REBubble/
+  enabled: false
   language: en
   country: US
   trust_tier: T4_community
@@ -135,6 +231,7 @@ sources:
 - name: r/korea
   type: reddit
   url: https://www.reddit.com/r/korea/
+  enabled: false
   language: en
   country: KR
   trust_tier: T4_community
@@ -143,6 +240,7 @@ sources:
 - name: r/landlord
   type: reddit
   url: https://www.reddit.com/r/landlord/
+  enabled: false
   language: en
   country: US
   trust_tier: T4_community
@@ -194,6 +292,7 @@ sources:
 - name: 부동산 실거래가 MCP
   type: mcp
   url: https://github.com/tae0y/real-estate-mcp
+  enabled: false
   language: ko
   country: KR
   trust_tier: T1_official
@@ -217,6 +316,7 @@ sources:
 - name: 청약정보 MCP
   type: mcp
   url: https://github.com/tae0y/real-estate-mcp
+  enabled: false
   language: ko
   country: KR
   trust_tier: T1_official

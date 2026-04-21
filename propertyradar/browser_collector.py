@@ -1,0 +1,69 @@
+from __future__ import annotations
+
+import importlib
+from typing import TYPE_CHECKING, Any
+
+from .models import Article
+
+
+if TYPE_CHECKING:
+    from .models import Source
+
+_BROWSER_COLLECTION_AVAILABLE = False
+try:
+    _module = importlib.import_module("radar_core.browser_collector")
+    _core_collect = _module.collect_browser_sources
+    _BROWSER_COLLECTION_AVAILABLE = True
+except ImportError:
+    _core_collect = None  # type: ignore[assignment]
+
+
+def collect_browser_sources(
+    sources: list["Source"],
+    category: str,
+    *,
+    timeout: int = 15_000,
+    health_db_path: str | None = None,
+) -> tuple[list[Article], list[str]]:
+    if not sources:
+        return [], []
+
+    if not _BROWSER_COLLECTION_AVAILABLE or _core_collect is None:
+        return [], [
+            f"Browser collection unavailable for {len(sources)} JS source(s). "
+            "Install radar-core[browser]."
+        ]
+
+    try:
+        source_dicts: list[dict[str, Any]] = [
+            {"name": s.name, "type": s.type, "url": s.url, "config": dict(s.config)}
+            for s in sources
+        ]
+        core_articles, errors = _core_collect(
+            sources=source_dicts,
+            category=category,
+            timeout=timeout,
+            health_db_path=health_db_path,
+        )
+    except ImportError:
+        return [], [
+            f"Playwright not installed for {len(sources)} JS source(s). "
+            "Install radar-core[browser]."
+        ]
+    except Exception as exc:
+        return [], [f"Browser collection failed: {exc}"]
+
+    local_articles: list[Article] = []
+    for article in core_articles:
+        local_articles.append(
+            Article(
+                title=article.title,
+                link=article.link,
+                summary=article.summary,
+                published=article.published,
+                source=article.source,
+                category=article.category or category,
+            )
+        )
+
+    return local_articles, errors

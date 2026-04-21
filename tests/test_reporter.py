@@ -119,3 +119,54 @@ def test_generate_report_with_errors(tmp_path, monkeypatch):
     )
     html = output_path.read_text(encoding="utf-8")
     assert "소스 타임아웃" in html
+
+
+def test_generate_report_includes_property_quality_panel(tmp_path, monkeypatch):
+    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=timezone.utc)
+
+    class FixedDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            if tz is None:
+                return fixed_now.replace(tzinfo=None)
+            return fixed_now.astimezone(tz)
+
+    monkeypatch.setattr("radar_core.report_utils.datetime", FixedDateTime)
+
+    output_path = tmp_path / "reports" / "test_report.html"
+    generate_report(
+        category=_sample_category(),
+        articles=_sample_articles(),
+        output_path=output_path,
+        stats={"sources": 1, "collected": 1, "matched": 1, "window_days": 7},
+        quality_report={
+            "summary": {
+                "property_signal_event_count": 1,
+                "transaction_record_events": 1,
+                "event_required_field_gap_count": 1,
+                "proxy_canonical_key_count": 1,
+                "daily_review_item_count": 1,
+            },
+            "events": [
+                {
+                    "event_model": "transaction_record",
+                    "source": "MOLIT Trades",
+                    "canonical_key": "property:11680:raemian:84-9",
+                    "canonical_key_status": "complete",
+                    "required_field_gaps": [],
+                }
+            ],
+            "daily_review_items": [
+                {
+                    "reason": "missing_required_fields",
+                    "source": "Realtor.com News",
+                }
+            ],
+        },
+    )
+
+    html = output_path.read_text(encoding="utf-8")
+    assert "Property Quality" in html
+    assert "transaction_record" in html
+    assert "property:11680:raemian:84-9" in html
+    assert "missing_required_fields" in html

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
 
 from propertyradar.models import Article, CategoryConfig
@@ -170,3 +171,9 @@ def test_generate_report_includes_property_quality_panel(tmp_path, monkeypatch):
     assert "transaction_record" in html
     assert "property:11680:raemian:84-9" in html
     assert "missing_required_fields" in html
+
+    summary_path = tmp_path / "reports" / "test_20240315_summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    assert summary["ontology"]["repo"] == "PropertyRadar"
+    assert summary["ontology"]["ontology_version"] == "0.1.0"
+    assert "property.transaction_record" in summary["ontology"]["event_model_ids"]

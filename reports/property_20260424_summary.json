@@ -1,0 +1,117 @@
+{
+  "date": "2026-04-24",
+  "category": "property",
+  "article_count": 46,
+  "source_count": 8,
+  "matched_count": 39,
+  "top_entities": [
+    {
+      "name": "Market",
+      "count": 83
+    },
+    {
+      "name": "PropertyGeneral",
+      "count": 75
+    },
+    {
+      "name": "PropertyType",
+      "count": 38
+    },
+    {
+      "name": "Policy",
+      "count": 19
+    },
+    {
+      "name": "Location",
+      "count": 16
+    },
+    {
+      "name": "Developer",
+      "count": 10
+    }
+  ],
+  "sources": {
+    "부동산114": 1,
+    "아파트실거래가": 1,
+    "SH 서울주택도시공사": 1,
+    "LH 공사": 1,
+    "Realtor.com News": 12,
+    "PropertyWire UK": 10,
+    "매일경제 부동산": 10,
+    "한경 부동산": 10
+  },
+  "generated_at": "2026-04-24T23:54:03.332906+09:00",
+  "ontology": {
+    "repo": "PropertyRadar",
+    "category": "property",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "property.listing_inventory",
+      "property.permit_completion",
+      "property.presale_competition",
+      "property.transaction_record"
+    ],
+    "event_model_mappings": {
+      "transaction_record": "property.transaction_record",
+      "presale_competition": "property.presale_competition",
+      "listing_inventory": "property.listing_inventory",
+      "permit_completion": "property.permit_completion"
+    },
+    "entity_type_hints": [
+      "property.asset",
+      "property.project"
+    ],
+    "source_role_ids": [
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "LH 공사": "primary_evidence",
+      "SH 서울주택도시공사": "primary_evidence",
+      "아파트실거래가": "operational_evidence",
+      "Realtor.com News": "context_only"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "official_confirmation_required",
+      "cross_reference_required"
+    ]
+  },
+  "quality_summary": {
+    "total_sources": 17,
+    "enabled_sources": 9,
+    "tracked_sources": 5,
+    "fresh_sources": 3,
+    "stale_sources": 0,
+    "missing_sources": 0,
+    "missing_event_sources": 0,
+    "unknown_event_date_sources": 0,
+    "not_tracked_sources": 6,
+    "skipped_disabled_sources": 8,
+    "collection_error_count": 0,
+    "transaction_record_events": 9,
+    "presale_competition_events": 23,
+    "listing_inventory_events": 5,
+    "permit_completion_events": 1,
+    "property_signal_event_count": 38,
+    "official_or_operational_event_count": 2,
+    "news_proxy_event_count": 35,
+    "complete_canonical_key_count": 0,
+    "proxy_canonical_key_count": 27,
+    "missing_canonical_key_count": 11,
+    "region_code_present_count": 5,
+    "project_key_present_count": 24,
+    "transaction_price_present_count": 16,
+    "listing_count_present_count": 9,
+    "competition_rate_present_count": 4,
+    "event_required_field_gap_count": 0,
+    "tracked_source_gap_count": 0,
+    "missing_event_model_count": 0,
+    "source_backlog_candidate_count": 4,
+    "daily_review_item_count": 50
+  },
+  "warnings": [
+    "freshness gaps detected: stale=2, missing=0"
+  ]
+}

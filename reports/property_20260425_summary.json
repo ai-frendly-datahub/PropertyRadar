@@ -1,0 +1,81 @@
+{
+  "date": "2026-04-25",
+  "category": "property",
+  "article_count": 146,
+  "source_count": 8,
+  "matched_count": 120,
+  "top_entities": [
+    {
+      "name": "Market",
+      "count": 173
+    },
+    {
+      "name": "PropertyGeneral",
+      "count": 166
+    },
+    {
+      "name": "PropertyType",
+      "count": 93
+    },
+    {
+      "name": "Location",
+      "count": 43
+    },
+    {
+      "name": "Policy",
+      "count": 32
+    },
+    {
+      "name": "Developer",
+      "count": 21
+    }
+  ],
+  "sources": {
+    "부동산114": 1,
+    "아파트실거래가": 1,
+    "SH 서울주택도시공사": 1,
+    "LH 공사": 1,
+    "Realtor.com News": 42,
+    "PropertyWire UK": 20,
+    "매일경제 부동산": 40,
+    "한경 부동산": 40
+  },
+  "generated_at": "2026-04-25T00:06:39.800661+09:00",
+  "ontology": {
+    "repo": "PropertyRadar",
+    "category": "property",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "property.listing_inventory",
+      "property.permit_completion",
+      "property.presale_competition",
+      "property.transaction_record"
+    ],
+    "event_model_mappings": {
+      "transaction_record": "property.transaction_record",
+      "presale_competition": "property.presale_competition",
+      "listing_inventory": "property.listing_inventory",
+      "permit_completion": "property.permit_completion"
+    },
+    "entity_type_hints": [
+      "property.asset",
+      "property.project"
+    ],
+    "source_role_ids": [
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "LH 공사": "primary_evidence",
+      "SH 서울주택도시공사": "primary_evidence",
+      "아파트실거래가": "operational_evidence",
+      "Realtor.com News": "context_only"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "official_confirmation_required",
+      "cross_reference_required"
+    ]
+  }
+}

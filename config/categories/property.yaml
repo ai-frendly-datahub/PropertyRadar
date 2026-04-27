@@ -78,19 +78,23 @@ source_backlog:
   - id: molit_transaction_api
     name: MOLIT real estate transaction API
     signal_type: transaction_record
-    activation_gate: API key, lawd code mapping, deal/report date separation, and duplicate transaction handling
+    activation_gate: API key, lawd code mapping, deal/report date separation, and
+      duplicate transaction handling
   - id: applyhome_presale_competition
     name: ApplyHome presale competition data
     signal_type: presale_competition
-    activation_gate: parser/API access, project id normalization, and region code mapping
+    activation_gate: parser/API access, project id normalization, and region code
+      mapping
   - id: property_listing_inventory
     name: Property listing inventory snapshots
     signal_type: listing_inventory
-    activation_gate: ToS review, anti-bot risk, stale listing policy, and listing dedupe
+    activation_gate: ToS review, anti-bot risk, stale listing policy, and listing
+      dedupe
   - id: permit_completion_public_data
     name: Permit and completion public data
     signal_type: permit_completion
-    activation_gate: public data API mapping, project id reconciliation, and date semantics
+    activation_gate: public data API mapping, project id reconciliation, and date
+      semantics
 sources:
 - name: 한경 부동산
   type: rss
@@ -100,6 +104,8 @@ sources:
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: news
+  config:
+    event_model: market_report
 - name: 매일경제 부동산
   type: rss
   url: https://www.mk.co.kr/rss/50300009/
@@ -108,6 +114,8 @@ sources:
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: news
+  config:
+    event_model: market_report
 - name: 서울경제 부동산
   type: rss
   url: https://m.sedaily.com/rss/realestate
@@ -116,27 +124,8 @@ sources:
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: news
-# NOTE: 2026-04-02 테스트에서 동작하지 않음 (404)
-# - name: 아시아경제 부동산
-#   type: rss
-#   url: https://www.asiae.co.kr/rss/estate.xml
-# NOTE: 2026-04-02 품질점검 - RSS가 아닌 HTML 반환 (F등급)
-# - name: 뉴스1 부동산
-#   type: rss
-#   url: https://www.news1.kr/rss/realestate
-# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (410/404/timeout)
-# - name: 머니투데이 부동산
-#   type: rss
-#   url: https://news.mt.co.kr/rss/estate.xml
-
-# - name: 조선비즈 부동산
-#   type: rss
-#   url: https://biz.chosun.com/rss/estate.xml
-
-# - name: 국토교통부 보도자료
-#   type: rss
-#   url: https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS
-# NOTE: 2026-04-02 URL 리다이렉트 수정
+  config:
+    event_model: market_report
 - name: LH 공사
   type: javascript
   url: https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003
@@ -147,7 +136,7 @@ sources:
   content_type: policy
   config:
     wait_for: .board_list
-# NOTE: 2026-04-02 SH 공사 URL 307 리다이렉트 - Playwright에서 자동 처리됨
+    event_model: presale_competition
 - name: SH 서울주택도시공사
   type: javascript
   url: https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do
@@ -158,10 +147,7 @@ sources:
   content_type: policy
   config:
     wait_for: body
-# NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Forbidden)
-# - name: 직방 매거진
-#   type: rss
-#   url: https://www.zigbang.com/blog/feed
+    event_model: presale_competition
 - name: 아파트실거래가
   type: javascript
   url: https://hogangnono.com/
@@ -173,6 +159,7 @@ sources:
   config:
     wait_for: body
     allow_source_context_event: true
+    event_model: transaction_record
 - name: 부동산114
   type: javascript
   url: https://www.r114.com/?_c=Research&_m=ReportNews
@@ -183,15 +170,7 @@ sources:
   content_type: news
   config:
     wait_for: body
-# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (401/404)
-# - name: Reuters Real Estate
-#   type: rss
-#   url: https://www.reuters.com/news/archive/propertyNews?view=rss
-
-# - name: Bloomberg Real Estate
-#   type: rss
-#   url: https://feeds.bloomberg.com/real-estate/news.rss
-
+    event_model: listing_inventory
 - name: r/RealEstate
   type: reddit
   url: https://www.reddit.com/r/RealEstate/
@@ -246,15 +225,6 @@ sources:
   trust_tier: T4_community
   collection_tier: C3_reddit
   content_type: community
-# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
-# - name: BiggerPockets Podcast
-#   type: rss
-#   url: https://www.biggerpockets.com/blog/real-estate-podcast?format=rss
-
-# - name: Freakonomics Real Estate
-#   type: rss
-#   url: https://freakonomics.com/series/freakonomics-radio/feed/
-
 - name: Realtor.com News
   type: rss
   url: https://www.realtor.com/news/feed/
@@ -263,10 +233,8 @@ sources:
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: news
-# NOTE: 2026-04-02 테스트에서 동작하지 않음 (403 Cloudflare)
-# - name: Zillow Research
-#   type: rss
-#   url: https://www.zillow.com/research/feed/
+  config:
+    event_model: market_report
 - name: PropertyWire UK
   type: rss
   url: https://www.propertywire.com/feed/
@@ -275,20 +243,8 @@ sources:
   trust_tier: T3_professional
   collection_tier: C1_rss
   content_type: news
-# NOTE: 아래 소스들은 2026-04-02 테스트에서 동작하지 않음 (timeout/403)
-# - name: Domain Australia
-#   type: rss
-#   url: https://www.domain.com.au/news/feed/
-
-# - name: CBRE Research
-#   type: rss
-#   url: https://www.cbre.com/insights/rss
-
-# - name: JLL Research
-#   type: rss
-#   url: https://www.jll.com/rss/research
-# === MCP 서버 소스 (한국 부동산 데이터) ===
-# NOTE: mcp-kr-realestate 저장소가 존재하지 않음 - real-estate-mcp로 통합
+  config:
+    event_model: market_report
 - name: 부동산 실거래가 MCP
   type: mcp
   url: https://github.com/tae0y/real-estate-mcp
@@ -301,17 +257,24 @@ sources:
   config:
     transport: stdio
     command: uvx
-    args: ["--from", "git+https://github.com/tae0y/real-estate-mcp", "real-estate-mcp"]
+    args:
+    - --from
+    - git+https://github.com/tae0y/real-estate-mcp
+    - real-estate-mcp
     env:
-      DATA_GO_KR_API_KEY: "${DATA_GO_KR_API_KEY}"
+      DATA_GO_KR_API_KEY: ${DATA_GO_KR_API_KEY}
     tool: get_apartment_trades
     arguments:
-      lawdCd: "11680"
-      dealYmd: "202603"
+      lawdCd: '11680'
+      dealYmd: '202603'
     transform:
       title_field: aptNm
       link_field: null
-      summary_fields: ["dealAmount", "excluUseAr", "floor", "dealDay"]
+      summary_fields:
+      - dealAmount
+      - excluUseAr
+      - floor
+      - dealDay
       published_field: dealDay
 - name: 청약정보 MCP
   type: mcp
@@ -325,16 +288,22 @@ sources:
   config:
     transport: stdio
     command: uvx
-    args: ["--from", "git+https://github.com/tae0y/real-estate-mcp", "real-estate-mcp"]
+    args:
+    - --from
+    - git+https://github.com/tae0y/real-estate-mcp
+    - real-estate-mcp
     env:
-      DATA_GO_KR_API_KEY: "${DATA_GO_KR_API_KEY}"
+      DATA_GO_KR_API_KEY: ${DATA_GO_KR_API_KEY}
     tool: get_apt_subscription_info
     arguments:
-      startmonth: "202603"
-      endmonth: "202604"
+      startmonth: '202603'
+      endmonth: '202604'
     transform:
       title_field: houseNm
-      summary_fields: ["bsnsMbyNm", "rcritPblancDe", "totSuplyHshldco"]
+      summary_fields:
+      - bsnsMbyNm
+      - rcritPblancDe
+      - totSuplyHshldco
       published_field: rcritPblancDe
 entities:
 - name: Location
@@ -584,7 +553,6 @@ entities:
 - name: PropertyGeneral
   display_name: 부동산 일반
   keywords:
-  # 핵심 부동산 용어
   - property
   - real estate
   - housing market
@@ -594,7 +562,6 @@ entities:
   - condo
   - residential
   - commercial property
-  # 거래 유형
   - buy home
   - sell home
   - rent apartment
@@ -602,13 +569,11 @@ entities:
   - mortgage
   - closing
   - escrow
-  # 시장 동향
   - housing price
   - market trend
   - property value
   - appreciation
   - depreciation
-  # 한국어 핵심 용어
   - 부동산
   - 집
   - 아파트

@@ -14,6 +14,7 @@ import yaml
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(PROJECT_ROOT.parent / "radar-core"))
 
 from propertyradar.config_loader import load_category_config, load_category_quality_config  # noqa: E402
 from propertyradar.quality_report import build_quality_report, write_quality_report  # noqa: E402

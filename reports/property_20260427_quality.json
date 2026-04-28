@@ -1,6 +1,6 @@
 {
   "category": "property",
-  "generated_at": "2026-04-28T00:41:13.843621+00:00",
+  "generated_at": "2026-04-27T23:45:15.637135+00:00",
   "scope_note": "Property quality rows separate operating signals such as transaction, presale, listing inventory, and permit/completion evidence from broad news or community market commentary. Proxy rows are review items until source-level identifiers and dates are collected.",
   "summary": {
     "total_sources": 17,
@@ -49,7 +49,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 40,
+      "article_count": 42,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -121,7 +121,7 @@
       "article_count": 1,
       "event_count": 1,
       "latest_event_at": "2026-04-24T15:06:07.972382+00:00",
-      "age_days": 3.4,
+      "age_days": 3.36,
       "latest_title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "latest_url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003",
       "latest_canonical_key": "property_project:title:c0e5a8a189a1",
@@ -148,7 +148,7 @@
       "article_count": 1,
       "event_count": 1,
       "latest_event_at": "2026-04-24T15:06:14.745860+00:00",
-      "age_days": 3.4,
+      "age_days": 3.36,
       "latest_title": "SH서울주택도시개발공사",
       "latest_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
       "latest_canonical_key": "property_project:11680:title:9a3eb8b1e98c",
@@ -174,7 +174,7 @@
       "article_count": 1,
       "event_count": 1,
       "latest_event_at": "2026-04-24T15:06:25.945158+00:00",
-      "age_days": 3.4,
+      "age_days": 3.36,
       "latest_title": "호갱노노 - 아파트 실거래가 1등 앱",
       "latest_url": "https://hogangnono.com/",
       "latest_canonical_key": "",
@@ -360,7 +360,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 43,
+      "article_count": 44,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -2051,6 +2051,61 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
+      "title": "Redwood Bank completes multi-property refinancing package",
+      "url": "https://www.propertywire.com/news/uk/redwood-bank-completes-multi-property-refinancing-package/",
+      "source_url": "https://www.propertywire.com/news/uk/redwood-bank-completes-multi-property-refinancing-package/",
+      "event_at": "2026-04-21T02:02:11+00:00",
+      "matched_entities": {
+        "Market": [
+          "property"
+        ],
+        "PropertyGeneral": [
+          "property",
+          "residential"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "US",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 943470.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "Redwood Bank completes multi-property refinancing package",
+      "competition_rate": null,
+      "property_type": "residential",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:85827bba7c62:20260421",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area"
+      ]
+    },
+    {
+      "source": "PropertyWire UK",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
       "title": "Care home operator secures £600k bridging loan for expansion",
       "url": "https://www.propertywire.com/news/uk/care-home-operator-secures-600k-bridging-loan-for-expansion/",
       "source_url": "https://www.propertywire.com/news/uk/care-home-operator-secures-600k-bridging-loan-for-expansion/",
@@ -2086,61 +2141,6 @@
       "canonical_key": "",
       "canonical_key_status": "missing",
       "event_key": "transaction_record:673fab3d1549:20260421",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": false,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name",
-        "area"
-      ]
-    },
-    {
-      "source": "PropertyWire UK",
-      "source_type": "rss",
-      "trust_tier": "T3_professional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "Redwood Bank completes multi-property refinancing package",
-      "url": "https://www.propertywire.com/news/uk/redwood-bank-completes-multi-property-refinancing-package/",
-      "source_url": "https://www.propertywire.com/news/uk/redwood-bank-completes-multi-property-refinancing-package/",
-      "event_at": "2026-04-21T02:02:11+00:00",
-      "matched_entities": {
-        "Market": [
-          "property"
-        ],
-        "PropertyGeneral": [
-          "property",
-          "residential"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 943470.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Redwood Bank completes multi-property refinancing package",
-      "competition_rate": null,
-      "property_type": "residential",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:85827bba7c62:20260421",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -2892,8 +2892,8 @@
       "reason": "missing_canonical_key",
       "event_model": "transaction_record",
       "source": "PropertyWire UK",
-      "title": "Care home operator secures £600k bridging loan for expansion",
-      "event_key": "transaction_record:673fab3d1549:20260421"
+      "title": "Redwood Bank completes multi-property refinancing package",
+      "event_key": "transaction_record:85827bba7c62:20260421"
     }
   ],
   "source_backlog": {

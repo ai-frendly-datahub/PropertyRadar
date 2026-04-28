@@ -7,6 +7,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import cast
 
+from radar_core.ontology import annotate_articles_with_ontology
+
 from propertyradar.analyzer import apply_entity_rules
 from propertyradar.collector import collect_sources
 from propertyradar.config_loader import (
@@ -123,6 +125,14 @@ def run(
             _ = raw_logger.log(source_articles, source_name=source.name)
 
     analyzed = apply_entity_rules(collected, category_cfg.entities)
+    analyzed = annotate_articles_with_ontology(
+        analyzed,
+        repo_name="PropertyRadar",
+        sources_by_name={source.name: source for source in category_cfg.sources},
+        category_name=category_cfg.category_name,
+        search_from=Path(__file__),
+        attach_event_model_payload=True,
+    )
 
     with RadarStorage(settings.database_path) as storage:
         storage.upsert_articles(analyzed)

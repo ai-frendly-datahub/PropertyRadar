@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import os
+import re
 import threading
 import time
 from collections.abc import Mapping
@@ -32,6 +33,7 @@ _DEFAULT_HEALTH_DB_PATH = "data/radar_data.duckdb"
 _COLLECTION_CONTROL_LOCK = threading.Lock()
 _ACTIVE_THROTTLER: AdaptiveThrottler | None = None
 _ACTIVE_HEALTH_STORE: CrawlHealthStore | None = None
+_ASCII_TOKEN_RE = re.compile(r"[0-9a-z]")
 
 
 def _set_collection_controls(
@@ -190,6 +192,52 @@ def _detect_encoding(response: requests.Response) -> str:
             if part.startswith("charset="):
                 return part.split("=", 1)[1].strip()
     return "utf-8"
+
+
+def _config_string_list(config: Mapping[str, object], key: str) -> list[str]:
+    raw = config.get(key)
+    if isinstance(raw, str) and raw.strip():
+        values: list[object] = [raw]
+    elif isinstance(raw, list):
+        values = raw
+    elif isinstance(raw, tuple | set):
+        values = list(raw)
+    else:
+        return []
+    return [str(value).strip() for value in values if str(value).strip()]
+
+
+def _matches_scope_keyword(text_lower: str, keyword: str) -> bool:
+    normalized = keyword.casefold().strip()
+    if not normalized:
+        return False
+    if normalized.isascii() and _ASCII_TOKEN_RE.search(normalized):
+        pattern = rf"(?<![0-9a-z]){re.escape(normalized)}(?![0-9a-z])"
+        return re.search(pattern, text_lower) is not None
+    return normalized in text_lower
+
+
+def article_matches_source_scope(
+    source: Source,
+    title: str,
+    summary: str,
+    link: str = "",
+) -> bool:
+    include_keywords = _config_string_list(source.config, "include_keywords")
+    exclude_keywords = _config_string_list(source.config, "exclude_keywords")
+    if not include_keywords and not exclude_keywords:
+        return True
+
+    text_lower = f"{title}\n{summary}\n{link}".casefold()
+    if include_keywords and not any(
+        _matches_scope_keyword(text_lower, keyword) for keyword in include_keywords
+    ):
+        return False
+    if exclude_keywords and any(
+        _matches_scope_keyword(text_lower, keyword) for keyword in exclude_keywords
+    ):
+        return False
+    return True
 
 
 def collect_sources(
@@ -359,6 +407,8 @@ def _collect_single(
                         summary = extracted_summary
             link = _resolve_entry_link(entry, fallback_url=source.url)
             summary_text = html.unescape(summary.strip()) if summary.strip() else title_text
+            if not article_matches_source_scope(source, title_text, summary_text, link):
+                continue
 
             items.append(
                 Article(

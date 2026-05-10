@@ -77,6 +77,7 @@ def generate_index_html(
 def _build_property_quality_section(quality_report: Mapping[str, Any]) -> dict[str, Any]:
     summary = _mapping(quality_report.get("summary"))
     events = _list_of_mappings(quality_report.get("events"))
+    activation_items = _list_of_mappings(quality_report.get("source_activation_items"))
     review_items = _list_of_mappings(quality_report.get("daily_review_items"))
     cards = [
         ("Property signals", summary.get("property_signal_event_count", 0)),
@@ -86,6 +87,7 @@ def _build_property_quality_section(quality_report: Mapping[str, Any]) -> dict[s
         ("Permits", summary.get("permit_completion_events", 0)),
         ("Required gaps", summary.get("event_required_field_gap_count", 0)),
         ("Proxy keys", summary.get("proxy_canonical_key_count", 0)),
+        ("Activation", summary.get("source_activation_item_count", 0)),
         ("Review items", summary.get("daily_review_item_count", 0)),
     ]
     cards_html = "\n".join(
@@ -104,6 +106,9 @@ def _build_property_quality_section(quality_report: Mapping[str, Any]) -> dict[s
             f"<div class=\"metric-grid\">{cards_html}</div>"
             "<div><h3>Observed Events</h3>"
             f"{_render_quality_events(events)}"
+            "</div>"
+            "<div><h3>Source Activation</h3>"
+            f"{_render_source_activation(activation_items)}"
             "</div>"
             "<div><h3>Daily Review</h3>"
             f"{_render_quality_review(review_items)}"
@@ -131,6 +136,32 @@ def _render_quality_events(events: list[Mapping[str, Any]]) -> str:
         "<div style=\"overflow-x:auto;\">"
         "<table class=\"data-table\"><thead><tr>"
         "<th>Model</th><th>Source</th><th>Canonical key</th><th>Status</th><th>Gaps</th>"
+        "</tr></thead><tbody>"
+        + "\n".join(rows)
+        + "</tbody></table></div>"
+    )
+
+
+def _render_source_activation(items: list[Mapping[str, Any]]) -> str:
+    if not items:
+        return "<p>No source activation items.</p>"
+    rows = []
+    for item in items[:8]:
+        required_env = ", ".join(str(value) for value in item.get("required_env") or [])
+        label = item.get("source") or item.get("signal_type") or ""
+        rows.append(
+            "<tr>"
+            f"<td>{escape(str(item.get('reason') or ''))}</td>"
+            f"<td>{escape(str(label))}</td>"
+            f"<td>{escape(str(item.get('event_model') or item.get('signal_type') or ''))}</td>"
+            f"<td>{escape(required_env)}</td>"
+            f"<td>{escape(str(item.get('activation_gate') or ''))}</td>"
+            "</tr>"
+        )
+    return (
+        "<div style=\"overflow-x:auto;\">"
+        "<table class=\"data-table\"><thead><tr>"
+        "<th>Reason</th><th>Source</th><th>Signal</th><th>Required env</th><th>Gate</th>"
         "</tr></thead><tbody>"
         + "\n".join(rows)
         + "</tbody></table></div>"

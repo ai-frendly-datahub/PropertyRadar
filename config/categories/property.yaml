@@ -235,6 +235,10 @@ sources:
   content_type: news
   config:
     event_model: market_report
+    exclude_keywords:
+    - HGTV
+    - reality TV
+    - family photos
 - name: PropertyWire UK
   type: rss
   url: https://www.propertywire.com/feed/
@@ -558,6 +562,11 @@ entities:
   - housing market
   - home buying
   - home selling
+  - homeowner
+  - homeowners
+  - homeownership
+  - homebuilder
+  - homebuilders
   - apartment
   - condo
   - residential

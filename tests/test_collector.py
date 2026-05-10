@@ -3,7 +3,11 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from unittest.mock import Mock, patch
 
-from propertyradar.collector import _collect_single, collect_sources
+from propertyradar.collector import (
+    _collect_single,
+    article_matches_source_scope,
+    collect_sources,
+)
 from propertyradar.models import Article, Source
 
 
@@ -87,3 +91,25 @@ def test_collect_single_falls_back_to_source_url_for_invalid_entry_id() -> None:
     assert articles[0].title == "Fallback title"
     assert articles[0].summary == "Fallback title"
     assert articles[0].link == "https://example.com/feed"
+
+
+def test_article_matches_source_scope_excludes_realtor_entertainment_items() -> None:
+    source = Source(
+        name="Realtor.com News",
+        type="rss",
+        url="https://www.realtor.com/news/feed/",
+        config={"exclude_keywords": ["HGTV", "reality TV", "family photos"]},
+    )
+
+    assert not article_matches_source_scope(
+        source,
+        "HGTV Alums Post Rare Glimpse of Daughters in Family Photos",
+        "Reality TV personalities shared photos.",
+        "https://www.realtor.com/news/reality-tv/example/",
+    )
+    assert article_matches_source_scope(
+        source,
+        "Why Fewer Young Married Homeowners Signal a Major Economic Shift",
+        "Homeownership rates are changing.",
+        "https://www.realtor.com/news/trends/example/",
+    )

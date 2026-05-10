@@ -10,7 +10,7 @@ from typing import cast
 from radar_core.ontology import annotate_articles_with_ontology
 
 from propertyradar.analyzer import apply_entity_rules
-from propertyradar.collector import collect_sources
+from propertyradar.collector import article_matches_source_scope, collect_sources
 from propertyradar.config_loader import (
     load_category_config,
     load_category_quality_config,
@@ -26,6 +26,7 @@ from propertyradar.quality_report import build_quality_report, write_quality_rep
 from propertyradar.raw_logger import RawLogger
 from propertyradar.reporter import generate_index_html, generate_report
 from propertyradar.storage import RadarStorage
+from propertyradar.models import Article, Source
 
 
 logger = get_logger(__name__)
@@ -39,6 +40,17 @@ def _daily_report_path(cycle_start: datetime, report_dir: Path, category: str) -
 def _summary_report_path(cycle_start: datetime, report_dir: Path, category: str) -> Path:
     stamp = cycle_start.astimezone(UTC).strftime("%Y%m%d")
     return report_dir / f"{category}_{stamp}_summary.json"
+
+
+def _latest_summary_path(report_dir: Path, category: str) -> Path | None:
+    candidates = [
+        path
+        for path in report_dir.glob(f"{category}_*_summary.json")
+        if path.is_file()
+    ]
+    if not candidates:
+        return None
+    return max(candidates, key=lambda path: path.stat().st_mtime)
 
 
 def _update_latest_report(report_path: Path, category: str) -> Path:
@@ -79,6 +91,14 @@ def _augment_summary_with_quality(
     summary["quality_summary"] = quality_summary
     if warnings:
         summary["warnings"] = warnings
+
+    activation_items = quality_report.get("source_activation_items")
+    if isinstance(activation_items, list) and activation_items:
+        summary["source_activation_items"] = activation_items[:12]
+
+    review_items = quality_report.get("daily_review_items")
+    if isinstance(review_items, list) and review_items:
+        summary["quality_review_items"] = review_items[:12]
 
     summary_path.write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
@@ -137,11 +157,17 @@ def run(
     with RadarStorage(settings.database_path) as storage:
         storage.upsert_articles(analyzed)
         _ = storage.delete_older_than(keep_days)
-        recent_articles = storage.recent_articles(category_cfg.category_name, days=recent_days)
-        quality_articles = storage.recent_articles(
-            category_cfg.category_name,
-            days=max(recent_days, 14),
-            limit=max(500, per_source_limit * max(len(category_cfg.sources), 1) * 2),
+        recent_articles = _filter_report_articles(
+            storage.recent_articles(category_cfg.category_name, days=recent_days),
+            category_cfg.sources,
+        )
+        quality_articles = _filter_report_articles(
+            storage.recent_articles(
+                category_cfg.category_name,
+                days=max(recent_days, 14),
+                limit=max(500, per_source_limit * max(len(category_cfg.sources), 1) * 2),
+            ),
+            category_cfg.sources,
         )
 
     snapshot_path = (
@@ -193,7 +219,9 @@ def run(
         quality_report=quality_report,
     )
     latest_path = _update_latest_report(report_path, category_cfg.category_name)
-    summary_path = _summary_report_path(cycle_start, settings.report_dir, category_cfg.category_name)
+    summary_path = _latest_summary_path(
+        settings.report_dir, category_cfg.category_name
+    ) or _summary_report_path(cycle_start, settings.report_dir, category_cfg.category_name)
     _augment_summary_with_quality(summary_path, quality_report)
     quality_paths = write_quality_report(
         quality_report,
@@ -207,6 +235,27 @@ def run(
         logger.warning("collection_errors", errors_count=len(errors))
 
     return report_path
+
+
+def _filter_report_articles(
+    articles: list[Article],
+    sources: list[Source],
+) -> list[Article]:
+    sources_by_name = {source.name: source for source in sources}
+    scoped_articles: list[Article] = []
+    for article in articles:
+        source = sources_by_name.get(article.source)
+        if source is None:
+            scoped_articles.append(article)
+            continue
+        if article_matches_source_scope(
+            source,
+            article.title,
+            article.summary,
+            article.link,
+        ):
+            scoped_articles.append(article)
+    return scoped_articles
 
 
 def parse_args() -> argparse.Namespace:

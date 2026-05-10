@@ -111,3 +111,51 @@ def test_run_writes_dated_report_latest_copy_and_snapshot(tmp_path, monkeypatch)
     raw_path = tmp_path / "data" / "raw" / "2026-04-12" / "Test.jsonl"
     assert raw_path.exists()
     assert "Seoul apartment" in raw_path.read_text(encoding="utf-8")
+
+
+def test_augment_summary_with_quality_includes_review_and_activation_items(tmp_path):
+    summary_path = tmp_path / "property_20260412_summary.json"
+    summary_path.write_text(
+        json.dumps(
+            {
+                "category": "property",
+                "date": "2026-04-12",
+                "article_count": 1,
+                "source_count": 1,
+                "matched_count": 0,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    property_main._augment_summary_with_quality(
+        summary_path,
+        {
+            "summary": {
+                "collection_error_count": 0,
+                "stale_sources": 0,
+                "missing_sources": 0,
+                "source_activation_item_count": 1,
+            },
+            "source_activation_items": [
+                {
+                    "reason": "disabled_operational_source",
+                    "source": "MOLIT Trades MCP",
+                }
+            ],
+            "daily_review_items": [
+                {
+                    "reason": "source_backlog_pending",
+                    "source": "MOLIT real estate transaction API",
+                }
+            ],
+        },
+    )
+
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    assert summary["quality_summary"]["source_activation_item_count"] == 1
+    assert summary["source_activation_items"][0]["reason"] == "disabled_operational_source"
+    assert summary["quality_review_items"][0]["reason"] == "source_backlog_pending"

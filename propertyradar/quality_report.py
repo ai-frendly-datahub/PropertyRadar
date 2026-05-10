@@ -131,19 +131,36 @@ def build_quality_report(
     }
     for event_model in TRACKED_EVENT_MODEL_ORDER:
         summary[f"{event_model}_events"] = event_counts.get(event_model, 0)
-    summary.update(
-        _event_quality_summary(
-            events=events,
-            source_rows=source_rows,
-            quality_config=quality_config or {},
-            tracked_models=tracked_models,
-        )
+    event_quality_summary = _event_quality_summary(
+        events=events,
+        source_rows=source_rows,
+        quality_config=quality_config or {},
+        tracked_models=tracked_models,
+    )
+    source_activation_items = _source_activation_items(
+        sources=category.sources,
+        source_rows=source_rows,
+        quality_config=quality_config or {},
+        tracked_models=tracked_models,
+    )
+    summary.update(event_quality_summary)
+    summary["source_activation_item_count"] = len(source_activation_items)
+    summary["disabled_operational_source_count"] = sum(
+        1 for item in source_activation_items if item.get("reason") == "disabled_operational_source"
+    )
+    summary["enabled_operational_gap_count"] = sum(
+        1 for item in source_activation_items if item.get("reason") == "tracked_operational_source_gap"
+    )
+    summary["operational_coverage_status"] = _operational_coverage_status(
+        event_quality_summary=event_quality_summary,
+        source_activation_items=source_activation_items,
     )
     daily_review_items = _daily_review_items(
         events=events,
         source_rows=source_rows,
         quality_config=quality_config or {},
         tracked_models=tracked_models,
+        source_activation_items=source_activation_items,
     )
     summary["daily_review_item_count"] = len(daily_review_items)
 
@@ -159,6 +176,7 @@ def build_quality_report(
         "summary": summary,
         "sources": source_rows,
         "events": events,
+        "source_activation_items": source_activation_items,
         "daily_review_items": daily_review_items,
         "source_backlog": (quality_config or {}).get("source_backlog", {}),
         "errors": error_rows,
@@ -505,8 +523,11 @@ def _daily_review_items(
     source_rows: list[dict[str, Any]],
     quality_config: Mapping[str, object],
     tracked_models: list[str],
+    source_activation_items: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
-    review: list[dict[str, Any]] = []
+    review: list[dict[str, Any]] = [
+        dict(item) for item in (source_activation_items or [])
+    ]
     for row in events:
         gaps = [str(value) for value in row.get("required_field_gaps") or []]
         if gaps and _counts_as_structured_gap(row):
@@ -571,16 +592,155 @@ def _daily_review_items(
         if event_model in tracked_models and event_counts.get(event_model, 0) == 0:
             review.append({"reason": "missing_event_model", "event_model": event_model})
 
+    return review[:50]
+
+
+def _source_activation_items(
+    *,
+    sources: list[Source],
+    source_rows: list[dict[str, Any]],
+    quality_config: Mapping[str, object],
+    tracked_models: list[str],
+) -> list[dict[str, Any]]:
+    rows_by_source = {str(row.get("source") or ""): row for row in source_rows}
+    backlog_by_signal = _source_backlog_by_signal(quality_config)
+    review: list[dict[str, Any]] = []
+
+    for source in sources:
+        event_model = _source_event_model(source, tracked_models)
+        if event_model not in tracked_models:
+            continue
+
+        source_row = rows_by_source.get(source.name, {})
+        if not source.enabled and _is_operational_activation_source(source, event_model):
+            review.append(
+                {
+                    "reason": "disabled_operational_source",
+                    "source": source.name,
+                    "source_type": source.type,
+                    "event_model": event_model,
+                    "trust_tier": source.trust_tier,
+                    "content_type": source.content_type,
+                    "required_env": _required_env_names(source),
+                    "command": _source_command(source),
+                    "activation_gate": _activation_gate_for_signal(
+                        event_model, backlog_by_signal
+                    ),
+                    "detail": (
+                        "Official or operational source is configured but disabled; "
+                        "do not treat proxy news events as a replacement."
+                    ),
+                }
+            )
+            continue
+
+        if source.enabled and source_row.get("status") in {
+            "missing",
+            "missing_event",
+            "unknown_event_date",
+            "stale",
+        }:
+            review.append(
+                {
+                    "reason": "tracked_operational_source_gap",
+                    "source": source.name,
+                    "source_type": source.type,
+                    "event_model": event_model,
+                    "status": source_row.get("status"),
+                    "age_days": source_row.get("age_days"),
+                    "latest_title": source_row.get("latest_title"),
+                    "activation_gate": _activation_gate_for_signal(
+                        event_model, backlog_by_signal
+                    ),
+                    "detail": (
+                        "Tracked source is enabled, but this report window did not "
+                        "produce a fresh structured event."
+                    ),
+                }
+            )
+
     for item in _source_backlog_items(quality_config):
+        signal_type = str(item.get("signal_type") or "")
         review.append(
             {
                 "reason": "source_backlog_pending",
                 "source": item.get("name") or item.get("id"),
-                "signal_type": item.get("signal_type"),
+                "signal_type": signal_type,
                 "activation_gate": item.get("activation_gate"),
             }
         )
-    return review[:50]
+    return review
+
+
+def _source_backlog_by_signal(
+    quality_config: Mapping[str, object],
+) -> dict[str, list[Mapping[str, object]]]:
+    rows: dict[str, list[Mapping[str, object]]] = {}
+    for item in _source_backlog_items(quality_config):
+        signal_type = str(item.get("signal_type") or "")
+        if signal_type:
+            rows.setdefault(signal_type, []).append(item)
+    return rows
+
+
+def _activation_gate_for_signal(
+    signal_type: str,
+    backlog_by_signal: Mapping[str, list[Mapping[str, object]]],
+) -> str:
+    gates = [
+        str(item.get("activation_gate") or "").strip()
+        for item in backlog_by_signal.get(signal_type, [])
+        if str(item.get("activation_gate") or "").strip()
+    ]
+    return "; ".join(dict.fromkeys(gates))
+
+
+def _is_operational_activation_source(source: Source, event_model: str) -> bool:
+    return (
+        source.type.lower() in {"api", "mcp"}
+        or str(source.trust_tier or "").startswith("T1_")
+        or str(source.content_type or "").lower() in {"price", "policy"}
+        or event_model in {"transaction_record", "presale_competition", "listing_inventory", "permit_completion"}
+    )
+
+
+def _required_env_names(source: Source) -> list[str]:
+    raw_env = source.config.get("env")
+    values: list[str] = []
+    if isinstance(raw_env, Mapping):
+        for key, value in raw_env.items():
+            values.append(str(key))
+            values.extend(re.findall(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}", str(value)))
+    elif isinstance(raw_env, list):
+        values.extend(str(value) for value in raw_env)
+    elif isinstance(raw_env, str):
+        values.append(raw_env)
+        values.extend(re.findall(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}", raw_env))
+    return sorted({value for value in values if value and not value.startswith("${")})
+
+
+def _source_command(source: Source) -> str:
+    command = str(source.config.get("command") or "").strip()
+    args = source.config.get("args")
+    if not command:
+        return ""
+    if isinstance(args, list):
+        rendered_args = " ".join(str(arg) for arg in args if str(arg).strip())
+        return f"{command} {rendered_args}".strip()
+    return command
+
+
+def _operational_coverage_status(
+    *,
+    event_quality_summary: Mapping[str, int],
+    source_activation_items: list[dict[str, Any]],
+) -> str:
+    official_or_operational = int(event_quality_summary.get("official_or_operational_event_count") or 0)
+    if official_or_operational == 0:
+        return "proxy_only"
+    if source_activation_items:
+        return "activation_required"
+    return "covered"
 
 
 def _counts_as_structured_gap(row: Mapping[str, Any]) -> bool:

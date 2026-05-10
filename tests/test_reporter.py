@@ -146,6 +146,7 @@ def test_generate_report_includes_property_quality_panel(tmp_path, monkeypatch):
                 "transaction_record_events": 1,
                 "event_required_field_gap_count": 1,
                 "proxy_canonical_key_count": 1,
+                "source_activation_item_count": 1,
                 "daily_review_item_count": 1,
             },
             "events": [
@@ -163,6 +164,15 @@ def test_generate_report_includes_property_quality_panel(tmp_path, monkeypatch):
                     "source": "Realtor.com News",
                 }
             ],
+            "source_activation_items": [
+                {
+                    "reason": "disabled_operational_source",
+                    "source": "MOLIT Trades MCP",
+                    "event_model": "transaction_record",
+                    "required_env": ["DATA_GO_KR_API_KEY"],
+                    "activation_gate": "API key and lawd code mapping",
+                }
+            ],
         },
     )
 
@@ -170,6 +180,8 @@ def test_generate_report_includes_property_quality_panel(tmp_path, monkeypatch):
     assert "Property Quality" in html
     assert "transaction_record" in html
     assert "property:11680:raemian:84-9" in html
+    assert "Source Activation" in html
+    assert "DATA_GO_KR_API_KEY" in html
     assert "missing_required_fields" in html
 
     summary_path = tmp_path / "reports" / "test_20240315_summary.json"

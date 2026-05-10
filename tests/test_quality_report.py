@@ -230,6 +230,61 @@ def test_build_quality_report_accepts_opt_in_source_context_event() -> None:
     assert report["summary"]["event_required_field_gap_count"] == 0
 
 
+def test_build_quality_report_prioritizes_source_activation_items() -> None:
+    now = datetime(2026, 4, 14, tzinfo=UTC)
+    source = Source(
+        name="MOLIT Trades MCP",
+        type="mcp",
+        url="https://github.com/example/real-estate-mcp",
+        enabled=False,
+        trust_tier="T1_official",
+        content_type="price",
+        config={
+            "command": "uvx",
+            "args": ["real-estate-mcp"],
+            "env": {"DATA_GO_KR_API_KEY": "${DATA_GO_KR_API_KEY}"},
+            "tool": "get_apartment_trades",
+        },
+    )
+    category = CategoryConfig(
+        category_name="property",
+        display_name="Property",
+        sources=[source],
+        entities=[],
+    )
+
+    report = build_quality_report(
+        category=category,
+        articles=[],
+        quality_config=_quality_config(),
+        generated_at=now,
+    )
+
+    assert report["summary"]["source_activation_item_count"] == 2
+    assert report["summary"]["disabled_operational_source_count"] == 1
+    assert report["summary"]["operational_coverage_status"] == "proxy_only"
+    assert report["source_activation_items"][0] == {
+        "reason": "disabled_operational_source",
+        "source": "MOLIT Trades MCP",
+        "source_type": "mcp",
+        "event_model": "transaction_record",
+        "trust_tier": "T1_official",
+        "content_type": "price",
+        "required_env": ["DATA_GO_KR_API_KEY"],
+        "command": "uvx real-estate-mcp",
+        "activation_gate": "API key and lawd code mapping",
+        "detail": (
+            "Official or operational source is configured but disabled; "
+            "do not treat proxy news events as a replacement."
+        ),
+    }
+    assert report["daily_review_items"][0]["reason"] == "disabled_operational_source"
+    assert any(
+        item["reason"] == "source_backlog_pending"
+        for item in report["source_activation_items"]
+    )
+
+
 def test_build_quality_report_does_not_count_subway_line_as_listing_count() -> None:
     now = datetime(2026, 4, 14, tzinfo=UTC)
     source = Source(

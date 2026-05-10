@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from propertyradar.analyzer import apply_entity_rules
+from propertyradar.config_loader import load_category_config
 from propertyradar.models import Article, EntityDefinition
 
 
@@ -82,3 +83,16 @@ def test_ascii_word_boundary():
     results = apply_entity_rules([article], entities)
     # "apart" should NOT match "Apartments" due to word boundary
     assert results[0].matched_entities == {}
+
+
+def test_real_config_matches_homeownership_market_terms():
+    """Current Realtor.com market rows classify homeowner terminology."""
+    config = load_category_config("property")
+    article = _make_article(
+        title="Why Fewer Young Married Homeowners Signal a Major Economic Shift",
+        summary="The homeownership rate has plunged since 1960.",
+    )
+
+    results = apply_entity_rules([article], config.entities)
+
+    assert "PropertyGeneral" in results[0].matched_entities

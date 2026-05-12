@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-visual-system="radar-unified-v2" data-visual-surface="index">
+<html lang="en" data-visual-system="radar-unified-v2" data-visual-surface="report" data-visual-page="index">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,30 +22,50 @@
   <style>
 
     :root {
+      --vs-bg-0: #0b0b0f;
+      --vs-bg-1: #121116;
+      --vs-surface-0: rgba(28, 26, 34, 0.85);
+      --vs-surface-1: rgba(36, 33, 43, 0.95);
+      --vs-surface-alt: rgba(24, 22, 29, 0.72);
+      --vs-text: #e4e6eb;
+      --vs-text-muted: #b0b3b8;
+      --vs-text-faint: rgba(233, 238, 251, 0.52);
+      --vs-line: rgba(244, 244, 247, 0.14);
+      --vs-line-strong: rgba(244, 244, 247, 0.22);
+      --vs-brand: #33d6c5;
+      --vs-brand-strong: #f6c84c;
+      --vs-danger: #ff5b6e;
+      --vs-shadow: 0 4px 24px rgba(0, 0, 0, 0.28);
+      --vs-shadow-glow: 0 0 40px rgba(51, 214, 197, 0.12);
+      --vs-font-sans: "Pretendard Variable", "Pretendard", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --vs-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      --vs-radius: 10px;
+      --vs-max: 1280px;
 
-      --bg-primary: #0b0b0f;
-      --bg-secondary: #121116;
-      --bg-card: rgba(28, 26, 34, 0.85);
-      --bg-card-hover: rgba(36, 33, 43, 0.95);
-      --bg-glass: rgba(24, 22, 29, 0.72);
+
+      --bg-primary: var(--vs-bg-0);
+      --bg-secondary: var(--vs-bg-1);
+      --bg-card: var(--vs-surface-0);
+      --bg-card-hover: var(--vs-surface-1);
+      --bg-glass: var(--vs-surface-alt);
 
 
-      --text-primary: #e4e6eb;
-      --text-secondary: #b0b3b8;
+      --text-primary: var(--vs-text);
+      --text-secondary: var(--vs-text-muted);
       --text-muted: #6b7280;
-      --text-faint: rgba(233, 238, 251, 0.52);
+      --text-faint: var(--vs-text-faint);
 
 
-      --accent-primary: #33d6c5;
-      --accent-secondary: #f6c84c;
-      --accent-highlight: #f6c84c;
-      --accent-danger: #ff5b6e;
+      --accent-primary: var(--vs-brand);
+      --accent-secondary: var(--vs-brand-strong);
+      --accent-highlight: var(--vs-brand-strong);
+      --accent-danger: var(--vs-danger);
 
 
-      --border-color: rgba(244, 244, 247, 0.14);
-      --border-highlight: rgba(244, 244, 247, 0.22);
-      --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.28);
-      --shadow-glow: 0 0 40px rgba(51, 214, 197, 0.12);
+      --border-color: var(--vs-line);
+      --border-highlight: var(--vs-line-strong);
+      --shadow-soft: var(--vs-shadow);
+      --shadow-glow: var(--vs-shadow-glow);
 
 
       --space-1: 0.25rem;
@@ -60,20 +80,20 @@
 
 
       --radius-sm: 6px;
-      --radius-md: 10px;
+      --radius-md: var(--vs-radius);
       --radius-lg: 8px;
       --radius-xl: 8px;
 
 
-      --font-sans: "Pretendard Variable", "Pretendard", ui-sans-serif, system-ui, -apple-system, sans-serif;
-      --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      --font-sans: var(--vs-font-sans);
+      --font-mono: var(--vs-font-mono);
 
 
       --transition-fast: 0.15s ease-out;
       --transition-normal: 0.25s ease-out;
 
 
-      --max-width: 1280px;
+      --max-width: var(--vs-max);
     }
 
 
@@ -511,7 +531,7 @@
 
       <div class="header__stats">
         <div class="stat-item">
-          <span class="stat-value">11</span>
+          <span class="stat-value">3</span>
           <span class="stat-label">Total Reports</span>
         </div>
 
@@ -618,182 +638,6 @@
             </div>
           </a>
 
-          <a href="property_20260421.html" class="report-card" data-date="2026-04-21" data-name="property - 2026-04-21" data-title="property - 2026-04-21" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-21</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-21">
-
-            </div>
-          </a>
-
-          <a href="property_20260420.html" class="report-card" data-date="2026-04-20" data-name="property - 2026-04-20" data-title="property - 2026-04-20" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-20</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-20">
-
-            </div>
-          </a>
-
-          <a href="property_20260419.html" class="report-card" data-date="2026-04-19" data-name="property - 2026-04-19" data-title="property - 2026-04-19" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-19</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-19">
-
-            </div>
-          </a>
-
-          <a href="property_20260418.html" class="report-card" data-date="2026-04-18" data-name="property - 2026-04-18" data-title="property - 2026-04-18" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-18</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-18">
-
-            </div>
-          </a>
-
-          <a href="property_20260417.html" class="report-card" data-date="2026-04-17" data-name="property - 2026-04-17" data-title="property - 2026-04-17" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-17</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-17">
-
-            </div>
-          </a>
-
-          <a href="property_20260416.html" class="report-card" data-date="2026-04-16" data-name="property - 2026-04-16" data-title="property - 2026-04-16" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-16</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-16">
-
-            </div>
-          </a>
-
-          <a href="property_20260415.html" class="report-card" data-date="2026-04-15" data-name="property - 2026-04-15" data-title="property - 2026-04-15" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-15</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-15">
-
-            </div>
-          </a>
-
-          <a href="property_20260414.html" class="report-card" data-date="2026-04-14" data-name="property - 2026-04-14" data-title="property - 2026-04-14" data-entities="">
-            <div class="report-card__header">
-              <span class="report-card__date">2026-04-14</span>
-
-              <span class="report-card__badge">Daily</span>
-
-            </div>
-            <div class="report-card__meta">
-              <span class="report-card__meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                View Report
-              </span>
-            </div>
-
-            <div class="report-card__entities" data-summary-date="2026-04-14">
-
-            </div>
-          </a>
-
           <a href="property_report.html" class="report-card" data-date="" data-name="Property Report" data-title="Property Report" data-entities="">
             <div class="report-card__header">
               <span class="report-card__date">Property Report</span>
@@ -827,7 +671,7 @@
         <span class="footer__timestamp">
 
 
-              2026-05-12T08:38:35.107873+00:00
+              2026-05-12T20:43:23.783680+00:00
 
 
         </span>
@@ -843,9 +687,9 @@
 
     const RADAR_DATA = {
       name: "Property Radar",
-      reports: [{"date": "2026-05-12", "date_label": "2026-05-12", "display_name": "property_report - 2026-05-12", "filename": "property_report_20260512.html"}, {"date": "2026-05-12", "date_label": "2026-05-12", "display_name": "property - 2026-05-12", "filename": "property_20260512.html"}, {"date": "2026-04-21", "date_label": "2026-04-21", "display_name": "property - 2026-04-21", "filename": "property_20260421.html"}, {"date": "2026-04-20", "date_label": "2026-04-20", "display_name": "property - 2026-04-20", "filename": "property_20260420.html"}, {"date": "2026-04-19", "date_label": "2026-04-19", "display_name": "property - 2026-04-19", "filename": "property_20260419.html"}, {"date": "2026-04-18", "date_label": "2026-04-18", "display_name": "property - 2026-04-18", "filename": "property_20260418.html"}, {"date": "2026-04-17", "date_label": "2026-04-17", "display_name": "property - 2026-04-17", "filename": "property_20260417.html"}, {"date": "2026-04-16", "date_label": "2026-04-16", "display_name": "property - 2026-04-16", "filename": "property_20260416.html"}, {"date": "2026-04-15", "date_label": "2026-04-15", "display_name": "property - 2026-04-15", "filename": "property_20260415.html"}, {"date": "2026-04-14", "date_label": "2026-04-14", "display_name": "property - 2026-04-14", "filename": "property_20260414.html"}, {"date": "", "date_label": "", "display_name": "Property Report", "filename": "property_report.html"}],
-      summaries: [{"date": "2026-05-12", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 85, "top_entities": [{"name": "PropertyGeneral", "count": 123}, {"name": "Market", "count": 98}, {"name": "PropertyType", "count": 72}, {"name": "Location", "count": 35}, {"name": "Policy", "count": 28}, {"name": "Developer", "count": 13}]}, {"date": "2026-05-11", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 91, "top_entities": [{"name": "PropertyGeneral", "count": 145}, {"name": "Market", "count": 119}, {"name": "PropertyType", "count": 77}, {"name": "Policy", "count": 40}, {"name": "Location", "count": 35}, {"name": "Developer", "count": 9}]}, {"date": "2026-05-10", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 94, "top_entities": [{"name": "PropertyGeneral", "count": 144}, {"name": "Market", "count": 119}, {"name": "PropertyType", "count": 77}, {"name": "Policy", "count": 28}, {"name": "Location", "count": 19}, {"name": "Developer", "count": 5}]}, {"date": "2026-05-09", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 92, "top_entities": [{"name": "PropertyGeneral", "count": 134}, {"name": "Market", "count": 119}, {"name": "PropertyType", "count": 78}, {"name": "Location", "count": 26}, {"name": "Policy", "count": 26}, {"name": "Developer", "count": 7}]}, {"date": "2026-05-08", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 86, "top_entities": [{"name": "PropertyGeneral", "count": 134}, {"name": "Market", "count": 102}, {"name": "PropertyType", "count": 89}, {"name": "Location", "count": 38}, {"name": "Policy", "count": 21}, {"name": "Developer", "count": 6}]}, {"date": "2026-05-07", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 87, "top_entities": [{"name": "PropertyGeneral", "count": 149}, {"name": "Market", "count": 115}, {"name": "PropertyType", "count": 86}, {"name": "Location", "count": 34}, {"name": "Policy", "count": 24}, {"name": "Developer", "count": 12}]}, {"date": "2026-05-05", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 86, "top_entities": [{"name": "PropertyGeneral", "count": 157}, {"name": "Market", "count": 120}, {"name": "PropertyType", "count": 88}, {"name": "Policy", "count": 39}, {"name": "Location", "count": 24}, {"name": "Developer", "count": 14}]}, {"date": "2026-05-04", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 87, "top_entities": [{"name": "PropertyGeneral", "count": 149}, {"name": "Market", "count": 107}, {"name": "PropertyType", "count": 87}, {"name": "Policy", "count": 39}, {"name": "Location", "count": 29}, {"name": "Developer", "count": 14}]}, {"date": "2026-05-03", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 87, "top_entities": [{"name": "PropertyGeneral", "count": 150}, {"name": "Market", "count": 143}, {"name": "PropertyType", "count": 77}, {"name": "Location", "count": 36}, {"name": "Developer", "count": 16}, {"name": "Policy", "count": 15}]}, {"date": "2026-05-02", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 87, "top_entities": [{"name": "PropertyGeneral", "count": 142}, {"name": "Market", "count": 128}, {"name": "PropertyType", "count": 71}, {"name": "Location", "count": 36}, {"name": "Developer", "count": 17}, {"name": "Policy", "count": 13}]}, {"date": "2026-05-01", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 91, "top_entities": [{"name": "PropertyGeneral", "count": 137}, {"name": "Market", "count": 119}, {"name": "PropertyType", "count": 74}, {"name": "Location", "count": 39}, {"name": "Developer", "count": 18}, {"name": "Policy", "count": 14}]}, {"date": "2026-04-30", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 89, "top_entities": [{"name": "PropertyGeneral", "count": 127}, {"name": "Market", "count": 120}, {"name": "PropertyType", "count": 62}, {"name": "Location", "count": 36}, {"name": "Developer", "count": 24}, {"name": "Policy", "count": 22}]}, {"date": "2026-04-29", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 87, "top_entities": [{"name": "Market", "count": 138}, {"name": "PropertyGeneral", "count": 136}, {"name": "PropertyType", "count": 75}, {"name": "Location", "count": 36}, {"name": "Developer", "count": 21}, {"name": "Policy", "count": 18}]}, {"date": "2026-04-28", "category": "property", "article_count": 104, "source_count": 8, "matched_count": 89, "top_entities": [{"name": "Market", "count": 123}, {"name": "PropertyGeneral", "count": 113}, {"name": "PropertyType", "count": 65}, {"name": "Location", "count": 26}, {"name": "Policy", "count": 25}, {"name": "Developer", "count": 21}]}, {"date": "2026-04-27", "category": "property", "article_count": 155, "source_count": 8, "matched_count": 135, "top_entities": [{"name": "PropertyGeneral", "count": 195}, {"name": "Market", "count": 180}, {"name": "PropertyType", "count": 113}, {"name": "Policy", "count": 50}, {"name": "Location", "count": 35}, {"name": "Developer", "count": 22}]}, {"date": "2026-04-26", "category": "property", "article_count": 200, "source_count": 8, "matched_count": 168, "top_entities": [{"name": "PropertyGeneral", "count": 237}, {"name": "Market", "count": 230}, {"name": "PropertyType", "count": 139}, {"name": "Location", "count": 42}, {"name": "Policy", "count": 42}, {"name": "Developer", "count": 32}]}, {"date": "2026-04-25", "category": "property", "article_count": 200, "source_count": 8, "matched_count": 170, "top_entities": [{"name": "PropertyGeneral", "count": 236}, {"name": "Market", "count": 226}, {"name": "PropertyType", "count": 141}, {"name": "Policy", "count": 46}, {"name": "Location", "count": 44}, {"name": "Developer", "count": 26}]}, {"date": "2026-04-24", "category": "property", "article_count": 200, "source_count": 8, "matched_count": 166, "top_entities": [{"name": "PropertyGeneral", "count": 232}, {"name": "Market", "count": 205}, {"name": "PropertyType", "count": 135}, {"name": "Policy", "count": 54}, {"name": "Location", "count": 47}, {"name": "Developer", "count": 28}]}, {"date": "2026-04-23", "category": "property", "article_count": 200, "source_count": 8, "matched_count": 168, "top_entities": [{"name": "PropertyGeneral", "count": 242}, {"name": "Market", "count": 203}, {"name": "PropertyType", "count": 143}, {"name": "Location", "count": 57}, {"name": "Policy", "count": 55}, {"name": "Developer", "count": 36}]}, {"date": "2026-04-22", "category": "property", "article_count": 200, "source_count": 8, "matched_count": 173, "top_entities": [{"name": "PropertyGeneral", "count": 240}, {"name": "Market", "count": 206}, {"name": "PropertyType", "count": 141}, {"name": "Policy", "count": 58}, {"name": "Location", "count": 55}, {"name": "Developer", "count": 35}]}, {"date": "2026-04-21", "category": "property", "article_count": 46, "source_count": 8, "matched_count": 39, "top_entities": [{"name": "Market", "count": 83}, {"name": "PropertyGeneral", "count": 75}, {"name": "PropertyType", "count": 38}, {"name": "Policy", "count": 19}, {"name": "Location", "count": 16}, {"name": "Developer", "count": 10}]}, {"date": "2026-04-20", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 177, "top_entities": [{"name": "Market", "count": 255}, {"name": "PropertyGeneral", "count": 208}, {"name": "PropertyType", "count": 115}, {"name": "Location", "count": 72}, {"name": "Policy", "count": 46}, {"name": "Developer", "count": 36}]}, {"date": "2026-04-19", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 166, "top_entities": [{"name": "Market", "count": 254}, {"name": "PropertyGeneral", "count": 212}, {"name": "PropertyType", "count": 118}, {"name": "Location", "count": 52}, {"name": "Policy", "count": 46}, {"name": "Developer", "count": 26}]}, {"date": "2026-04-18", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 163, "top_entities": [{"name": "Market", "count": 222}, {"name": "PropertyGeneral", "count": 194}, {"name": "PropertyType", "count": 110}, {"name": "Location", "count": 53}, {"name": "Policy", "count": 46}, {"name": "Developer", "count": 22}]}, {"date": "2026-04-17", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 163, "top_entities": [{"name": "Market", "count": 220}, {"name": "PropertyGeneral", "count": 210}, {"name": "PropertyType", "count": 123}, {"name": "Location", "count": 57}, {"name": "Policy", "count": 47}, {"name": "Developer", "count": 25}]}, {"date": "2026-04-16", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 163, "top_entities": [{"name": "PropertyGeneral", "count": 223}, {"name": "Market", "count": 209}, {"name": "PropertyType", "count": 141}, {"name": "Location", "count": 45}, {"name": "Policy", "count": 43}, {"name": "Developer", "count": 30}]}, {"date": "2026-04-15", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 172, "top_entities": [{"name": "PropertyGeneral", "count": 224}, {"name": "Market", "count": 218}, {"name": "PropertyType", "count": 116}, {"name": "Location", "count": 55}, {"name": "Policy", "count": 46}, {"name": "Developer", "count": 36}]}, {"date": "2026-04-14", "category": "property", "article_count": 10, "source_count": 4, "matched_count": 9, "top_entities": [{"name": "Market", "count": 8}, {"name": "PropertyGeneral", "count": 5}, {"name": "Location", "count": 3}, {"name": "Developer", "count": 3}, {"name": "PropertyType", "count": 3}]}, {"date": "2026-04-13", "category": "property", "article_count": 4, "source_count": 4, "matched_count": 4, "top_entities": [{"name": "Market", "count": 9}, {"name": "PropertyGeneral", "count": 4}, {"name": "Developer", "count": 1}]}, {"date": "2026-04-12", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 164, "top_entities": [{"name": "PropertyGeneral", "count": 219}, {"name": "Market", "count": 179}, {"name": "PropertyType", "count": 122}, {"name": "Location", "count": 79}, {"name": "Developer", "count": 46}, {"name": "Policy", "count": 43}]}, {"date": "2026-04-11", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 166, "top_entities": [{"name": "PropertyGeneral", "count": 213}, {"name": "Market", "count": 210}, {"name": "PropertyType", "count": 114}, {"name": "Location", "count": 68}, {"name": "Developer", "count": 36}, {"name": "Policy", "count": 35}]}, {"date": "2026-04-10", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 170, "top_entities": [{"name": "Market", "count": 224}, {"name": "PropertyGeneral", "count": 223}, {"name": "PropertyType", "count": 122}, {"name": "Location", "count": 64}, {"name": "Developer", "count": 37}, {"name": "Policy", "count": 32}]}, {"date": "2026-04-09", "category": "property", "article_count": 192, "source_count": 4, "matched_count": 162, "top_entities": [{"name": "Market", "count": 216}, {"name": "PropertyGeneral", "count": 210}, {"name": "PropertyType", "count": 122}, {"name": "Location", "count": 51}, {"name": "Policy", "count": 29}, {"name": "Developer", "count": 27}]}, {"date": "2026-04-08", "category": "property", "article_count": 113, "source_count": 4, "matched_count": 99, "top_entities": [{"name": "Market", "count": 131}, {"name": "PropertyGeneral", "count": 128}, {"name": "PropertyType", "count": 81}, {"name": "Location", "count": 24}, {"name": "Policy", "count": 15}, {"name": "Developer", "count": 14}]}, {"date": "2026-04-07", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 182, "top_entities": [{"name": "PropertyGeneral", "count": 284}, {"name": "Market", "count": 162}, {"name": "PropertyType", "count": 156}, {"name": "Location", "count": 67}, {"name": "Policy", "count": 58}, {"name": "Developer", "count": 33}]}, {"date": "2026-04-06", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 182, "top_entities": [{"name": "PropertyGeneral", "count": 303}, {"name": "Market", "count": 179}, {"name": "PropertyType", "count": 160}, {"name": "Location", "count": 84}, {"name": "Policy", "count": 49}, {"name": "Developer", "count": 28}]}, {"date": "2026-04-05", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 174, "top_entities": [{"name": "PropertyGeneral", "count": 278}, {"name": "Market", "count": 177}, {"name": "PropertyType", "count": 139}, {"name": "Location", "count": 62}, {"name": "Policy", "count": 42}, {"name": "Developer", "count": 18}]}, {"date": "2026-04-04", "category": "property", "article_count": 200, "source_count": 7, "matched_count": 166, "top_entities": [{"name": "PropertyGeneral", "count": 249}, {"name": "Market", "count": 161}, {"name": "PropertyType", "count": 126}, {"name": "Location", "count": 56}, {"name": "Policy", "count": 32}, {"name": "Developer", "count": 22}]}, {"date": "2026-04-03", "category": "property", "article_count": 200, "source_count": 9, "matched_count": 163, "top_entities": [{"name": "PropertyGeneral", "count": 232}, {"name": "Market", "count": 146}, {"name": "PropertyType", "count": 127}, {"name": "Location", "count": 55}, {"name": "Policy", "count": 36}, {"name": "Developer", "count": 27}]}, {"date": "2026-04-02", "category": "property", "article_count": 200, "source_count": 10, "matched_count": 118, "top_entities": [{"name": "PropertyGeneral", "count": 131}, {"name": "Market", "count": 92}, {"name": "PropertyType", "count": 84}, {"name": "Location", "count": 36}, {"name": "Policy", "count": 32}, {"name": "Developer", "count": 21}]}, {"date": "2026-04-01", "category": "property", "article_count": 200, "source_count": 11, "matched_count": 84, "top_entities": [{"name": "PropertyType", "count": 69}, {"name": "Market", "count": 61}, {"name": "Policy", "count": 27}, {"name": "Location", "count": 25}, {"name": "Developer", "count": 19}]}, {"date": "2026-03-31", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 137, "top_entities": [{"name": "PropertyType", "count": 131}, {"name": "Market", "count": 90}, {"name": "Location", "count": 61}, {"name": "Policy", "count": 37}]}, {"date": "2026-03-30", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 133, "top_entities": [{"name": "PropertyType", "count": 107}, {"name": "Market", "count": 87}, {"name": "Location", "count": 67}, {"name": "Policy", "count": 39}]}, {"date": "2026-03-29", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 130, "top_entities": [{"name": "Location", "count": 102}, {"name": "Market", "count": 95}, {"name": "PropertyType", "count": 86}, {"name": "Policy", "count": 32}]}, {"date": "2026-03-28", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 90}, {"name": "Location", "count": 86}, {"name": "Market", "count": 81}, {"name": "Policy", "count": 27}]}, {"date": "2026-03-27", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 124, "top_entities": [{"name": "PropertyType", "count": 88}, {"name": "Location", "count": 82}, {"name": "Market", "count": 79}, {"name": "Policy", "count": 28}]}, {"date": "2026-03-26", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 97}, {"name": "Market", "count": 77}, {"name": "Location", "count": 75}, {"name": "Policy", "count": 30}]}, {"date": "2026-03-25", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 112}, {"name": "Market", "count": 87}, {"name": "Location", "count": 43}, {"name": "Policy", "count": 22}]}, {"date": "2026-03-24", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 136, "top_entities": [{"name": "PropertyType", "count": 137}, {"name": "Market", "count": 92}, {"name": "Location", "count": 62}, {"name": "Policy", "count": 18}]}, {"date": "2026-03-23", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 149, "top_entities": [{"name": "PropertyType", "count": 153}, {"name": "Market", "count": 92}, {"name": "Location", "count": 75}, {"name": "Policy", "count": 34}]}, {"date": "2026-03-22", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 132, "top_entities": [{"name": "PropertyType", "count": 112}, {"name": "Market", "count": 90}, {"name": "Location", "count": 89}, {"name": "Policy", "count": 29}]}, {"date": "2026-03-21", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 118, "top_entities": [{"name": "PropertyType", "count": 93}, {"name": "Location", "count": 86}, {"name": "Market", "count": 85}, {"name": "Policy", "count": 21}]}, {"date": "2026-03-20", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 122, "top_entities": [{"name": "PropertyType", "count": 108}, {"name": "Location", "count": 92}, {"name": "Market", "count": 89}, {"name": "Policy", "count": 23}]}, {"date": "2026-03-19", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 122, "top_entities": [{"name": "PropertyType", "count": 97}, {"name": "Market", "count": 83}, {"name": "Location", "count": 76}, {"name": "Policy", "count": 27}]}, {"date": "2026-03-18", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 136, "top_entities": [{"name": "Market", "count": 101}, {"name": "PropertyType", "count": 98}, {"name": "Location", "count": 77}, {"name": "Policy", "count": 44}]}, {"date": "2026-03-17", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 135, "top_entities": [{"name": "PropertyType", "count": 139}, {"name": "Market", "count": 88}, {"name": "Location", "count": 63}, {"name": "Policy", "count": 43}]}, {"date": "2026-03-16", "category": "property", "article_count": 100, "source_count": 4, "matched_count": 57, "top_entities": [{"name": "PropertyType", "count": 72}, {"name": "Market", "count": 29}, {"name": "Location", "count": 27}, {"name": "Policy", "count": 16}]}],
-      generatedAt: "2026-05-12T08:38:35.107873+00:00"
+      reports: [{"date": "2026-05-12", "date_label": "2026-05-12", "display_name": "property_report - 2026-05-12", "filename": "property_report_20260512.html"}, {"date": "2026-05-12", "date_label": "2026-05-12", "display_name": "property - 2026-05-12", "filename": "property_20260512.html"}, {"date": "", "date_label": "", "display_name": "Property Report", "filename": "property_report.html"}],
+      summaries: [{"date": "2026-05-13", "category": "property", "article_count": 108, "source_count": 8, "matched_count": 91, "top_entities": [{"name": "PropertyGeneral", "count": 144}, {"name": "Market", "count": 103}, {"name": "PropertyType", "count": 79}, {"name": "Location", "count": 27}, {"name": "Policy", "count": 19}, {"name": "Developer", "count": 11}]}, {"date": "2026-05-07", "category": "property", "article_count": 8, "source_count": 8, "matched_count": 8, "top_entities": [{"name": "PropertyGeneral", "count": 34}, {"name": "Market", "count": 21}, {"name": "PropertyType", "count": 20}, {"name": "Policy", "count": 5}, {"name": "Location", "count": 4}, {"name": "Developer", "count": 3}]}, {"date": "2026-04-30", "category": "property", "article_count": 9, "source_count": 8, "matched_count": 9, "top_entities": [{"name": "PropertyGeneral", "count": 41}, {"name": "Market", "count": 28}, {"name": "PropertyType", "count": 25}, {"name": "Location", "count": 16}, {"name": "Policy", "count": 14}, {"name": "Developer", "count": 7}]}, {"date": "2026-04-29", "category": "property", "article_count": 12, "source_count": 8, "matched_count": 10, "top_entities": [{"name": "PropertyGeneral", "count": 44}, {"name": "PropertyType", "count": 29}, {"name": "Market", "count": 29}, {"name": "Location", "count": 16}, {"name": "Policy", "count": 11}, {"name": "Developer", "count": 8}]}, {"date": "2026-04-25", "category": "property", "article_count": 146, "source_count": 8, "matched_count": 120, "top_entities": [{"name": "Market", "count": 173}, {"name": "PropertyGeneral", "count": 166}, {"name": "PropertyType", "count": 93}, {"name": "Location", "count": 43}, {"name": "Policy", "count": 32}, {"name": "Developer", "count": 21}]}, {"date": "2026-04-24", "category": "property", "article_count": 46, "source_count": 8, "matched_count": 39, "top_entities": [{"name": "Market", "count": 83}, {"name": "PropertyGeneral", "count": 75}, {"name": "PropertyType", "count": 38}, {"name": "Policy", "count": 19}, {"name": "Location", "count": 16}, {"name": "Developer", "count": 10}]}, {"date": "2026-04-21", "category": "property", "article_count": 46, "source_count": 8, "matched_count": 39, "top_entities": [{"name": "Market", "count": 83}, {"name": "PropertyGeneral", "count": 75}, {"name": "PropertyType", "count": 38}, {"name": "Policy", "count": 19}, {"name": "Location", "count": 16}, {"name": "Developer", "count": 10}]}, {"date": "2026-04-14", "category": "property", "article_count": 10, "source_count": 4, "matched_count": 9, "top_entities": [{"name": "Market", "count": 8}, {"name": "PropertyGeneral", "count": 5}, {"name": "Location", "count": 3}, {"name": "Developer", "count": 3}, {"name": "PropertyType", "count": 3}]}, {"date": "2026-04-13", "category": "property", "article_count": 4, "source_count": 4, "matched_count": 4, "top_entities": [{"name": "Market", "count": 9}, {"name": "PropertyGeneral", "count": 4}, {"name": "Developer", "count": 1}]}, {"date": "2026-04-09", "category": "property", "article_count": 192, "source_count": 4, "matched_count": 162, "top_entities": [{"name": "Market", "count": 216}, {"name": "PropertyGeneral", "count": 210}, {"name": "PropertyType", "count": 122}, {"name": "Location", "count": 51}, {"name": "Policy", "count": 29}, {"name": "Developer", "count": 27}]}, {"date": "2026-04-08", "category": "property", "article_count": 113, "source_count": 4, "matched_count": 99, "top_entities": [{"name": "Market", "count": 131}, {"name": "PropertyGeneral", "count": 128}, {"name": "PropertyType", "count": 81}, {"name": "Location", "count": 24}, {"name": "Policy", "count": 15}, {"name": "Developer", "count": 14}]}, {"date": "2026-04-07", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 182, "top_entities": [{"name": "PropertyGeneral", "count": 284}, {"name": "Market", "count": 162}, {"name": "PropertyType", "count": 156}, {"name": "Location", "count": 67}, {"name": "Policy", "count": 58}, {"name": "Developer", "count": 33}]}, {"date": "2026-04-06", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 182, "top_entities": [{"name": "PropertyGeneral", "count": 303}, {"name": "Market", "count": 179}, {"name": "PropertyType", "count": 160}, {"name": "Location", "count": 84}, {"name": "Policy", "count": 49}, {"name": "Developer", "count": 28}]}, {"date": "2026-04-05", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 174, "top_entities": [{"name": "PropertyGeneral", "count": 278}, {"name": "Market", "count": 177}, {"name": "PropertyType", "count": 139}, {"name": "Location", "count": 62}, {"name": "Policy", "count": 42}, {"name": "Developer", "count": 18}]}, {"date": "2026-04-04", "category": "property", "article_count": 200, "source_count": 7, "matched_count": 166, "top_entities": [{"name": "PropertyGeneral", "count": 249}, {"name": "Market", "count": 161}, {"name": "PropertyType", "count": 126}, {"name": "Location", "count": 56}, {"name": "Policy", "count": 32}, {"name": "Developer", "count": 22}]}, {"date": "2026-04-03", "category": "property", "article_count": 200, "source_count": 9, "matched_count": 163, "top_entities": [{"name": "PropertyGeneral", "count": 232}, {"name": "Market", "count": 146}, {"name": "PropertyType", "count": 127}, {"name": "Location", "count": 55}, {"name": "Policy", "count": 36}, {"name": "Developer", "count": 27}]}, {"date": "2026-04-02", "category": "property", "article_count": 200, "source_count": 10, "matched_count": 118, "top_entities": [{"name": "PropertyGeneral", "count": 131}, {"name": "Market", "count": 92}, {"name": "PropertyType", "count": 84}, {"name": "Location", "count": 36}, {"name": "Policy", "count": 32}, {"name": "Developer", "count": 21}]}, {"date": "2026-04-01", "category": "property", "article_count": 200, "source_count": 11, "matched_count": 84, "top_entities": [{"name": "PropertyType", "count": 69}, {"name": "Market", "count": 61}, {"name": "Policy", "count": 27}, {"name": "Location", "count": 25}, {"name": "Developer", "count": 19}]}, {"date": "2026-03-31", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 137, "top_entities": [{"name": "PropertyType", "count": 131}, {"name": "Market", "count": 90}, {"name": "Location", "count": 61}, {"name": "Policy", "count": 37}]}, {"date": "2026-03-30", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 133, "top_entities": [{"name": "PropertyType", "count": 107}, {"name": "Market", "count": 87}, {"name": "Location", "count": 67}, {"name": "Policy", "count": 39}]}, {"date": "2026-03-29", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 130, "top_entities": [{"name": "Location", "count": 102}, {"name": "Market", "count": 95}, {"name": "PropertyType", "count": 86}, {"name": "Policy", "count": 32}]}, {"date": "2026-03-28", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 90}, {"name": "Location", "count": 86}, {"name": "Market", "count": 81}, {"name": "Policy", "count": 27}]}, {"date": "2026-03-27", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 124, "top_entities": [{"name": "PropertyType", "count": 88}, {"name": "Location", "count": 82}, {"name": "Market", "count": 79}, {"name": "Policy", "count": 28}]}, {"date": "2026-03-26", "category": "property", "article_count": 200, "source_count": 4, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 97}, {"name": "Market", "count": 77}, {"name": "Location", "count": 75}, {"name": "Policy", "count": 30}]}, {"date": "2026-03-25", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 125, "top_entities": [{"name": "PropertyType", "count": 112}, {"name": "Market", "count": 87}, {"name": "Location", "count": 43}, {"name": "Policy", "count": 22}]}, {"date": "2026-03-24", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 136, "top_entities": [{"name": "PropertyType", "count": 137}, {"name": "Market", "count": 92}, {"name": "Location", "count": 62}, {"name": "Policy", "count": 18}]}, {"date": "2026-03-23", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 149, "top_entities": [{"name": "PropertyType", "count": 153}, {"name": "Market", "count": 92}, {"name": "Location", "count": 75}, {"name": "Policy", "count": 34}]}, {"date": "2026-03-22", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 132, "top_entities": [{"name": "PropertyType", "count": 112}, {"name": "Market", "count": 90}, {"name": "Location", "count": 89}, {"name": "Policy", "count": 29}]}, {"date": "2026-03-21", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 118, "top_entities": [{"name": "PropertyType", "count": 93}, {"name": "Location", "count": 86}, {"name": "Market", "count": 85}, {"name": "Policy", "count": 21}]}, {"date": "2026-03-20", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 122, "top_entities": [{"name": "PropertyType", "count": 108}, {"name": "Location", "count": 92}, {"name": "Market", "count": 89}, {"name": "Policy", "count": 23}]}, {"date": "2026-03-19", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 122, "top_entities": [{"name": "PropertyType", "count": 97}, {"name": "Market", "count": 83}, {"name": "Location", "count": 76}, {"name": "Policy", "count": 27}]}, {"date": "2026-03-18", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 136, "top_entities": [{"name": "Market", "count": 101}, {"name": "PropertyType", "count": 98}, {"name": "Location", "count": 77}, {"name": "Policy", "count": 44}]}, {"date": "2026-03-17", "category": "property", "article_count": 200, "source_count": 5, "matched_count": 135, "top_entities": [{"name": "PropertyType", "count": 139}, {"name": "Market", "count": 88}, {"name": "Location", "count": 63}, {"name": "Policy", "count": 43}]}, {"date": "2026-03-16", "category": "property", "article_count": 100, "source_count": 4, "matched_count": 57, "top_entities": [{"name": "PropertyType", "count": 72}, {"name": "Market", "count": 29}, {"name": "Location", "count": 27}, {"name": "Policy", "count": 16}]}],
+      generatedAt: "2026-05-12T20:43:23.783680+00:00"
     };
 
 

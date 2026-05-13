@@ -1,13 +1,13 @@
 {
   "date": "2026-05-13",
   "category": "property",
-  "article_count": 108,
+  "article_count": 91,
   "source_count": 8,
   "matched_count": 91,
   "top_entities": [
     {
       "name": "PropertyGeneral",
-      "count": 144
+      "count": 140
     },
     {
       "name": "Market",
@@ -15,19 +15,19 @@
     },
     {
       "name": "PropertyType",
-      "count": 79
+      "count": 73
     },
     {
       "name": "Location",
-      "count": 27
+      "count": 26
     },
     {
       "name": "Policy",
-      "count": 19
+      "count": 17
     },
     {
       "name": "Developer",
-      "count": 11
+      "count": 12
     }
   ],
   "sources": {
@@ -35,12 +35,12 @@
     "아파트실거래가": 1,
     "SH 서울주택도시공사": 1,
     "LH 공사": 1,
-    "Realtor.com News": 31,
-    "매일경제 부동산": 31,
-    "PropertyWire UK": 11,
-    "한경 부동산": 31
+    "매일경제 부동산": 29,
+    "한경 부동산": 22,
+    "Realtor.com News": 26,
+    "PropertyWire UK": 10
   },
-  "generated_at": "2026-05-13T05:43:23.417798+09:00",
+  "generated_at": "2026-05-13T09:45:09.492461+09:00",
   "articles": [
     {
       "event_model_payload": {
@@ -91,19 +91,19 @@
     "not_tracked_sources": 5,
     "skipped_disabled_sources": 8,
     "collection_error_count": 0,
-    "transaction_record_events": 4,
-    "presale_competition_events": 25,
-    "listing_inventory_events": 11,
-    "permit_completion_events": 3,
-    "property_signal_event_count": 43,
+    "transaction_record_events": 5,
+    "presale_competition_events": 24,
+    "listing_inventory_events": 9,
+    "permit_completion_events": 4,
+    "property_signal_event_count": 42,
     "official_or_operational_event_count": 2,
-    "news_proxy_event_count": 40,
+    "news_proxy_event_count": 39,
     "complete_canonical_key_count": 0,
-    "proxy_canonical_key_count": 38,
-    "missing_canonical_key_count": 5,
-    "region_code_present_count": 7,
+    "proxy_canonical_key_count": 36,
+    "missing_canonical_key_count": 6,
+    "region_code_present_count": 8,
     "project_key_present_count": 28,
-    "transaction_price_present_count": 5,
+    "transaction_price_present_count": 7,
     "listing_count_present_count": 7,
     "competition_rate_present_count": 0,
     "event_required_field_gap_count": 0,
@@ -250,7 +250,7 @@
       "event_model": "transaction_record",
       "source": "아파트실거래가",
       "title": "호갱노노 - 아파트 실거래가 1등 앱",
-      "event_key": "transaction_record:88c77a29dcd3:20260512"
+      "event_key": "transaction_record:88c77a29dcd3:20260513"
     },
     {
       "reason": "proxy_canonical_key",
@@ -270,17 +270,17 @@
     },
     {
       "reason": "proxy_canonical_key",
-      "event_model": "listing_inventory",
-      "source": "Realtor.com News",
-      "title": "EXCLUSIVE: Former Tampa Bay Buccaneers QB Chris Simms Slashes Half a Million Dollars From Price of Historic Greenwich Home",
-      "canonical_key": "listing_inventory:source:realtor-com-news:home",
-      "canonical_key_status": "source_proxy"
+      "event_model": "permit_completion",
+      "source": "매일경제 부동산",
+      "title": "“전사 품질경영 강화”…롯데건설, AI 기술 적용 고객감동 품질 혁신 나서",
+      "canonical_key": "property_project:title:019d8fb66dde",
+      "canonical_key_status": "title_proxy"
     },
     {
       "reason": "news_or_community_proxy_source",
-      "event_model": "listing_inventory",
-      "source": "Realtor.com News",
-      "title": "EXCLUSIVE: Former Tampa Bay Buccaneers QB Chris Simms Slashes Half a Million Dollars From Price of Historic Greenwich Home",
+      "event_model": "permit_completion",
+      "source": "매일경제 부동산",
+      "title": "“전사 품질경영 강화”…롯데건설, AI 기술 적용 고객감동 품질 혁신 나서",
       "signal_basis": "article_text_signal"
     }
   ]

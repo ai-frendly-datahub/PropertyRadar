@@ -1,47 +1,52 @@
 {
   "date": "2026-05-13",
   "category": "property",
-  "article_count": 91,
+  "article_count": 97,
   "source_count": 8,
-  "matched_count": 91,
+  "matched_count": 97,
   "top_entities": [
     {
       "name": "PropertyGeneral",
-      "count": 140
+      "count": 152
     },
     {
       "name": "Market",
-      "count": 103
+      "count": 131
     },
     {
       "name": "PropertyType",
-      "count": 73
-    },
-    {
-      "name": "Location",
-      "count": 26
+      "count": 76
     },
     {
       "name": "Policy",
-      "count": 17
+      "count": 23
+    },
+    {
+      "name": "Location",
+      "count": 23
     },
     {
       "name": "Developer",
-      "count": 12
+      "count": 15
     }
   ],
   "sources": {
     "부동산114": 1,
     "아파트실거래가": 1,
     "SH 서울주택도시공사": 1,
-    "LH 공사": 1,
-    "매일경제 부동산": 29,
-    "한경 부동산": 22,
+    "LH 공사": 2,
     "Realtor.com News": 26,
-    "PropertyWire UK": 10
+    "한경 부동산": 28,
+    "매일경제 부동산": 29,
+    "PropertyWire UK": 9
   },
-  "generated_at": "2026-05-13T09:45:09.492461+09:00",
+  "generated_at": "2026-05-13T19:26:14.877670+09:00",
   "articles": [
+    {
+      "event_model_payload": {
+        "source_url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003"
+      }
+    },
     {
       "event_model_payload": {
         "source_name": "매일경제 부동산",
@@ -68,15 +73,6 @@
         "published_at": "2026-05-06T13:32:42+00:00",
         "summary": "Peter Magowan, who died of cancer in 2019, purchased the property in 1992 and used it as his primary residence for years."
       }
-    },
-    {
-      "event_model_payload": {
-        "source_name": "PropertyWire UK",
-        "headline": "Riyadh villa market gains traction amid Vision 2030 push",
-        "source_url": "https://www.propertywire.com/news/global-news/riyadh-villa-market-gains-traction-amid-vision-2030-push/",
-        "published_at": "2026-05-06T02:02:23+00:00",
-        "summary": "<p>Riyadh's residential property market is undergoing significant transformation as Saudi Arabia's Vision 2030 initiative drives infrastructure investment and policy changes aimed at attracting international capital and residents to the capital. The city's villa sector, historically dominated by domestic buyers, is now drawing attention from international investors as the Saudi government encourages foreign property ownership.</p>\n<p>The post <a href=\"https://www.propertywire.com/news/global-news/riyadh-villa-market-gains-traction-amid-vision-2030-push/\">Riyadh villa market gains traction amid Vision 2030 push</a> appeared first on <a href=\"https://www.propertywire.com\">PropertyWire</a>.</p>"
-      }
     }
   ],
   "quality_summary": {
@@ -92,20 +88,20 @@
     "skipped_disabled_sources": 8,
     "collection_error_count": 0,
     "transaction_record_events": 5,
-    "presale_competition_events": 24,
-    "listing_inventory_events": 9,
-    "permit_completion_events": 4,
-    "property_signal_event_count": 42,
-    "official_or_operational_event_count": 2,
-    "news_proxy_event_count": 39,
+    "presale_competition_events": 25,
+    "listing_inventory_events": 12,
+    "permit_completion_events": 3,
+    "property_signal_event_count": 45,
+    "official_or_operational_event_count": 3,
+    "news_proxy_event_count": 41,
     "complete_canonical_key_count": 0,
-    "proxy_canonical_key_count": 36,
-    "missing_canonical_key_count": 6,
-    "region_code_present_count": 8,
+    "proxy_canonical_key_count": 38,
+    "missing_canonical_key_count": 7,
+    "region_code_present_count": 3,
     "project_key_present_count": 28,
-    "transaction_price_present_count": 7,
-    "listing_count_present_count": 7,
-    "competition_rate_present_count": 0,
+    "transaction_price_present_count": 9,
+    "listing_count_present_count": 4,
+    "competition_rate_present_count": 5,
     "event_required_field_gap_count": 0,
     "tracked_source_gap_count": 1,
     "missing_event_model_count": 0,
@@ -246,6 +242,21 @@
       "activation_gate": "public data API mapping, project id reconciliation, and date semantics"
     },
     {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "부동산114",
+      "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "canonical_key": "property_project:title:e7e933dabbc7",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "부동산114",
+      "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "signal_basis": "article_text_signal"
+    },
+    {
       "reason": "missing_canonical_key",
       "event_model": "transaction_record",
       "source": "아파트실거래가",
@@ -267,21 +278,6 @@
       "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "canonical_key": "property_project:title:c0e5a8a189a1",
       "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "“전사 품질경영 강화”…롯데건설, AI 기술 적용 고객감동 품질 혁신 나서",
-      "canonical_key": "property_project:title:019d8fb66dde",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "“전사 품질경영 강화”…롯데건설, AI 기술 적용 고객감동 품질 혁신 나서",
-      "signal_basis": "article_text_signal"
     }
   ]
 }

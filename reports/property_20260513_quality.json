@@ -1,0 +1,1561 @@
+{
+  "category": "property",
+  "generated_at": "2026-05-13T12:28:14.683426+00:00",
+  "scope_note": "Property quality rows separate operating signals such as transaction, presale, listing inventory, and permit/completion evidence from broad news or community market commentary. Proxy rows are review items until source-level identifiers and dates are collected.",
+  "summary": {
+    "total_sources": 17,
+    "enabled_sources": 9,
+    "tracked_sources": 6,
+    "fresh_sources": 3,
+    "stale_sources": 0,
+    "missing_sources": 0,
+    "missing_event_sources": 1,
+    "unknown_event_date_sources": 0,
+    "not_tracked_sources": 5,
+    "skipped_disabled_sources": 8,
+    "collection_error_count": 0,
+    "transaction_record_events": 3,
+    "presale_competition_events": 8,
+    "listing_inventory_events": 1,
+    "permit_completion_events": 0,
+    "property_signal_event_count": 12,
+    "official_or_operational_event_count": 3,
+    "news_proxy_event_count": 8,
+    "complete_canonical_key_count": 0,
+    "proxy_canonical_key_count": 9,
+    "missing_canonical_key_count": 3,
+    "region_code_present_count": 2,
+    "project_key_present_count": 8,
+    "transaction_price_present_count": 3,
+    "listing_count_present_count": 0,
+    "competition_rate_present_count": 2,
+    "event_required_field_gap_count": 0,
+    "tracked_source_gap_count": 1,
+    "missing_event_model_count": 1,
+    "source_backlog_candidate_count": 4,
+    "source_activation_item_count": 7,
+    "disabled_operational_source_count": 2,
+    "enabled_operational_gap_count": 1,
+    "operational_coverage_status": "activation_required",
+    "daily_review_item_count": 29
+  },
+  "sources": [
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "market_report",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 3,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "market_report",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 4,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "서울경제 부동산",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "market_report",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "LH 공사",
+      "source_type": "javascript",
+      "enabled": true,
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "presale_competition",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 2,
+      "event_count": 2,
+      "latest_event_at": "2026-05-13T12:28:19.116951+00:00",
+      "age_days": 0.0,
+      "latest_title": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "latest_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
+      "latest_canonical_key": "property_project:title:c0e5a8a189a1",
+      "latest_required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ],
+      "errors": []
+    },
+    {
+      "source": "SH 서울주택도시공사",
+      "source_type": "javascript",
+      "enabled": true,
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "presale_competition",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-05-13T12:28:24.098957+00:00",
+      "age_days": 0.0,
+      "latest_title": "SH서울주택도시개발공사",
+      "latest_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
+      "latest_canonical_key": "property_project:11680:title:9a3eb8b1e98c",
+      "latest_required_field_gaps": [
+        "project_id",
+        "competition_rate"
+      ],
+      "errors": []
+    },
+    {
+      "source": "아파트실거래가",
+      "source_type": "javascript",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "price",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "transaction_record",
+      "freshness_sla_days": 7.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-05-13T12:28:29.295093+00:00",
+      "age_days": 0.0,
+      "latest_title": "호갱노노 - 아파트 실거래가 1등 앱",
+      "latest_url": "https://hogangnono.com/",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area",
+        "transaction_price"
+      ],
+      "errors": []
+    },
+    {
+      "source": "부동산114",
+      "source_type": "javascript",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "listing_inventory",
+      "freshness_sla_days": 1.0,
+      "status": "missing_event",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/RealEstate",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/realestateinvesting",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/FirstTimeHomeBuyer",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/REBubble",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/korea",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "r/landlord",
+      "source_type": "reddit",
+      "enabled": false,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "Realtor.com News",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "market_report",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 3,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "PropertyWire UK",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "market_report",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 2,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "부동산 실거래가 MCP",
+      "source_type": "mcp",
+      "enabled": false,
+      "trust_tier": "T1_official",
+      "content_type": "price",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "transaction_record",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    },
+    {
+      "source": "청약정보 MCP",
+      "source_type": "mcp",
+      "enabled": false,
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": true,
+      "event_model": "presale_competition",
+      "freshness_sla_days": 3.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "errors": []
+    }
+  ],
+  "events": [
+    {
+      "source": "부동산114",
+      "source_type": "javascript",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "url": "https://www.r114.com/?_c=Research&_m=ReportNews",
+      "source_url": "https://www.r114.com/?_c=Research&_m=ReportNews",
+      "event_at": "2026-05-13T12:28:32.516689+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트",
+          "분양"
+        ],
+        "Market": [
+          "시세",
+          "입주"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "시세",
+          "분양",
+          "입주"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:e7e933dabbc7",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:ba6d1ba41ef1:20260513",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "아파트실거래가",
+      "source_type": "javascript",
+      "trust_tier": "T3_professional",
+      "content_type": "price",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "호갱노노 - 아파트 실거래가 1등 앱",
+      "url": "https://hogangnono.com/",
+      "source_url": "https://hogangnono.com/",
+      "event_at": "2026-05-13T12:28:29.295093+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트",
+          "분양",
+          "임대",
+          "전세",
+          "월세",
+          "매매",
+          "경매",
+          "재건축"
+        ],
+        "Policy": [
+          "역전세"
+        ],
+        "Market": [
+          "하락",
+          "거래량",
+          "실거래가",
+          "미분양",
+          "입주",
+          "공급",
+          "수익률"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "매매",
+          "전세",
+          "월세",
+          "가격",
+          "분양",
+          "실거래가",
+          "재건축",
+          "입주"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "호갱노노 - 아파트 실거래가 1등 앱",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:88c77a29dcd3:20260513",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area",
+        "transaction_price"
+      ]
+    },
+    {
+      "source": "SH 서울주택도시공사",
+      "source_type": "javascript",
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "SH서울주택도시개발공사",
+      "url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
+      "source_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
+      "event_at": "2026-05-13T12:28:24.098957+00:00",
+      "matched_entities": {
+        "Location": [
+          "강남"
+        ],
+        "PropertyType": [
+          "주택"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "housing"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "주택",
+          "청약"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "region_code": "11680",
+      "region_name": "강남",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "SH서울주택도시개발공사",
+      "competition_rate": null,
+      "property_type": "housing",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:11680:title:9a3eb8b1e98c",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:657604ca451e:20260513",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate"
+      ]
+    },
+    {
+      "source": "LH 공사",
+      "source_type": "javascript",
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
+      "source_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
+      "event_at": "2026-05-13T12:28:19.116951+00:00",
+      "matched_entities": {
+        "Location": [
+          "관악",
+          "동탄"
+        ],
+        "PropertyType": [
+          "주택",
+          "토지",
+          "임대",
+          "전세",
+          "월세",
+          "정비사업"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "조정",
+          "공급",
+          "housing"
+        ],
+        "Developer": [
+          "건설사"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "집",
+          "주택",
+          "전세",
+          "월세",
+          "토지",
+          "청약"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "region_code": "",
+      "region_name": "관악",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "competition_rate": null,
+      "property_type": "housing",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:c0e5a8a189a1",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:fbb61543a895:20260513",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "PropertyWire UK",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "Avamore funds £3.3m development with highway works",
+      "url": "https://www.propertywire.com/news/uk/avamore-funds-3-3m-development-with-highway-works",
+      "source_url": "https://www.propertywire.com/news/uk/avamore-funds-3-3m-development-with-highway-works",
+      "event_at": "2026-05-13T02:02:09+00:00",
+      "matched_entities": {
+        "PropertyGeneral": [
+          "residential"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "US",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 3.3,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "Avamore funds £3.3m development with highway works",
+      "competition_rate": null,
+      "property_type": "residential",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:81aff40e9aff:20260513",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "내년 서울 입주물량 26년 만에 최저…신축 품귀에 청약 불붙고 전월세 급등",
+      "url": "https://www.hankyung.com/article/202605133992i",
+      "source_url": "https://www.hankyung.com/article/202605133992i",
+      "event_at": "2026-05-13T00:15:27+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "신축",
+          "월세"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "급등",
+          "입주",
+          "투자"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "월세",
+          "청약",
+          "입주"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "내년 서울 입주물량 26년 만에 최저…신축 품귀에 청약 불붙고 전월세 급등",
+      "competition_rate": 18.0,
+      "property_type": "신축",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:f2eb81d59f35",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:caadf11dfa5a:20260513",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": true,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "메트로시티 자산 데시앙 … 평균 14.1대1 1순위 마감",
+      "url": "https://www.mk.co.kr/news/realestate/12046340",
+      "source_url": "https://www.mk.co.kr/news/realestate/12046340",
+      "event_at": "2026-05-12T23:19:04+00:00",
+      "matched_entities": {
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "공급"
+        ],
+        "Developer": [
+          "태영건설"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "청약"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "메트로시티 자산 데시앙 … 평균 14.1대1 1순위 마감",
+      "competition_rate": 14.1,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:7a705ce03bba",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:767a0fe20ad6:20260512",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": true,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
+      ]
+    },
+    {
+      "source": "LH 공사",
+      "source_type": "javascript",
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "collection_tier": "C2_js",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003",
+      "source_url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003",
+      "event_at": "2026-05-07T01:00:57.737905+00:00",
+      "matched_entities": {
+        "Location": [
+          "인천",
+          "동탄"
+        ],
+        "PropertyType": [
+          "아파트",
+          "주택",
+          "토지",
+          "분양",
+          "임대",
+          "전세",
+          "월세",
+          "정비사업"
+        ],
+        "Policy": [
+          "청약",
+          "공공분양"
+        ],
+        "Market": [
+          "조정",
+          "미분양",
+          "입주",
+          "공급",
+          "housing"
+        ],
+        "Developer": [
+          "건설사"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "집",
+          "아파트",
+          "주택",
+          "전세",
+          "월세",
+          "토지",
+          "분양",
+          "청약",
+          "입주"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "region_code": "28000",
+      "region_name": "인천",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 100000000.0,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:28000:title:c0e5a8a189a1",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:e408a98b4d36:20260507",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "listing_inventory",
+      "title": "“이사갈 집 없어요, 그냥 버텨야죠”…서울 아파트 갱신권 비중 확대",
+      "url": "https://www.mk.co.kr/news/realestate/12038854",
+      "source_url": "https://www.mk.co.kr/news/realestate/12038854",
+      "event_at": "2026-05-06T15:51:55+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트",
+          "월세"
+        ],
+        "Policy": [
+          "금리"
+        ],
+        "Market": [
+          "거래량",
+          "매물"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "아파트",
+          "월세",
+          "계약",
+          "금리"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "“이사갈 집 없어요, 그냥 버텨야죠”…서울 아파트 갱신권 비중 확대",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "listing_inventory:source:매일경제-부동산:apartment",
+      "canonical_key_status": "source_proxy",
+      "event_key": "listing_inventory:b30ee6e8ed60:20260506",
+      "required_field_proxy": {
+        "region_code": false,
+        "property_type": true,
+        "listing_count": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "listing_count"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "김포 풍무 초역세권 주상복합…호반써밋 풍무Ⅱ 이달 분양",
+      "url": "https://www.hankyung.com/article/2026050704416",
+      "source_url": "https://www.hankyung.com/article/2026050704416",
+      "event_at": "2026-05-06T15:04:01+00:00",
+      "matched_entities": {
+        "Location": [
+          "김포"
+        ],
+        "PropertyType": [
+          "분양"
+        ],
+        "Market": [
+          "트렌드",
+          "market"
+        ],
+        "Developer": [
+          "호반써밋"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "분양"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "김포",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "김포 풍무 초역세권 주상복합…호반써밋 풍무Ⅱ 이달 분양",
+      "competition_rate": null,
+      "property_type": "분양",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:813eb8924066",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:013f8b5a63d6:20260506",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "Realtor.com News",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "Late San Francisco Giants Owner Peter Magowan’s Stunning Napa Valley Wine Estate Hits the Market for $13 Million",
+      "url": "https://www.realtor.com/news/unique-homes/san-francisco-giants-peter-magowan-napa-valley-home-sale/",
+      "source_url": "https://www.realtor.com/news/unique-homes/san-francisco-giants-peter-magowan-napa-valley-home-sale/",
+      "event_at": "2026-05-06T13:32:42+00:00",
+      "matched_entities": {
+        "Market": [
+          "market",
+          "property"
+        ],
+        "PropertyGeneral": [
+          "property"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "US",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 13.0,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "Late San Francisco Giants Owner Peter Magowan’s Stunning Napa Valley Wine Estate Hits the Market for $13 Million",
+      "competition_rate": null,
+      "property_type": "home",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:d40c193eecc5:20260506",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "서울 청약, 69점도 불안… 당첨 가점 ‘70점대’ 시대",
+      "url": "https://www.mk.co.kr/news/realestate/12032044",
+      "source_url": "https://www.mk.co.kr/news/realestate/12032044",
+      "event_at": "2026-04-29T16:44:58+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Policy": [
+          "청약",
+          "당첨",
+          "가점"
+        ],
+        "Market": [
+          "안정",
+          "고점"
+        ],
+        "PropertyGeneral": [
+          "아파트",
+          "청약"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "서울 청약, 69점도 불안… 당첨 가점 ‘70점대’ 시대",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:258f1bab3498",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:f4fbef102fb4:20260429",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    }
+  ],
+  "source_activation_items": [
+    {
+      "reason": "tracked_operational_source_gap",
+      "source": "부동산114",
+      "source_type": "javascript",
+      "event_model": "listing_inventory",
+      "status": "missing_event",
+      "age_days": null,
+      "latest_title": "",
+      "activation_gate": "ToS review, anti-bot risk, stale listing policy, and listing dedupe",
+      "detail": "Tracked source is enabled, but this report window did not produce a fresh structured event."
+    },
+    {
+      "reason": "disabled_operational_source",
+      "source": "부동산 실거래가 MCP",
+      "source_type": "mcp",
+      "event_model": "transaction_record",
+      "trust_tier": "T1_official",
+      "content_type": "price",
+      "required_env": [
+        "DATA_GO_KR_API_KEY"
+      ],
+      "command": "uvx --from git+https://github.com/tae0y/real-estate-mcp real-estate-mcp",
+      "activation_gate": "API key, lawd code mapping, deal/report date separation, and duplicate transaction handling",
+      "detail": "Official or operational source is configured but disabled; do not treat proxy news events as a replacement."
+    },
+    {
+      "reason": "disabled_operational_source",
+      "source": "청약정보 MCP",
+      "source_type": "mcp",
+      "event_model": "presale_competition",
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "required_env": [
+        "DATA_GO_KR_API_KEY"
+      ],
+      "command": "uvx --from git+https://github.com/tae0y/real-estate-mcp real-estate-mcp",
+      "activation_gate": "parser/API access, project id normalization, and region code mapping",
+      "detail": "Official or operational source is configured but disabled; do not treat proxy news events as a replacement."
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "MOLIT real estate transaction API",
+      "signal_type": "transaction_record",
+      "activation_gate": "API key, lawd code mapping, deal/report date separation, and duplicate transaction handling"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "ApplyHome presale competition data",
+      "signal_type": "presale_competition",
+      "activation_gate": "parser/API access, project id normalization, and region code mapping"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Property listing inventory snapshots",
+      "signal_type": "listing_inventory",
+      "activation_gate": "ToS review, anti-bot risk, stale listing policy, and listing dedupe"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Permit and completion public data",
+      "signal_type": "permit_completion",
+      "activation_gate": "public data API mapping, project id reconciliation, and date semantics"
+    }
+  ],
+  "daily_review_items": [
+    {
+      "reason": "tracked_operational_source_gap",
+      "source": "부동산114",
+      "source_type": "javascript",
+      "event_model": "listing_inventory",
+      "status": "missing_event",
+      "age_days": null,
+      "latest_title": "",
+      "activation_gate": "ToS review, anti-bot risk, stale listing policy, and listing dedupe",
+      "detail": "Tracked source is enabled, but this report window did not produce a fresh structured event."
+    },
+    {
+      "reason": "disabled_operational_source",
+      "source": "부동산 실거래가 MCP",
+      "source_type": "mcp",
+      "event_model": "transaction_record",
+      "trust_tier": "T1_official",
+      "content_type": "price",
+      "required_env": [
+        "DATA_GO_KR_API_KEY"
+      ],
+      "command": "uvx --from git+https://github.com/tae0y/real-estate-mcp real-estate-mcp",
+      "activation_gate": "API key, lawd code mapping, deal/report date separation, and duplicate transaction handling",
+      "detail": "Official or operational source is configured but disabled; do not treat proxy news events as a replacement."
+    },
+    {
+      "reason": "disabled_operational_source",
+      "source": "청약정보 MCP",
+      "source_type": "mcp",
+      "event_model": "presale_competition",
+      "trust_tier": "T1_official",
+      "content_type": "policy",
+      "required_env": [
+        "DATA_GO_KR_API_KEY"
+      ],
+      "command": "uvx --from git+https://github.com/tae0y/real-estate-mcp real-estate-mcp",
+      "activation_gate": "parser/API access, project id normalization, and region code mapping",
+      "detail": "Official or operational source is configured but disabled; do not treat proxy news events as a replacement."
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "MOLIT real estate transaction API",
+      "signal_type": "transaction_record",
+      "activation_gate": "API key, lawd code mapping, deal/report date separation, and duplicate transaction handling"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "ApplyHome presale competition data",
+      "signal_type": "presale_competition",
+      "activation_gate": "parser/API access, project id normalization, and region code mapping"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Property listing inventory snapshots",
+      "signal_type": "listing_inventory",
+      "activation_gate": "ToS review, anti-bot risk, stale listing policy, and listing dedupe"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Permit and completion public data",
+      "signal_type": "permit_completion",
+      "activation_gate": "public data API mapping, project id reconciliation, and date semantics"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "부동산114",
+      "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "canonical_key": "property_project:title:e7e933dabbc7",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "부동산114",
+      "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "아파트실거래가",
+      "title": "호갱노노 - 아파트 실거래가 1등 앱",
+      "event_key": "transaction_record:88c77a29dcd3:20260513"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "SH 서울주택도시공사",
+      "title": "SH서울주택도시개발공사",
+      "canonical_key": "property_project:11680:title:9a3eb8b1e98c",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "LH 공사",
+      "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "canonical_key": "property_project:title:c0e5a8a189a1",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "PropertyWire UK",
+      "title": "Avamore funds £3.3m development with highway works",
+      "event_key": "transaction_record:81aff40e9aff:20260513"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "PropertyWire UK",
+      "title": "Avamore funds £3.3m development with highway works",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "내년 서울 입주물량 26년 만에 최저…신축 품귀에 청약 불붙고 전월세 급등",
+      "canonical_key": "property_project:title:f2eb81d59f35",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "내년 서울 입주물량 26년 만에 최저…신축 품귀에 청약 불붙고 전월세 급등",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "메트로시티 자산 데시앙 … 평균 14.1대1 1순위 마감",
+      "canonical_key": "property_project:title:7a705ce03bba",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "메트로시티 자산 데시앙 … 평균 14.1대1 1순위 마감",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "LH 공사",
+      "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
+      "canonical_key": "property_project:28000:title:c0e5a8a189a1",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "listing_inventory",
+      "source": "매일경제 부동산",
+      "title": "“이사갈 집 없어요, 그냥 버텨야죠”…서울 아파트 갱신권 비중 확대",
+      "canonical_key": "listing_inventory:source:매일경제-부동산:apartment",
+      "canonical_key_status": "source_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "listing_inventory",
+      "source": "매일경제 부동산",
+      "title": "“이사갈 집 없어요, 그냥 버텨야죠”…서울 아파트 갱신권 비중 확대",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "김포 풍무 초역세권 주상복합…호반써밋 풍무Ⅱ 이달 분양",
+      "canonical_key": "property_project:title:813eb8924066",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "김포 풍무 초역세권 주상복합…호반써밋 풍무Ⅱ 이달 분양",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "Late San Francisco Giants Owner Peter Magowan’s Stunning Napa Valley Wine Estate Hits the Market for $13 Million",
+      "event_key": "transaction_record:d40c193eecc5:20260506"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "Late San Francisco Giants Owner Peter Magowan’s Stunning Napa Valley Wine Estate Hits the Market for $13 Million",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "서울 청약, 69점도 불안… 당첨 가점 ‘70점대’ 시대",
+      "canonical_key": "property_project:title:258f1bab3498",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "서울 청약, 69점도 불안… 당첨 가점 ‘70점대’ 시대",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "source_missing_event",
+      "source": "부동산114",
+      "event_model": "listing_inventory",
+      "age_days": null,
+      "latest_title": ""
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "permit_completion"
+    }
+  ],
+  "source_backlog": {
+    "operational_candidates": [
+      {
+        "id": "molit_transaction_api",
+        "name": "MOLIT real estate transaction API",
+        "signal_type": "transaction_record",
+        "activation_gate": "API key, lawd code mapping, deal/report date separation, and duplicate transaction handling"
+      },
+      {
+        "id": "applyhome_presale_competition",
+        "name": "ApplyHome presale competition data",
+        "signal_type": "presale_competition",
+        "activation_gate": "parser/API access, project id normalization, and region code mapping"
+      },
+      {
+        "id": "property_listing_inventory",
+        "name": "Property listing inventory snapshots",
+        "signal_type": "listing_inventory",
+        "activation_gate": "ToS review, anti-bot risk, stale listing policy, and listing dedupe"
+      },
+      {
+        "id": "permit_completion_public_data",
+        "name": "Permit and completion public data",
+        "signal_type": "permit_completion",
+        "activation_gate": "public data API mapping, project id reconciliation, and date semantics"
+      }
+    ]
+  },
+  "errors": []
+}

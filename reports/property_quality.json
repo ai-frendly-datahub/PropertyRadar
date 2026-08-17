@@ -1,6 +1,6 @@
 {
   "category": "property",
-  "generated_at": "2026-08-16T08:27:41.435852+00:00",
+  "generated_at": "2026-08-17T08:41:48.565039+00:00",
   "scope_note": "Property quality rows separate operating signals such as transaction, presale, listing inventory, and permit/completion evidence from broad news or community market commentary. Proxy rows are review items until source-level identifiers and dates are collected.",
   "summary": {
     "total_sources": 17,
@@ -14,21 +14,21 @@
     "not_tracked_sources": 5,
     "skipped_disabled_sources": 8,
     "collection_error_count": 0,
-    "transaction_record_events": 22,
-    "presale_competition_events": 140,
-    "listing_inventory_events": 20,
-    "permit_completion_events": 15,
-    "property_signal_event_count": 197,
+    "transaction_record_events": 24,
+    "presale_competition_events": 136,
+    "listing_inventory_events": 15,
+    "permit_completion_events": 16,
+    "property_signal_event_count": 191,
     "official_or_operational_event_count": 2,
-    "news_proxy_event_count": 194,
+    "news_proxy_event_count": 188,
     "complete_canonical_key_count": 0,
-    "proxy_canonical_key_count": 171,
+    "proxy_canonical_key_count": 165,
     "missing_canonical_key_count": 26,
-    "region_code_present_count": 29,
-    "project_key_present_count": 155,
+    "region_code_present_count": 26,
+    "project_key_present_count": 152,
     "transaction_price_present_count": 67,
-    "listing_count_present_count": 36,
-    "competition_rate_present_count": 14,
+    "listing_count_present_count": 38,
+    "competition_rate_present_count": 13,
     "event_required_field_gap_count": 0,
     "tracked_source_gap_count": 1,
     "missing_event_model_count": 0,
@@ -53,7 +53,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 139,
+      "article_count": 136,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -124,7 +124,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-16T08:27:13.743740+00:00",
+      "latest_event_at": "2026-08-17T08:41:23.296808+00:00",
       "age_days": 0.0,
       "latest_title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "latest_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
@@ -150,7 +150,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-16T08:27:23.754065+00:00",
+      "latest_event_at": "2026-08-17T08:41:31.497111+00:00",
       "age_days": 0.0,
       "latest_title": "서울주택도시개발공사",
       "latest_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
@@ -176,7 +176,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-16T08:27:31.614389+00:00",
+      "latest_event_at": "2026-08-17T08:41:36.768514+00:00",
       "age_days": 0.0,
       "latest_title": "실거래가부터 집 구하기까지, 호갱노노",
       "latest_url": "https://hogangnono.com/",
@@ -363,7 +363,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 111,
+      "article_count": 117,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -386,7 +386,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 55,
+      "article_count": 52,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -456,7 +456,7 @@
       "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
       "url": "https://www.r114.com/?_c=Research&_m=ReportNews",
       "source_url": "https://www.r114.com/?_c=Research&_m=ReportNews",
-      "event_at": "2026-08-16T08:27:36.864847+00:00",
+      "event_at": "2026-08-17T08:41:42.775788+00:00",
       "matched_entities": {
         "PropertyType": [
           "아파트",
@@ -493,7 +493,7 @@
       "completion_date": "",
       "canonical_key": "property_project:title:e7e933dabbc7",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:ba6d1ba41ef1:20260816",
+      "event_key": "presale_competition:ba6d1ba41ef1:20260817",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -518,7 +518,7 @@
       "title": "실거래가부터 집 구하기까지, 호갱노노",
       "url": "https://hogangnono.com/",
       "source_url": "https://hogangnono.com/",
-      "event_at": "2026-08-16T08:27:31.614389+00:00",
+      "event_at": "2026-08-17T08:41:36.768514+00:00",
       "matched_entities": {
         "PropertyType": [
           "분양",
@@ -577,7 +577,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:88c77a29dcd3:20260816",
+      "event_key": "transaction_record:88c77a29dcd3:20260817",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -604,7 +604,7 @@
       "title": "서울주택도시개발공사",
       "url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
       "source_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
-      "event_at": "2026-08-16T08:27:23.754065+00:00",
+      "event_at": "2026-08-17T08:41:31.497111+00:00",
       "matched_entities": {
         "Location": [
           "강남"
@@ -643,7 +643,7 @@
       "completion_date": "",
       "canonical_key": "property_project:11680:title:9d21a5b91bb7",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:056bc46b7f7d:20260816",
+      "event_key": "presale_competition:056bc46b7f7d:20260817",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -667,7 +667,7 @@
       "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
       "source_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
-      "event_at": "2026-08-16T08:27:13.743740+00:00",
+      "event_at": "2026-08-17T08:41:23.296808+00:00",
       "matched_entities": {
         "Location": [
           "인천",
@@ -721,7 +721,7 @@
       "completion_date": "",
       "canonical_key": "property_project:28000:title:c0e5a8a189a1",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:e408a98b4d36:20260816",
+      "event_key": "presale_competition:e408a98b4d36:20260817",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -731,6 +731,605 @@
       "required_field_gaps": [
         "project_id",
         "competition_rate"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "서울 전세 3만가구 증발 … 월세는 5만가구 껑충",
+      "url": "https://www.mk.co.kr/news/realestate/12129367",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129367",
+      "event_at": "2026-08-16T22:31:10+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트",
+          "임대",
+          "전세",
+          "월세"
+        ],
+        "Policy": [
+          "임대차"
+        ],
+        "PropertyGeneral": [
+          "아파트",
+          "전세",
+          "월세"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "서울 전세 3만가구 증발 … 월세는 5만가구 껑충",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:15955d8ae56c",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:76fc5de34e73:20260816",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "공장서 뚝딱…모듈러 주택 年5천가구 '닥공'",
+      "url": "https://www.mk.co.kr/news/realestate/12129363",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129363",
+      "event_at": "2026-08-16T22:31:08+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "주택",
+          "공장"
+        ],
+        "Market": [
+          "공급"
+        ],
+        "PropertyGeneral": [
+          "주택"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "공장서 뚝딱…모듈러 주택 年5천가구 '닥공'",
+      "competition_rate": null,
+      "property_type": "housing",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:6aeae80b595f",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:b954f788ee92:20260816",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "서울 상도동 214 재개발 확정…최고 29층 1840가구로 탈바꿈",
+      "url": "https://www.hankyung.com/article/202608174992i",
+      "source_url": "https://www.hankyung.com/article/202608174992i",
+      "event_at": "2026-08-16T19:34:42+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "재개발"
+        ],
+        "Market": [
+          "트렌드"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "재개발"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "서울 상도동 214 재개발 확정…최고 29층 1840가구로 탈바꿈",
+      "competition_rate": null,
+      "property_type": "재개발",
+      "listing_count": 1840,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:76c3fd21c52e",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:4aa207931fcf:20260816",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "“공급까지는 한참 남았는데”…먼저 풀리는 대출, 집값 자극할라 우려",
+      "url": "https://www.mk.co.kr/news/realestate/12129204",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129204",
+      "event_at": "2026-08-16T14:07:33+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "주택"
+        ],
+        "Policy": [
+          "완화",
+          "대출"
+        ],
+        "Market": [
+          "공급",
+          "착공"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "주택",
+          "대출"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "“공급까지는 한참 남았는데”…먼저 풀리는 대출, 집값 자극할라 우려",
+      "competition_rate": null,
+      "property_type": "housing",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:b185ec4c0529",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:198c42f381f8:20260816",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "Realtor.com News",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "‘Magical’ New York A-Frame With Secret Gardens and ‘Breathtaking’ Walls of Glass Is Listed for $1.7 Million",
+      "url": "https://www.realtor.com/news/unique-homes/aframe-for-sale-new-york-secret-gardens",
+      "source_url": "https://www.realtor.com/news/unique-homes/aframe-for-sale-new-york-secret-gardens",
+      "event_at": "2026-08-16T12:12:00+00:00",
+      "matched_entities": {
+        "Market": [
+          "home",
+          "property"
+        ],
+        "PropertyGeneral": [
+          "property"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "US",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 1.7,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "‘Magical’ New York A-Frame With Secret Gardens and ‘Breathtaking’ Walls of Glass Is Listed for $1.7 Million",
+      "competition_rate": null,
+      "property_type": "home",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:b1b8e12e4603:20260816",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area"
+      ]
+    },
+    {
+      "source": "Realtor.com News",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "16-Acre Ultimate ‘Glamping’ House Tucked Between the Berkshires and Catskills Lists for $4.6 Million",
+      "url": "https://www.realtor.com/news/unique-homes/red-rock-house-east-chatham-new-york-for-sale",
+      "source_url": "https://www.realtor.com/news/unique-homes/red-rock-house-east-chatham-new-york-for-sale",
+      "event_at": "2026-08-16T07:57:00+00:00",
+      "matched_entities": {
+        "PropertyGeneral": [
+          "apartment"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "US",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 4.6,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "16-Acre Ultimate ‘Glamping’ House Tucked Between the Berkshires and Catskills Lists for $4.6 Million",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:d031835fb0a5:20260816",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": false,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name",
+        "area"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "\"개발되면 덕 보겠지만…\" 주민들은 교통난 심화가 걱정",
+      "url": "https://www.mk.co.kr/news/realestate/12129055",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129055",
+      "event_at": "2026-08-15T23:47:00+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "호가"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "아파트"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 20000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "개발되면 덕 보겠지만…",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": 1000,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:2de587c68a08",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:60f086ec2da1:20260815",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "[단독] 남양주 택지 발표前 ‘지분쪼개기’ 몰렸다…정부, 이상거래 조사",
+      "url": "https://www.mk.co.kr/news/realestate/12129052",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129052",
+      "event_at": "2026-08-15T23:42:09+00:00",
+      "matched_entities": {
+        "Market": [
+          "공급"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "[단독] 남양주 택지 발표前 ‘지분쪼개기’ 몰렸다…정부, 이상거래 조사",
+      "competition_rate": null,
+      "property_type": "",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:0e1dc0ce9270",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:c195ec79d68f:20260815",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "[단독] 의정부·구로…정비사업 틈새 뚫는 중견건설사",
+      "url": "https://www.hankyung.com/article/2026081641051",
+      "source_url": "https://www.hankyung.com/article/2026081641051",
+      "event_at": "2026-08-15T23:35:08+00:00",
+      "matched_entities": {
+        "Location": [
+          "서초",
+          "여의도",
+          "압구정",
+          "삼성",
+          "성남",
+          "인천"
+        ],
+        "PropertyType": [
+          "아파트",
+          "주택",
+          "토지",
+          "분양",
+          "재건축",
+          "재개발",
+          "정비사업"
+        ],
+        "Market": [
+          "안정",
+          "미분양",
+          "수요"
+        ],
+        "Developer": [
+          "삼성물산",
+          "현대건설",
+          "gs건설",
+          "두산건설",
+          "건설사",
+          "시공사"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "아파트",
+          "주택",
+          "가격",
+          "토지",
+          "분양",
+          "재개발",
+          "재건축"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11650",
+      "region_name": "서초",
+      "complex_name": "",
+      "building": "",
+      "area": 3.3,
+      "transaction_price": 642600000000.0,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "[단독] 의정부·구로…정비사업 틈새 뚫는 중견건설사",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": 1000,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:11650:title:65db42a2462c",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:10280fc9e76f:20260815",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "'천안 아이파크 시티' 1714가구 분양",
+      "url": "https://www.hankyung.com/article/2026081641041",
+      "source_url": "https://www.hankyung.com/article/2026081641041",
+      "event_at": "2026-08-15T23:18:36+00:00",
+      "matched_entities": {
+        "Location": [
+          "천안"
+        ],
+        "PropertyType": [
+          "분양"
+        ],
+        "Market": [
+          "트렌드"
+        ],
+        "Developer": [
+          "아이파크"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "분양"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "천안",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "천안 아이파크 시티",
+      "competition_rate": 17.0,
+      "property_type": "분양",
+      "listing_count": 1714,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:88c954b55f64",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:411bc82170b4:20260815",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": true,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
       ]
     },
     {
@@ -806,70 +1405,6 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "presale_competition",
-      "title": "송파 9억대 아파트, 하나 남았습니다",
-      "url": "https://www.mk.co.kr/news/realestate/12129000",
-      "source_url": "https://www.mk.co.kr/news/realestate/12129000",
-      "event_at": "2026-08-15T22:53:21+00:00",
-      "matched_entities": {
-        "Location": [
-          "송파"
-        ],
-        "PropertyType": [
-          "아파트",
-          "분양"
-        ],
-        "Policy": [
-          "청약"
-        ],
-        "Developer": [
-          "롯데캐슬"
-        ],
-        "PropertyGeneral": [
-          "아파트",
-          "분양",
-          "청약"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11710",
-      "region_name": "송파",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 900000000.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "송파 9억대 아파트, 하나 남았습니다",
-      "competition_rate": null,
-      "property_type": "apartment",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:11710:title:9987ca407ebb",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:273ff1567671:20260815",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
       "title": "'로또 줍줍' LH가 사들여 임대로 공급 추진",
       "url": "https://www.mk.co.kr/news/realestate/12129001",
       "source_url": "https://www.mk.co.kr/news/realestate/12129001",
@@ -926,6 +1461,70 @@
         "project_id",
         "competition_rate",
         "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "송파 9억대 아파트, 하나 남았습니다",
+      "url": "https://www.mk.co.kr/news/realestate/12129000",
+      "source_url": "https://www.mk.co.kr/news/realestate/12129000",
+      "event_at": "2026-08-15T22:53:21+00:00",
+      "matched_entities": {
+        "Location": [
+          "송파"
+        ],
+        "PropertyType": [
+          "아파트",
+          "분양"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Developer": [
+          "롯데캐슬"
+        ],
+        "PropertyGeneral": [
+          "아파트",
+          "분양",
+          "청약"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11710",
+      "region_name": "송파",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 900000000.0,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "송파 9억대 아파트, 하나 남았습니다",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:11710:title:9987ca407ebb",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:273ff1567671:20260815",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate"
       ]
     },
     {
@@ -3320,46 +3919,26 @@
       "collection_tier": "C1_rss",
       "producer_role": "",
       "info_purpose": [],
-      "event_model": "presale_competition",
+      "event_model": "permit_completion",
       "title": "착공 속도전…강서 염창공원 2029년·남양주 와부 2030년 첫삽",
       "url": "https://www.hankyung.com/article/2026081301601",
       "source_url": "https://www.hankyung.com/article/2026081301601",
       "event_at": "2026-08-13T00:00:21+00:00",
       "matched_entities": {
         "Location": [
-          "강남",
-          "용산",
-          "강서",
-          "판교",
-          "용인",
-          "고양",
-          "광주"
-        ],
-        "PropertyType": [
-          "주택",
-          "토지",
-          "월세",
-          "매매"
-        ],
-        "Policy": [
-          "규제",
-          "완화"
+          "강서"
         ],
         "Market": [
-          "안정",
-          "공급",
-          "착공"
+          "착공",
+          "트렌드"
         ],
         "PropertyGeneral": [
-          "주택",
-          "매매",
-          "월세",
-          "토지"
+          "부동산"
         ]
       },
       "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
+      "region_code": "",
+      "region_name": "강서",
       "complex_name": "",
       "building": "",
       "area": null,
@@ -3370,22 +3949,21 @@
       "project_id": "",
       "project_name": "착공 속도전…강서 염창공원 2029년·남양주 와부 2030년 첫삽",
       "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": 1000,
+      "property_type": "부동산",
+      "listing_count": null,
       "permit_date": "",
       "completion_date": "",
-      "canonical_key": "property_project:11680:title:fb965b390cc9",
+      "canonical_key": "property_project:title:fb965b390cc9",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:6a3815f25cdf:20260813",
+      "event_key": "permit_completion:eff86fe422ce:20260813",
       "required_field_proxy": {
         "project_id": false,
-        "competition_rate": false,
-        "region_code": true,
+        "region_code": false,
         "source_url": true
       },
       "required_field_gaps": [
         "project_id",
-        "competition_rate"
+        "region_code"
       ]
     },
     {
@@ -8457,64 +9035,6 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "presale_competition",
-      "title": "울산 '그랑라크 에일린의 뜰' 1521가구 대단지 내달 분양",
-      "url": "https://www.mk.co.kr/news/realestate/12123007",
-      "source_url": "https://www.mk.co.kr/news/realestate/12123007",
-      "event_at": "2026-08-09T23:09:51+00:00",
-      "matched_entities": {
-        "Location": [
-          "울산"
-        ],
-        "PropertyType": [
-          "분양",
-          "재개발"
-        ],
-        "PropertyGeneral": [
-          "분양",
-          "재개발"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "울산",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "그랑라크 에일린의 뜰",
-      "competition_rate": null,
-      "property_type": "분양",
-      "listing_count": 1521,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:7b405e62e7f2",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:d23ec66fb718:20260809",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
       "title": "서울 민간 분양가 3.3㎡당 8천만원",
       "url": "https://www.mk.co.kr/news/realestate/12123008",
       "source_url": "https://www.mk.co.kr/news/realestate/12123008",
@@ -8553,6 +9073,64 @@
       "canonical_key": "property_project:title:2e883ba5e57a",
       "canonical_key_status": "title_proxy",
       "event_key": "presale_competition:6726bf02976b:20260809",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "울산 '그랑라크 에일린의 뜰' 1521가구 대단지 내달 분양",
+      "url": "https://www.mk.co.kr/news/realestate/12123007",
+      "source_url": "https://www.mk.co.kr/news/realestate/12123007",
+      "event_at": "2026-08-09T23:09:51+00:00",
+      "matched_entities": {
+        "Location": [
+          "울산"
+        ],
+        "PropertyType": [
+          "분양",
+          "재개발"
+        ],
+        "PropertyGeneral": [
+          "분양",
+          "재개발"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "울산",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "그랑라크 에일린의 뜰",
+      "competition_rate": null,
+      "property_type": "분양",
+      "listing_count": 1521,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:7b405e62e7f2",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:d23ec66fb718:20260809",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -11272,932 +11850,6 @@
         "competition_rate",
         "region_code"
       ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "“본인부터 버스하우스 입주해야”…與황희 논란에 국힘 ‘쓴소리’[종합]",
-      "url": "https://www.mk.co.kr/news/realestate/12121364",
-      "source_url": "https://www.mk.co.kr/news/realestate/12121364",
-      "event_at": "2026-08-07T03:08:33+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택",
-          "리모델링"
-        ],
-        "Market": [
-          "입주",
-          "공급"
-        ],
-        "PropertyGeneral": [
-          "주택",
-          "입주"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "“본인부터 버스하우스 입주해야”…與황희 논란에 국힘 ‘쓴소리’[종합]",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:4d56f7c174d3",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:80f191fd9694:20260807",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "PropertyWire UK",
-      "source_type": "rss",
-      "trust_tier": "T3_professional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "Converted pubs in England listed from £300,000 to £1.25m",
-      "url": "https://www.propertywire.com/news/uk/converted-pubs-in-england-listed-from-300000-to-1-25m",
-      "source_url": "https://www.propertywire.com/news/uk/converted-pubs-in-england-listed-from-300000-to-1-25m",
-      "event_at": "2026-08-07T02:02:42+00:00",
-      "matched_entities": {
-        "Market": [
-          "market"
-        ],
-        "PropertyGeneral": [
-          "residential"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 300000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Converted pubs in England listed from £300,000 to £1.25m",
-      "competition_rate": null,
-      "property_type": "residential",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:propertywire-uk:residential",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:e2aef1ea264c:20260807",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "구윤철 “최대한 주택공급 빨리…‘핀셋 지원’도 고민해 조만간 대책”",
-      "url": "https://www.mk.co.kr/news/economy/12121291",
-      "source_url": "https://www.mk.co.kr/news/economy/12121291",
-      "event_at": "2026-08-07T01:47:18+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택"
-        ],
-        "Policy": [
-          "규제",
-          "완화",
-          "대출"
-        ],
-        "Market": [
-          "공급"
-        ],
-        "PropertyGeneral": [
-          "주택",
-          "대출"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "구윤철 “최대한 주택공급 빨리…‘핀셋 지원’도 고민해 조만간 대책”",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:ae39bae975a2",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:58b4a6f8ce29:20260807",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "EXCLUSIVE: Sen. Warren Says Compass Private Listings Partnership With Chicago MLS ‘Increases Risks of Civil Rights Violations’ in Scathing Letter to CEOs",
-      "url": "https://www.realtor.com/news/real-estate-news/senator-elizabeth-warren-private-listings-compass-ceo-reffkin-letter",
-      "source_url": "https://www.realtor.com/news/real-estate-news/senator-elizabeth-warren-private-listings-compass-ceo-reffkin-letter",
-      "event_at": "2026-08-07T01:00:00+00:00",
-      "matched_entities": {},
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "EXCLUSIVE: Sen. Warren Says Compass Private Listings Partnership With Chicago MLS ‘Increases Risks of Civil Rights Viola",
-      "competition_rate": null,
-      "property_type": "",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "listing_inventory:3e5a1e77c801:20260807",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": false,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "property_type",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "\"전임 시장 때 43만 가구 날렸다\"…서울시가 靑에 건넨 보고서",
-      "url": "https://www.hankyung.com/article/2026080713351",
-      "source_url": "https://www.hankyung.com/article/2026080713351",
-      "event_at": "2026-08-07T00:12:46+00:00",
-      "matched_entities": {
-        "Market": [
-          "시가",
-          "트렌드"
-        ],
-        "PropertyGeneral": [
-          "부동산"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "전임 시장 때 43만 가구 날렸다",
-      "competition_rate": 18.0,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:8a38757906ce",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:03e2180d0c93:20260807",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": true,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "강남 16억 낮춘 급매…한강벨트는 올라",
-      "url": "https://www.mk.co.kr/news/realestate/12121195",
-      "source_url": "https://www.mk.co.kr/news/realestate/12121195",
-      "event_at": "2026-08-07T00:04:18+00:00",
-      "matched_entities": {
-        "Location": [
-          "강남"
-        ],
-        "PropertyType": [
-          "주택"
-        ],
-        "Policy": [
-          "양도세",
-          "보유세"
-        ],
-        "Market": [
-          "매물",
-          "급매",
-          "급매물",
-          "호가"
-        ],
-        "PropertyGeneral": [
-          "주택"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 1600000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "강남 16억 낮춘 급매…한강벨트는 올라",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:11680:housing",
-      "canonical_key_status": "region_proxy",
-      "event_key": "listing_inventory:87c4010d8835:20260807",
-      "required_field_proxy": {
-        "region_code": true,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "listing_count"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "\"2~3년내 착공 가능한 물량만 우선 발표\"… 국유지·軍용지 대상될 듯",
-      "url": "https://www.mk.co.kr/news/realestate/12121135",
-      "source_url": "https://www.mk.co.kr/news/realestate/12121135",
-      "event_at": "2026-08-06T23:52:35+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택"
-        ],
-        "Market": [
-          "공급",
-          "착공"
-        ],
-        "PropertyGeneral": [
-          "집",
-          "주택"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "2~3년내 착공 가능한 물량만 우선 발표",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:158a83e1d113",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:bcad3da9dfb7:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "아리팍 보유세 3816만 → 6142만원 … 稅부담에 호가 낮춘 매물 속출",
-      "url": "https://www.mk.co.kr/news/realestate/12121133",
-      "source_url": "https://www.mk.co.kr/news/realestate/12121133",
-      "event_at": "2026-08-06T23:52:34+00:00",
-      "matched_entities": {
-        "Location": [
-          "강남",
-          "대치"
-        ],
-        "PropertyType": [
-          "아파트"
-        ],
-        "Policy": [
-          "보유세"
-        ],
-        "Market": [
-          "매물",
-          "호가"
-        ],
-        "PropertyGeneral": [
-          "집",
-          "아파트"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 61420000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "아리팍 보유세 3816만 → 6142만원 … 稅부담에 호가 낮춘 매물 속출",
-      "competition_rate": null,
-      "property_type": "apartment",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:11680:apartment",
-      "canonical_key_status": "region_proxy",
-      "event_key": "listing_inventory:256c2bc9ee44:20260806",
-      "required_field_proxy": {
-        "region_code": true,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "listing_count"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "'생애최초 특공'에 몰리는 이유…물량 많고 1인 가구도 청약 가능",
-      "url": "https://www.hankyung.com/article/2026080712441",
-      "source_url": "https://www.hankyung.com/article/2026080712441",
-      "event_at": "2026-08-06T23:28:09+00:00",
-      "matched_entities": {
-        "Policy": [
-          "청약"
-        ],
-        "Market": [
-          "트렌드"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "청약"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "생애최초 특공",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:d8e0fde26760",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:0fbe385d5c82:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "'더샵 여주역더퍼스트' 696가구",
-      "url": "https://www.hankyung.com/article/2026080712461",
-      "source_url": "https://www.hankyung.com/article/2026080712461",
-      "event_at": "2026-08-06T23:27:40+00:00",
-      "matched_entities": {
-        "Market": [
-          "트렌드"
-        ],
-        "Developer": [
-          "더샵"
-        ],
-        "PropertyGeneral": [
-          "부동산"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "더샵 여주역더퍼스트",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": 696,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:5209d0c2832e",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:5b8b6330c3dc:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "정부는 서두르는데…부산·대전 공공분양 잇단 연기",
-      "url": "https://www.hankyung.com/article/2026080712431",
-      "source_url": "https://www.hankyung.com/article/2026080712431",
-      "event_at": "2026-08-06T23:27:17+00:00",
-      "matched_entities": {
-        "Location": [
-          "대전",
-          "부산"
-        ],
-        "PropertyType": [
-          "분양"
-        ],
-        "Policy": [
-          "공공분양"
-        ],
-        "Market": [
-          "트렌드"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "분양"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "대전",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "정부는 서두르는데…부산·대전 공공분양 잇단 연기",
-      "competition_rate": 27.0,
-      "property_type": "분양",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:cbd2ec0b758e",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:73f0fa3721ca:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": true,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "대통령 요청에 답했다...서울시, 대통령실에 민간 정비사업 공급효과 백서 전달",
-      "url": "https://www.mk.co.kr/news/realestate/12120862",
-      "source_url": "https://www.mk.co.kr/news/realestate/12120862",
-      "event_at": "2026-08-06T20:14:23+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택",
-          "정비사업"
-        ],
-        "Policy": [
-          "규제",
-          "완화",
-          "대출"
-        ],
-        "Market": [
-          "공급",
-          "착공"
-        ],
-        "PropertyGeneral": [
-          "주택",
-          "대출"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "대통령 요청에 답했다...서울시, 대통령실에 민간 정비사업 공급효과 백서 전달",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:44feb5aee634",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:9d93edfd63b5:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "“28억에 샀는데 450억”…서장훈, 26년 보유 양재역 빌딩 매각 추진",
-      "url": "https://www.mk.co.kr/news/realestate/12120797",
-      "source_url": "https://www.mk.co.kr/news/realestate/12120797",
-      "event_at": "2026-08-06T18:04:12+00:00",
-      "matched_entities": {
-        "Policy": [
-          "세금"
-        ],
-        "Market": [
-          "매물"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 2800000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "“28억에 샀는데 450억”…서장훈, 26년 보유 양재역 빌딩 매각 추진",
-      "competition_rate": null,
-      "property_type": "",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "listing_inventory:3a91ed0f3956:20260806",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": false,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "property_type",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "“부산 청약열기 고조”…두산건설, ‘두산위브더제니스 대연’ 10일 청약일정 돌입",
-      "url": "https://www.mk.co.kr/news/realestate/12120780",
-      "source_url": "https://www.mk.co.kr/news/realestate/12120780",
-      "event_at": "2026-08-06T17:37:45+00:00",
-      "matched_entities": {
-        "Location": [
-          "부산"
-        ],
-        "Policy": [
-          "청약",
-          "당첨"
-        ],
-        "Market": [
-          "공급"
-        ],
-        "Developer": [
-          "두산건설"
-        ],
-        "PropertyGeneral": [
-          "청약",
-          "계약"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "26000",
-      "region_name": "부산",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "“부산 청약열기 고조”…두산건설, ‘두산위브더제니스 대연’ 10일 청약일정 돌입",
-      "competition_rate": null,
-      "property_type": "청약",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:26000:title:e0bfdc2b630d",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:1a13e6cac9fe:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "민주당 “서울주택 공급 절벽?…오세훈이 만들어낸 결과물”",
-      "url": "https://www.mk.co.kr/news/realestate/12120766",
-      "source_url": "https://www.mk.co.kr/news/realestate/12120766",
-      "event_at": "2026-08-06T17:22:36+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택"
-        ],
-        "Market": [
-          "공급"
-        ],
-        "PropertyGeneral": [
-          "주택"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "민주당 “서울주택 공급 절벽?…오세훈이 만들어낸 결과물”",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:f97be8bb5936",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:db764a01ce95:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "“닥공 외치더니 착공 19%뿐”…안철수, 이 대통령에 “공급포기 대통령”",
-      "url": "https://www.mk.co.kr/news/realestate/12120753",
-      "source_url": "https://www.mk.co.kr/news/realestate/12120753",
-      "event_at": "2026-08-06T17:11:59+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택"
-        ],
-        "Market": [
-          "공급",
-          "착공"
-        ],
-        "PropertyGeneral": [
-          "주택"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "“닥공 외치더니 착공 19%뿐”…안철수, 이 대통령에 “공급포기 대통령”",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:e0d9b12d0b14",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:c2acee43135f:20260806",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
     }
   ],
   "source_activation_items": [
@@ -12349,7 +12001,7 @@
       "event_model": "transaction_record",
       "source": "아파트실거래가",
       "title": "실거래가부터 집 구하기까지, 호갱노노",
-      "event_key": "transaction_record:88c77a29dcd3:20260816"
+      "event_key": "transaction_record:88c77a29dcd3:20260817"
     },
     {
       "reason": "proxy_canonical_key",
@@ -12371,6 +12023,154 @@
       "reason": "proxy_canonical_key",
       "event_model": "presale_competition",
       "source": "매일경제 부동산",
+      "title": "서울 전세 3만가구 증발 … 월세는 5만가구 껑충",
+      "canonical_key": "property_project:title:15955d8ae56c",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "서울 전세 3만가구 증발 … 월세는 5만가구 껑충",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "공장서 뚝딱…모듈러 주택 年5천가구 '닥공'",
+      "canonical_key": "property_project:title:6aeae80b595f",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "공장서 뚝딱…모듈러 주택 年5천가구 '닥공'",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "서울 상도동 214 재개발 확정…최고 29층 1840가구로 탈바꿈",
+      "canonical_key": "property_project:title:76c3fd21c52e",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "서울 상도동 214 재개발 확정…최고 29층 1840가구로 탈바꿈",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "“공급까지는 한참 남았는데”…먼저 풀리는 대출, 집값 자극할라 우려",
+      "canonical_key": "property_project:title:b185ec4c0529",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "“공급까지는 한참 남았는데”…먼저 풀리는 대출, 집값 자극할라 우려",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "‘Magical’ New York A-Frame With Secret Gardens and ‘Breathtaking’ Walls of Glass Is Listed for $1.7 Million",
+      "event_key": "transaction_record:b1b8e12e4603:20260816"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "‘Magical’ New York A-Frame With Secret Gardens and ‘Breathtaking’ Walls of Glass Is Listed for $1.7 Million",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "16-Acre Ultimate ‘Glamping’ House Tucked Between the Berkshires and Catskills Lists for $4.6 Million",
+      "event_key": "transaction_record:d031835fb0a5:20260816"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "Realtor.com News",
+      "title": "16-Acre Ultimate ‘Glamping’ House Tucked Between the Berkshires and Catskills Lists for $4.6 Million",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "\"개발되면 덕 보겠지만…\" 주민들은 교통난 심화가 걱정",
+      "canonical_key": "property_project:title:2de587c68a08",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "\"개발되면 덕 보겠지만…\" 주민들은 교통난 심화가 걱정",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "[단독] 남양주 택지 발표前 ‘지분쪼개기’ 몰렸다…정부, 이상거래 조사",
+      "canonical_key": "property_project:title:0e1dc0ce9270",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "[단독] 남양주 택지 발표前 ‘지분쪼개기’ 몰렸다…정부, 이상거래 조사",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "[단독] 의정부·구로…정비사업 틈새 뚫는 중견건설사",
+      "canonical_key": "property_project:11650:title:65db42a2462c",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "[단독] 의정부·구로…정비사업 틈새 뚫는 중견건설사",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "'천안 아이파크 시티' 1714가구 분양",
+      "canonical_key": "property_project:title:88c954b55f64",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "한경 부동산",
+      "title": "'천안 아이파크 시티' 1714가구 분양",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
       "title": "“로또 청약, 꿈도 꾸지 마세요”…이제 LH가 먼저 ‘줍줍’, 공공임대로 돌린다",
       "canonical_key": "property_project:title:5364952e9c70",
       "canonical_key_status": "title_proxy"
@@ -12386,21 +12186,6 @@
       "reason": "proxy_canonical_key",
       "event_model": "presale_competition",
       "source": "매일경제 부동산",
-      "title": "송파 9억대 아파트, 하나 남았습니다",
-      "canonical_key": "property_project:11710:title:9987ca407ebb",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "송파 9억대 아파트, 하나 남았습니다",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
       "title": "'로또 줍줍' LH가 사들여 임대로 공급 추진",
       "canonical_key": "property_project:title:72698ce5ac74",
       "canonical_key_status": "title_proxy"
@@ -12410,6 +12195,21 @@
       "event_model": "presale_competition",
       "source": "매일경제 부동산",
       "title": "'로또 줍줍' LH가 사들여 임대로 공급 추진",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "송파 9억대 아파트, 하나 남았습니다",
+      "canonical_key": "property_project:11710:title:9987ca407ebb",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "송파 9억대 아파트, 하나 남았습니다",
       "signal_basis": "article_text_signal"
     },
     {
@@ -12500,156 +12300,6 @@
       "event_model": "presale_competition",
       "source": "매일경제 부동산",
       "title": "“생애최초 혜택 유지된다고?”…청년 비아파트 지원 대책에 ‘눈길’",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "“직접 보니 기대 이상”… ‘상동역 롯데캐슬 시그니처’ 견본주택 방문객 호평",
-      "canonical_key": "property_project:title:ddf2ff8535bf",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "“직접 보니 기대 이상”… ‘상동역 롯데캐슬 시그니처’ 견본주택 방문객 호평",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "노원구 하계동 극동아파트 55.72㎡, 7억원 최근 3년 신고가",
-      "canonical_key": "property_project:title:d5b7866aa9e5",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "노원구 하계동 극동아파트 55.72㎡, 7억원 최근 3년 신고가",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "도봉구 창동신도브래뉴1차 84.989㎡, 9억 9,000만 원 최근 3년 신고가",
-      "canonical_key": "property_project:title:5c8498730fc5",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "도봉구 창동신도브래뉴1차 84.989㎡, 9억 9,000만 원 최근 3년 신고가",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "광진구 광장현대9차 59.97㎡, 18억 7천만원 최근 3년 신고가",
-      "canonical_key": "property_project:title:fb29a703dcc1",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "광진구 광장현대9차 59.97㎡, 18억 7천만원 최근 3년 신고가",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "‘한국 부동산 쇼핑’ 즐기던 왕서방 다 어디갔나…이 제도 탓에 발길 끊겼다는데",
-      "canonical_key": "property_project:title:18338feae8cd",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "‘한국 부동산 쇼핑’ 즐기던 왕서방 다 어디갔나…이 제도 탓에 발길 끊겼다는데",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "회장님들도 한강뷰는 포기못해…한남동 재벌마을서 벌어진 소송전",
-      "canonical_key": "property_project:title:233fb249d0af",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
-      "source": "매일경제 부동산",
-      "title": "회장님들도 한강뷰는 포기못해…한남동 재벌마을서 벌어진 소송전",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "대한건설협회 “‘8·13 대책’은 실효성 있는 대책…환영”",
-      "canonical_key": "property_project:title:b5e447471d0d",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "대한건설협회 “‘8·13 대책’은 실효성 있는 대책…환영”",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "전국 13곳서 2.2만 가구 '랜드마크' 쏟아진다",
-      "canonical_key": "property_project:title:f7bbc025586a",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "전국 13곳서 2.2만 가구 '랜드마크' 쏟아진다",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
-      "source": "한경 부동산",
-      "title": "대한건설협회 “PF 자기자본 유예, 착공에 숨통”",
-      "canonical_key": "property_project:title:61edf37e9dee",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
-      "source": "한경 부동산",
-      "title": "대한건설협회 “PF 자기자본 유예, 착공에 숨통”",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "김윤덕 장관 \"용산공원 전체, 주택 공급지로 검토\"",
-      "canonical_key": "property_project:title:a3d8a279788c",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "김윤덕 장관 \"용산공원 전체, 주택 공급지로 검토\"",
       "signal_basis": "article_text_signal"
     }
   ],

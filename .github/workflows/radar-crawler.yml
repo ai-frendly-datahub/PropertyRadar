@@ -3,7 +3,7 @@ name: PropertyRadar Daily Collection
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"  # Daily at 6:00 UTC
+    - cron: "29 8 * * *"  # Daily at 08:29 UTC (17:29 KST)
 
 permissions:
   contents: write

@@ -1,6 +1,6 @@
 {
   "category": "property",
-  "generated_at": "2026-11-06T16:09:42.463889+00:00",
+  "generated_at": "2026-11-07T15:06:22.541494+00:00",
   "scope_note": "Property quality rows separate operating signals such as transaction, presale, listing inventory, and permit/completion evidence from broad news or community market commentary. Proxy rows are review items until source-level identifiers and dates are collected.",
   "summary": {
     "total_sources": 17,
@@ -14,19 +14,19 @@
     "not_tracked_sources": 5,
     "skipped_disabled_sources": 8,
     "collection_error_count": 0,
-    "transaction_record_events": 65,
-    "presale_competition_events": 105,
-    "listing_inventory_events": 16,
+    "transaction_record_events": 85,
+    "presale_competition_events": 104,
+    "listing_inventory_events": 12,
     "permit_completion_events": 17,
-    "property_signal_event_count": 203,
+    "property_signal_event_count": 218,
     "official_or_operational_event_count": 2,
-    "news_proxy_event_count": 200,
+    "news_proxy_event_count": 215,
     "complete_canonical_key_count": 0,
-    "proxy_canonical_key_count": 145,
-    "missing_canonical_key_count": 58,
-    "region_code_present_count": 30,
-    "project_key_present_count": 122,
-    "transaction_price_present_count": 94,
+    "proxy_canonical_key_count": 141,
+    "missing_canonical_key_count": 77,
+    "region_code_present_count": 31,
+    "project_key_present_count": 121,
+    "transaction_price_present_count": 112,
     "listing_count_present_count": 40,
     "competition_rate_present_count": 12,
     "event_required_field_gap_count": 0,
@@ -53,7 +53,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 135,
+      "article_count": 132,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -76,7 +76,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 188,
+      "article_count": 207,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -124,7 +124,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-11-06T16:09:17.041658+00:00",
+      "latest_event_at": "2026-11-07T15:05:56.494902+00:00",
       "age_days": 0.0,
       "latest_title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "latest_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
@@ -151,7 +151,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-11-06T16:09:25.567351+00:00",
+      "latest_event_at": "2026-11-07T15:06:05.616269+00:00",
       "age_days": 0.0,
       "latest_title": "서울주택도시개발공사",
       "latest_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
@@ -177,7 +177,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-11-06T16:09:31.614571+00:00",
+      "latest_event_at": "2026-11-07T15:06:10.941757+00:00",
       "age_days": 0.0,
       "latest_title": "실거래가부터 집 구하기까지, 호갱노노",
       "latest_url": "https://hogangnono.com/",
@@ -364,7 +364,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 122,
+      "article_count": 112,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -387,7 +387,7 @@
       "event_model": "market_report",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 51,
+      "article_count": 45,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -457,7 +457,7 @@
       "title": "부동산114 | 아파트 시세·분양·입주 분석 플랫폼",
       "url": "https://www.r114.com/?_c=Research&_m=ReportNews",
       "source_url": "https://www.r114.com/?_c=Research&_m=ReportNews",
-      "event_at": "2026-11-06T16:09:36.116652+00:00",
+      "event_at": "2026-11-07T15:06:17.753332+00:00",
       "matched_entities": {
         "PropertyType": [
           "아파트",
@@ -494,7 +494,7 @@
       "completion_date": "",
       "canonical_key": "property_project:title:e7e933dabbc7",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:ba6d1ba41ef1:20261106",
+      "event_key": "presale_competition:ba6d1ba41ef1:20261107",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -519,7 +519,7 @@
       "title": "실거래가부터 집 구하기까지, 호갱노노",
       "url": "https://hogangnono.com/",
       "source_url": "https://hogangnono.com/",
-      "event_at": "2026-11-06T16:09:31.614571+00:00",
+      "event_at": "2026-11-07T15:06:10.941757+00:00",
       "matched_entities": {
         "PropertyType": [
           "분양",
@@ -544,6 +544,7 @@
           "수익률"
         ],
         "PropertyGeneral": [
+          "부동산",
           "집",
           "매매",
           "전세",
@@ -574,7 +575,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:88c77a29dcd3:20261106",
+      "event_key": "transaction_record:88c77a29dcd3:20261107",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -601,7 +602,7 @@
       "title": "서울주택도시개발공사",
       "url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
       "source_url": "https://www.i-sh.co.kr/main/lay2/S1T22C97/contents.do",
-      "event_at": "2026-11-06T16:09:25.567351+00:00",
+      "event_at": "2026-11-07T15:06:05.616269+00:00",
       "matched_entities": {
         "Location": [
           "강남"
@@ -640,7 +641,7 @@
       "completion_date": "",
       "canonical_key": "property_project:11680:title:9d21a5b91bb7",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:056bc46b7f7d:20261106",
+      "event_key": "presale_competition:056bc46b7f7d:20261107",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -664,7 +665,7 @@
       "title": "보도자료 | 뉴스룸 : 한국토지주택공사",
       "url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
       "source_url": "https://www.lh.or.kr/gallery.es?bid=0003&mid=a10502000000",
-      "event_at": "2026-11-06T16:09:17.041658+00:00",
+      "event_at": "2026-11-07T15:05:56.494902+00:00",
       "matched_entities": {
         "Location": [
           "동탄",
@@ -719,7 +720,7 @@
       "completion_date": "",
       "canonical_key": "property_project:title:c0e5a8a189a1",
       "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:fbb61543a895:20261106",
+      "event_key": "presale_competition:fbb61543a895:20261107",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -729,6 +730,1662 @@
       "required_field_gaps": [
         "project_id",
         "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "“앞날이 캄캄”…당첨 기쁨은 잠깐, 대출 금리에 한숨만",
+      "url": "https://www.mk.co.kr/news/realestate/12201523",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201523",
+      "event_at": "2026-11-07T02:05:45+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "분양"
+        ],
+        "Policy": [
+          "규제",
+          "완화",
+          "대출",
+          "금리",
+          "당첨"
+        ],
+        "Market": [
+          "공급"
+        ],
+        "PropertyGeneral": [
+          "분양",
+          "대출",
+          "금리"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "“앞날이 캄캄”…당첨 기쁨은 잠깐, 대출 금리에 한숨만",
+      "competition_rate": null,
+      "property_type": "분양",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:28f2e5d273f7",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:70d72abac88d:20261107",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "“찬바람 이긴 청약 열기”…‘한화포레나 지제역’ 견본주택에 내방객 북적",
+      "url": "https://www.mk.co.kr/news/realestate/12201453",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201453",
+      "event_at": "2026-11-06T20:33:02+00:00",
+      "matched_entities": {
+        "Location": [
+          "평택"
+        ],
+        "PropertyType": [
+          "주택",
+          "분양"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "공급",
+          "수요"
+        ],
+        "PropertyGeneral": [
+          "주택",
+          "분양",
+          "청약"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "평택",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "“찬바람 이긴 청약 열기”…‘한화포레나 지제역’ 견본주택에 내방객 북적",
+      "competition_rate": null,
+      "property_type": "housing",
+      "listing_count": 1098,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:3b582f0853f0",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:bae5709f1699:20261106",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "listing_inventory",
+      "title": "강남 급매물 35억 ‘뚝’ 떨어졌는데…집값 3.5억 ‘껑충’ 뛰는 곳 보니",
+      "url": "https://www.mk.co.kr/news/realestate/12201431",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201431",
+      "event_at": "2026-11-06T17:04:10+00:00",
+      "matched_entities": {
+        "Location": [
+          "강남"
+        ],
+        "PropertyType": [
+          "아파트",
+          "매매"
+        ],
+        "Market": [
+          "상승",
+          "매물",
+          "급매",
+          "급매물"
+        ],
+        "PropertyGeneral": [
+          "집",
+          "아파트",
+          "매매"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11680",
+      "region_name": "강남",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": 3500000000.0,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강남 급매물 35억 ‘뚝’ 떨어졌는데…집값 3.5억 ‘껑충’ 뛰는 곳 보니",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "listing_inventory:11680:apartment",
+      "canonical_key_status": "region_proxy",
+      "event_key": "listing_inventory:256c2bc9ee44:20261106",
+      "required_field_proxy": {
+        "region_code": true,
+        "property_type": true,
+        "listing_count": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "listing_count"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "성동구 이편한세상금호파크힐스 84.957㎡ 23억 3500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201426",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201426",
+      "event_at": "2026-11-06T17:01:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "성동"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "성동",
+      "complex_name": "",
+      "building": "",
+      "area": 84.957,
+      "transaction_price": 2300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "성동구 이편한세상금호파크힐스 84.957㎡ 23억 3500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:cb2ffc0217bb:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "성동구 옥수동 래미안 옥수 리버젠 59.84㎡ 24억 7천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201427",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201427",
+      "event_at": "2026-11-06T17:01:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "성동"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "래미안"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "성동",
+      "complex_name": "",
+      "building": "",
+      "area": 59.84,
+      "transaction_price": 2400000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "성동구 옥수동 래미안 옥수 리버젠 59.84㎡ 24억 7천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:2939e62e7b76:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "동대문구 이문동 대림e-편한세상 84.972㎡ 12억 6500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201428",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201428",
+      "event_at": "2026-11-06T17:01:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 84.972,
+      "transaction_price": 1200000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "동대문구 이문동 대림e-편한세상 84.972㎡ 12억 6500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:8331f3274965:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "중랑구 신내동 라이프미성 59.6㎡ 5억 3800만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201430",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201430",
+      "event_at": "2026-11-06T17:01:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.6,
+      "transaction_price": 500000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "중랑구 신내동 라이프미성 59.6㎡ 5억 3800만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:9a7b0ec9becc:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "중랑구 면목동금호어울림아파트 84.87㎡ 8억 9500만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201429",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201429",
+      "event_at": "2026-11-06T17:01:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "목동"
+        ],
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "목동",
+      "complex_name": "",
+      "building": "",
+      "area": 84.87,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "중랑구 면목동금호어울림아파트 84.87㎡ 8억 9500만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:85f6d2cfbf2e:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "permit_completion",
+      "title": "영등포구 영등포중흥에스클래스 84.95㎡ 16억 4500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201422",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201422",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "영등포"
+        ],
+        "Market": [
+          "준공"
+        ],
+        "PropertyGeneral": [
+          "부동산"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "영등포",
+      "complex_name": "",
+      "building": "",
+      "area": 84.95,
+      "transaction_price": 1600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "영등포구 영등포중흥에스클래스 84.95㎡ 16억 4500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:67b7baf6f6d3",
+      "canonical_key_status": "title_proxy",
+      "event_key": "permit_completion:af2125b774d4:20261106",
+      "required_field_proxy": {
+        "project_id": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "강남구 래미안포레 84.99㎡ 22억 4천만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201424",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201424",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "강남"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "래미안"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11680",
+      "region_name": "강남",
+      "complex_name": "",
+      "building": "",
+      "area": 84.99,
+      "transaction_price": 2200000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강남구 래미안포레 84.99㎡ 22억 4천만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_region:11680",
+      "canonical_key_status": "region_proxy",
+      "event_key": "transaction_record:137f5f811141:20261106",
+      "required_field_proxy": {
+        "region_code": true,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "구로구 개봉동 한마을 149.97㎡ 13억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201419",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201419",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 149.97,
+      "transaction_price": 1300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "구로구 개봉동 한마을 149.97㎡ 13억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:fad0863203d2:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "관악구 신림동 동부 7억 1800만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201423",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201423",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "관악"
+        ],
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "관악",
+      "complex_name": "",
+      "building": "",
+      "area": 50.57,
+      "transaction_price": 700000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "관악구 신림동 동부 7억 1800만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:9fe0aa0b30c5:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "구로구 고척LIG리가2차 59.95㎡ 10억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201421",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201421",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.95,
+      "transaction_price": 1000000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "구로구 고척LIG리가2차 59.95㎡ 10억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:9bec0b94c4f9:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "강동구 둔촌동 초원동아 59.63㎡ 8억 8700만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201425",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201425",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.63,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강동구 둔촌동 초원동아 59.63㎡ 8억 8700만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:c288c36b3b7e:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "permit_completion",
+      "title": "구로구 개봉동 한진 84.96㎡ 8억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201420",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201420",
+      "event_at": "2026-11-06T17:00:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가",
+          "준공"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 84.96,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "구로구 개봉동 한진 84.96㎡ 8억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:51e0393891e9",
+      "canonical_key_status": "title_proxy",
+      "event_key": "permit_completion:3ba109edacc0:20261106",
+      "required_field_proxy": {
+        "project_id": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "도봉구 창동 삼성래미안 66.48㎡ 9억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201408",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201408",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Location": [
+          "삼성"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "래미안"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "삼성",
+      "complex_name": "",
+      "building": "",
+      "area": 66.48,
+      "transaction_price": 900000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "도봉구 창동 삼성래미안 66.48㎡ 9억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:7909f36c7594:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 하계동 한신1 전용 27㎡ 3억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201418",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201418",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 27.0,
+      "transaction_price": 300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 하계동 한신1 전용 27㎡ 3억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:f0f76b0c1d7a:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 중계동 경남 74.2㎡ 9억원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201413",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201413",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 74.2,
+      "transaction_price": 900000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 중계동 경남 74.2㎡ 9억원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:d8b7482fe012:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 중계동 현대(6차) 59.84㎡, 6억 4천만원 `최근 3년 신고가` [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201416",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201416",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.84,
+      "transaction_price": 600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 중계동 현대(6차) 59.84㎡, 6억 4천만원 `최근 3년 신고가` [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:2c48663cd8b9:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 월계동 롯데캐슬루나 84.9852㎡, 10억 8천만원 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201412",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201412",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "롯데캐슬"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 84.9852,
+      "transaction_price": 1000000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 월계동 롯데캐슬루나 84.9852㎡, 10억 8천만원 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:1635048bbe89:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 하계동 학여울청구 113.51㎡ 12억 4천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201417",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201417",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 113.51,
+      "transaction_price": 1200000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 하계동 학여울청구 113.51㎡ 12억 4천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:66230c8afa0d:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 중계동 주공5 전용 38.64㎡ 5억 500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201415",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201415",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 38.64,
+      "transaction_price": 500000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 중계동 주공5 전용 38.64㎡ 5억 500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:c602cf542814:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 보람아파트 54.59㎡ 6억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201409",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201409",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 54.59,
+      "transaction_price": 600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 보람아파트 54.59㎡ 6억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:22e6fd5ac940:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 상계대림 59.67㎡ 6억 1천만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201410",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201410",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.67,
+      "transaction_price": 600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 상계대림 59.67㎡ 6억 1천만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:d875a73fc0e3:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 중계동 롯데(505) 8억 9천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201414",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201414",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 72.49,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 중계동 롯데(505) 8억 9천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:c90004ede556:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "강북구 수유벽산1차 84.92㎡ 8억원 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201407",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201407",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Location": [
+          "강북"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "강북",
+      "complex_name": "",
+      "building": "",
+      "area": 84.92,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강북구 수유벽산1차 84.92㎡ 8억원 거래… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:4ca7b629c20c:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "서초구 반포동 래미안퍼스티지 84.93㎡ 53억원 거래 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201406",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201406",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Location": [
+          "서초"
+        ],
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "래미안"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11650",
+      "region_name": "서초",
+      "complex_name": "",
+      "building": "",
+      "area": 84.93,
+      "transaction_price": 5300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "서초구 반포동 래미안퍼스티지 84.93㎡ 53억원 거래 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_region:11650",
+      "canonical_key_status": "region_proxy",
+      "event_key": "transaction_record:7747523c04ee:20261106",
+      "required_field_proxy": {
+        "region_code": true,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 상계주공14단지 45.9㎡ 5억 4천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12201411",
+      "source_url": "https://www.mk.co.kr/news/realestate/12201411",
+      "event_at": "2026-11-06T17:00:16+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 45.9,
+      "transaction_price": 500000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 상계주공14단지 45.9㎡ 5억 4천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:3f7049fb4f28:20261106",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "한경 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "'엘리프 시흥 더프라임' 338가구",
+      "url": "https://www.hankyung.com/article/2026110618121",
+      "source_url": "https://www.hankyung.com/article/2026110618121",
+      "event_at": "2026-11-06T07:16:04+00:00",
+      "matched_entities": {
+        "Market": [
+          "트렌드"
+        ],
+        "PropertyGeneral": [
+          "부동산"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "rent",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "엘리프 시흥 더프라임",
+      "competition_rate": 1.0,
+      "property_type": "부동산",
+      "listing_count": 338,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:081b5414217f",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:de417005198e:20261106",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": true,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
         "region_code"
       ]
     },
@@ -1308,9 +2965,11 @@
           "주택"
         ],
         "Market": [
-          "공급"
+          "공급",
+          "트렌드"
         ],
         "PropertyGeneral": [
+          "부동산",
           "주택"
         ]
       },
@@ -1321,7 +2980,7 @@
       "building": "",
       "area": null,
       "transaction_price": null,
-      "transaction_type": "",
+      "transaction_type": "rent",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
@@ -1421,11 +3080,7 @@
           "아파트",
           "재건축"
         ],
-        "Market": [
-          "트렌드"
-        ],
         "PropertyGeneral": [
-          "부동산",
           "아파트",
           "재건축"
         ]
@@ -1437,7 +3092,7 @@
       "building": "",
       "area": null,
       "transaction_price": null,
-      "transaction_type": "rent",
+      "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
@@ -1721,11 +3376,7 @@
         "PropertyType": [
           "분양"
         ],
-        "Market": [
-          "트렌드"
-        ],
         "PropertyGeneral": [
-          "부동산",
           "분양"
         ]
       },
@@ -1736,7 +3387,7 @@
       "building": "",
       "area": null,
       "transaction_price": null,
-      "transaction_type": "rent",
+      "transaction_type": "sale",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
@@ -2251,63 +3902,6 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "중랑구 면목동 용마한신 44.35㎡ 5억 9천만원…최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12200158",
-      "source_url": "https://www.mk.co.kr/news/realestate/12200158",
-      "event_at": "2026-11-05T15:01:17+00:00",
-      "matched_entities": {
-        "Location": [
-          "목동"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "목동",
-      "complex_name": "",
-      "building": "",
-      "area": 44.35,
-      "transaction_price": 500000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "중랑구 면목동 용마한신 44.35㎡ 5억 9천만원…최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:9d3c2041e8bc:20261105",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
       "title": "강동구 롯데캐슬퍼스트 111.22㎡ 22억 4500만원 최근 3년 신고가 [MAI부동산]",
       "url": "https://www.mk.co.kr/news/realestate/12200163",
       "source_url": "https://www.mk.co.kr/news/realestate/12200163",
@@ -2344,114 +3938,6 @@
       "canonical_key": "",
       "canonical_key_status": "missing",
       "event_key": "transaction_record:61a776718dfb:20261105",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "노원구 상계주공14단지 45.9㎡ 5억 1천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12200161",
-      "source_url": "https://www.mk.co.kr/news/realestate/12200161",
-      "event_at": "2026-11-05T15:01:17+00:00",
-      "matched_entities": {
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": 45.9,
-      "transaction_price": 500000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "노원구 상계주공14단지 45.9㎡ 5억 1천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:8ef3aeeb9765:20261105",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "성북구 석관동 코오롱 59.94㎡ 8억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12200160",
-      "source_url": "https://www.mk.co.kr/news/realestate/12200160",
-      "event_at": "2026-11-05T15:01:17+00:00",
-      "matched_entities": {
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": 59.94,
-      "transaction_price": 800000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "성북구 석관동 코오롱 59.94㎡ 8억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:4f86cfc63432:20261105",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -2527,20 +4013,16 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "동대문구 용두동 신동아 84.63㎡ 11억 8천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12200156",
-      "source_url": "https://www.mk.co.kr/news/realestate/12200156",
-      "event_at": "2026-11-05T15:01:16+00:00",
+      "title": "성북구 석관동 코오롱 59.94㎡ 8억 6천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12200160",
+      "source_url": "https://www.mk.co.kr/news/realestate/12200160",
+      "event_at": "2026-11-05T15:01:17+00:00",
       "matched_entities": {
-        "PropertyType": [
-          "아파트"
-        ],
         "Market": [
           "실거래가"
         ],
         "PropertyGeneral": [
           "부동산",
-          "아파트",
           "실거래가"
         ]
       },
@@ -2549,21 +4031,132 @@
       "region_name": "KR",
       "complex_name": "",
       "building": "",
-      "area": 84.63,
-      "transaction_price": 1100000000.0,
+      "area": 59.94,
+      "transaction_price": 800000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "동대문구 용두동 신동아 84.63㎡ 11억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "성북구 석관동 코오롱 59.94㎡ 8억 6천만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
-      "property_type": "apartment",
+      "property_type": "부동산",
       "listing_count": null,
       "permit_date": "",
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:15534f907f11:20261105",
+      "event_key": "transaction_record:4f86cfc63432:20261105",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "중랑구 면목동 용마한신 44.35㎡ 5억 9천만원…최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12200158",
+      "source_url": "https://www.mk.co.kr/news/realestate/12200158",
+      "event_at": "2026-11-05T15:01:17+00:00",
+      "matched_entities": {
+        "Location": [
+          "목동"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "목동",
+      "complex_name": "",
+      "building": "",
+      "area": 44.35,
+      "transaction_price": 500000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "중랑구 면목동 용마한신 44.35㎡ 5억 9천만원…최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:9d3c2041e8bc:20261105",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "노원구 상계주공14단지 45.9㎡ 5억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12200161",
+      "source_url": "https://www.mk.co.kr/news/realestate/12200161",
+      "event_at": "2026-11-05T15:01:17+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 45.9,
+      "transaction_price": 500000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "노원구 상계주공14단지 45.9㎡ 5억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:8ef3aeeb9765:20261105",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -2622,6 +4215,64 @@
       "canonical_key": "",
       "canonical_key_status": "missing",
       "event_key": "transaction_record:623bb64f9eaf:20261105",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "동대문구 용두동 신동아 84.63㎡ 11억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12200156",
+      "source_url": "https://www.mk.co.kr/news/realestate/12200156",
+      "event_at": "2026-11-05T15:01:16+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 84.63,
+      "transaction_price": 1100000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "동대문구 용두동 신동아 84.63㎡ 11억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:15534f907f11:20261105",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -3481,13 +5132,15 @@
           "주택",
           "농지",
           "재건축",
-          "재개발",
           "정비사업"
         ],
+        "Market": [
+          "준공"
+        ],
         "PropertyGeneral": [
+          "집",
           "아파트",
           "주택",
-          "재개발",
           "재건축"
         ]
       },
@@ -3503,7 +5156,7 @@
       "report_date": "",
       "project_id": "",
       "project_name": "천지개벽",
-      "competition_rate": 16.0,
+      "competition_rate": 2.0,
       "property_type": "apartment",
       "listing_count": 6000,
       "permit_date": "",
@@ -6145,13 +7798,13 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "동작구 사당우성3 84.66㎡ 19억원 거래… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12195990",
-      "source_url": "https://www.mk.co.kr/news/realestate/12195990",
+      "title": "관악구 신림현대 59.85㎡ 7억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12195992",
+      "source_url": "https://www.mk.co.kr/news/realestate/12195992",
       "event_at": "2026-11-03T15:13:31+00:00",
       "matched_entities": {
         "Location": [
-          "동작"
+          "관악"
         ],
         "Market": [
           "실거래가"
@@ -6163,16 +7816,16 @@
       },
       "signal_basis": "article_text_signal",
       "region_code": "",
-      "region_name": "동작",
+      "region_name": "관악",
       "complex_name": "",
       "building": "",
-      "area": 84.66,
-      "transaction_price": 1900000000.0,
+      "area": 59.85,
+      "transaction_price": 700000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "동작구 사당우성3 84.66㎡ 19억원 거래… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "관악구 신림현대 59.85㎡ 7억 9500만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
       "property_type": "부동산",
       "listing_count": null,
@@ -6180,7 +7833,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:932fc146816c:20261103",
+      "event_key": "transaction_record:9c3fee201608:20261103",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -6262,13 +7915,13 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "관악구 신림현대 59.85㎡ 7억 9500만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12195992",
-      "source_url": "https://www.mk.co.kr/news/realestate/12195992",
+      "title": "동작구 사당우성3 84.66㎡ 19억원 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12195990",
+      "source_url": "https://www.mk.co.kr/news/realestate/12195990",
       "event_at": "2026-11-03T15:13:31+00:00",
       "matched_entities": {
         "Location": [
-          "관악"
+          "동작"
         ],
         "Market": [
           "실거래가"
@@ -6280,16 +7933,16 @@
       },
       "signal_basis": "article_text_signal",
       "region_code": "",
-      "region_name": "관악",
+      "region_name": "동작",
       "complex_name": "",
       "building": "",
-      "area": 59.85,
-      "transaction_price": 700000000.0,
+      "area": 84.66,
+      "transaction_price": 1900000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "관악구 신림현대 59.85㎡ 7억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "동작구 사당우성3 84.66㎡ 19억원 거래… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
       "property_type": "부동산",
       "listing_count": null,
@@ -6297,7 +7950,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:9c3fee201608:20261103",
+      "event_key": "transaction_record:932fc146816c:20261103",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -6355,177 +8008,6 @@
       "canonical_key": "",
       "canonical_key_status": "missing",
       "event_key": "transaction_record:f1b318d36beb:20261103",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "영등포구 문래동6가 현대2차 79.72㎡ 13억 2천만원 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12195988",
-      "source_url": "https://www.mk.co.kr/news/realestate/12195988",
-      "event_at": "2026-11-03T15:13:30+00:00",
-      "matched_entities": {
-        "Location": [
-          "영등포"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "영등포",
-      "complex_name": "",
-      "building": "",
-      "area": 79.72,
-      "transaction_price": 1300000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "영등포구 문래동6가 현대2차 79.72㎡ 13억 2천만원 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:2b8dfedd793c:20261103",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "성북구 길음뉴타운9단지(래미안) 59.98㎡ 13억 3천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12195980",
-      "source_url": "https://www.mk.co.kr/news/realestate/12195980",
-      "event_at": "2026-11-03T15:13:30+00:00",
-      "matched_entities": {
-        "Market": [
-          "실거래가"
-        ],
-        "Developer": [
-          "래미안"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": 59.98,
-      "transaction_price": 1300000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "성북구 길음뉴타운9단지(래미안) 59.98㎡ 13억 3천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:c322ddae6dd8:20261103",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "은평구 녹번동 북한산푸르지오 59.99㎡ 11억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12195985",
-      "source_url": "https://www.mk.co.kr/news/realestate/12195985",
-      "event_at": "2026-11-03T15:13:30+00:00",
-      "matched_entities": {
-        "Market": [
-          "실거래가"
-        ],
-        "Developer": [
-          "푸르지오"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": 59.99,
-      "transaction_price": 1100000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "은평구 녹번동 북한산푸르지오 59.99㎡ 11억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:20a9c3004a1a:20261103",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -6637,6 +8119,177 @@
       "canonical_key": "",
       "canonical_key_status": "missing",
       "event_key": "transaction_record:dc14ba7ee108:20261103",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "영등포구 문래동6가 현대2차 79.72㎡ 13억 2천만원 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12195988",
+      "source_url": "https://www.mk.co.kr/news/realestate/12195988",
+      "event_at": "2026-11-03T15:13:30+00:00",
+      "matched_entities": {
+        "Location": [
+          "영등포"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "영등포",
+      "complex_name": "",
+      "building": "",
+      "area": 79.72,
+      "transaction_price": 1300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "영등포구 문래동6가 현대2차 79.72㎡ 13억 2천만원 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:2b8dfedd793c:20261103",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "은평구 녹번동 북한산푸르지오 59.99㎡ 11억 6천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12195985",
+      "source_url": "https://www.mk.co.kr/news/realestate/12195985",
+      "event_at": "2026-11-03T15:13:30+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "푸르지오"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.99,
+      "transaction_price": 1100000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "은평구 녹번동 북한산푸르지오 59.99㎡ 11억 6천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:20a9c3004a1a:20261103",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "성북구 길음뉴타운9단지(래미안) 59.98㎡ 13억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12195980",
+      "source_url": "https://www.mk.co.kr/news/realestate/12195980",
+      "event_at": "2026-11-03T15:13:30+00:00",
+      "matched_entities": {
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "래미안"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 59.98,
+      "transaction_price": 1300000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "성북구 길음뉴타운9단지(래미안) 59.98㎡ 13억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:c322ddae6dd8:20261103",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -8521,56 +10174,6 @@
       "collection_tier": "C1_rss",
       "producer_role": "",
       "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "\"신도시 되면 농어촌전형 사라질라\"… 대입 걱정하는 김포 고촌 학부모",
-      "url": "https://www.mk.co.kr/news/realestate/12193759",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193759",
-      "event_at": "2026-11-01T23:29:24+00:00",
-      "matched_entities": {
-        "Location": [
-          "김포"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "김포",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "신도시 되면 농어촌전형 사라질라",
-      "competition_rate": null,
-      "property_type": "",
-      "listing_count": 7000,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:e72f14177281",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:1e79240e09e3:20261101",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
       "event_model": "transaction_record",
       "title": "3평 미사동 밭이 무려 1200만원 … 알박기에 토지보상 빨간불",
       "url": "https://www.mk.co.kr/news/realestate/12193760",
@@ -8618,6 +10221,56 @@
       "required_field_gaps": [
         "region_code",
         "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "\"신도시 되면 농어촌전형 사라질라\"… 대입 걱정하는 김포 고촌 학부모",
+      "url": "https://www.mk.co.kr/news/realestate/12193759",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193759",
+      "event_at": "2026-11-01T23:29:24+00:00",
+      "matched_entities": {
+        "Location": [
+          "김포"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "김포",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "신도시 되면 농어촌전형 사라질라",
+      "competition_rate": null,
+      "property_type": "",
+      "listing_count": 7000,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:e72f14177281",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:1e79240e09e3:20261101",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
       ]
     },
     {
@@ -9881,6 +11534,175 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
+      "title": "은평구 신사동 미성 83.27㎡ 8억 7500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193018",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193018",
+      "event_at": "2026-11-01T02:58:28+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 83.27,
+      "transaction_price": 800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "은평구 신사동 미성 83.27㎡ 8억 7500만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:af7f64a9b6b2:20261101",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "permit_completion",
+      "title": "구로구 개봉동현대아이파크 84.98㎡ 12억 2800만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193021",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193021",
+      "event_at": "2026-11-01T02:58:28+00:00",
+      "matched_entities": {
+        "Market": [
+          "준공"
+        ],
+        "Developer": [
+          "아이파크"
+        ],
+        "PropertyGeneral": [
+          "부동산"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": 84.98,
+      "transaction_price": 1200000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "구로구 개봉동현대아이파크 84.98㎡ 12억 2800만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:39ee485eb137",
+      "canonical_key_status": "title_proxy",
+      "event_key": "permit_completion:eedfa592cfad:20261101",
+      "required_field_proxy": {
+        "project_id": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "강남구 논현동 신동아(22) 114.34㎡ 26억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193023",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193023",
+      "event_at": "2026-11-01T02:58:28+00:00",
+      "matched_entities": {
+        "Location": [
+          "강남",
+          "논현"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "11680",
+      "region_name": "강남",
+      "complex_name": "",
+      "building": "",
+      "area": 114.34,
+      "transaction_price": 2600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강남구 논현동 신동아(22) 114.34㎡ 26억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_region:11680",
+      "canonical_key_status": "region_proxy",
+      "event_key": "transaction_record:137f5f811141:20261101",
+      "required_field_proxy": {
+        "region_code": true,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
       "title": "노원구 월계동 성원(사슴4) 39.6㎡, 4억 7500만원 최근 3년 신고가 [MAI부동산]",
       "url": "https://www.mk.co.kr/news/realestate/12193017",
       "source_url": "https://www.mk.co.kr/news/realestate/12193017",
@@ -9935,43 +11757,42 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "노원구 시영3차(라이프)아파트 39.6㎡ 5억 2천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193016",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193016",
+      "title": "강서구 내발산동 우장산월드메르디앙 84.4476㎡ 10억 2천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193020",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193020",
       "event_at": "2026-11-01T02:58:28+00:00",
       "matched_entities": {
-        "PropertyType": [
-          "아파트"
+        "Location": [
+          "강서"
         ],
         "Market": [
           "실거래가"
         ],
         "PropertyGeneral": [
           "부동산",
-          "아파트",
           "실거래가"
         ]
       },
       "signal_basis": "article_text_signal",
       "region_code": "",
-      "region_name": "KR",
+      "region_name": "강서",
       "complex_name": "",
       "building": "",
-      "area": 39.6,
-      "transaction_price": 500000000.0,
+      "area": 84.4476,
+      "transaction_price": 1000000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "노원구 시영3차(라이프)아파트 39.6㎡ 5억 2천만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "강서구 내발산동 우장산월드메르디앙 84.4476㎡ 10억 2천만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
-      "property_type": "apartment",
+      "property_type": "부동산",
       "listing_count": null,
       "permit_date": "",
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:5c465afde59e:20261101",
+      "event_key": "transaction_record:87273a5cd767:20261101",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -10051,177 +11872,9 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "강남구 논현동 신동아(22) 114.34㎡ 26억 3천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193023",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193023",
-      "event_at": "2026-11-01T02:58:28+00:00",
-      "matched_entities": {
-        "Location": [
-          "강남",
-          "논현"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
-      "complex_name": "",
-      "building": "",
-      "area": 114.34,
-      "transaction_price": 2600000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "강남구 논현동 신동아(22) 114.34㎡ 26억 3천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_region:11680",
-      "canonical_key_status": "region_proxy",
-      "event_key": "transaction_record:137f5f811141:20261101",
-      "required_field_proxy": {
-        "region_code": true,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "permit_completion",
-      "title": "구로구 개봉동현대아이파크 84.98㎡ 12억 2800만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193021",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193021",
-      "event_at": "2026-11-01T02:58:28+00:00",
-      "matched_entities": {
-        "Market": [
-          "준공"
-        ],
-        "Developer": [
-          "아이파크"
-        ],
-        "PropertyGeneral": [
-          "부동산"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": 84.98,
-      "transaction_price": 1200000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "구로구 개봉동현대아이파크 84.98㎡ 12억 2800만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:39ee485eb137",
-      "canonical_key_status": "title_proxy",
-      "event_key": "permit_completion:eedfa592cfad:20261101",
-      "required_field_proxy": {
-        "project_id": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "강서구 내발산동 우장산월드메르디앙 84.4476㎡ 10억 2천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193020",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193020",
-      "event_at": "2026-11-01T02:58:28+00:00",
-      "matched_entities": {
-        "Location": [
-          "강서"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "강서",
-      "complex_name": "",
-      "building": "",
-      "area": 84.4476,
-      "transaction_price": 1000000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "강서구 내발산동 우장산월드메르디앙 84.4476㎡ 10억 2천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:87273a5cd767:20261101",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "은평구 신사동 미성 83.27㎡ 8억 7500만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193018",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193018",
+      "title": "노원구 시영3차(라이프)아파트 39.6㎡ 5억 2천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193016",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193016",
       "event_at": "2026-11-01T02:58:28+00:00",
       "matched_entities": {
         "PropertyType": [
@@ -10241,13 +11894,13 @@
       "region_name": "KR",
       "complex_name": "",
       "building": "",
-      "area": 83.27,
-      "transaction_price": 800000000.0,
+      "area": 39.6,
+      "transaction_price": 500000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "은평구 신사동 미성 83.27㎡ 8억 7500만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "노원구 시영3차(라이프)아파트 39.6㎡ 5억 2천만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
       "property_type": "apartment",
       "listing_count": null,
@@ -10255,7 +11908,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:af7f64a9b6b2:20261101",
+      "event_key": "transaction_record:5c465afde59e:20261101",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -10334,16 +11987,20 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "중랑구 망우동 중랑숲리가 59.978㎡, 최근 3년 신고가 6억 6250만원 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193010",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193010",
+      "title": "성북구 석관동 두산 54.55㎡ 9억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193012",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193012",
       "event_at": "2026-11-01T02:58:27+00:00",
       "matched_entities": {
+        "PropertyType": [
+          "아파트"
+        ],
         "Market": [
           "실거래가"
         ],
         "PropertyGeneral": [
           "부동산",
+          "아파트",
           "실거래가"
         ]
       },
@@ -10352,151 +12009,31 @@
       "region_name": "KR",
       "complex_name": "",
       "building": "",
-      "area": 59.978,
-      "transaction_price": 600000000.0,
+      "area": 54.55,
+      "transaction_price": 900000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "중랑구 망우동 중랑숲리가 59.978㎡, 최근 3년 신고가 6억 6250만원 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:2ce0aeccc7e7:20261101",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "용산구 용산롯데캐슬센터포레 59.79㎡ 21억 9천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193008",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193008",
-      "event_at": "2026-11-01T02:58:27+00:00",
-      "matched_entities": {
-        "Location": [
-          "용산"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "Developer": [
-          "롯데캐슬"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "용산",
-      "complex_name": "",
-      "building": "",
-      "area": 59.79,
-      "transaction_price": 2100000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "용산구 용산롯데캐슬센터포레 59.79㎡ 21억 9천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:fef4f2164e12:20261101",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "강북구 번동 해모로아파트 84.93㎡, 6억 9500만원에 거래… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193015",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193015",
-      "event_at": "2026-11-01T02:58:27+00:00",
-      "matched_entities": {
-        "Location": [
-          "강북"
-        ],
-        "PropertyType": [
-          "아파트"
-        ],
-        "Market": [
-          "준공"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "아파트"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "강북",
-      "complex_name": "",
-      "building": "",
-      "area": 84.93,
-      "transaction_price": 600000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "강북구 번동 해모로아파트 84.93㎡, 6억 9500만원에 거래… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "성북구 석관동 두산 54.55㎡ 9억 1천만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
       "property_type": "apartment",
       "listing_count": null,
       "permit_date": "",
       "completion_date": "",
-      "canonical_key": "property_project:title:107ab8c8a58e",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:0849b03bb1e9:20261101",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:dc25d0e8a62c:20261101",
       "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
         "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
         "source_url": true
       },
       "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
+        "region_code",
+        "complex_name"
       ]
     },
     {
@@ -10574,130 +12111,13 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "광진구 광장동 현대3 74.92㎡ 18억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193009",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193009",
-      "event_at": "2026-11-01T02:58:27+00:00",
-      "matched_entities": {
-        "Location": [
-          "광진"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "광진",
-      "complex_name": "",
-      "building": "",
-      "area": 74.92,
-      "transaction_price": 1800000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "광진구 광장동 현대3 74.92㎡ 18억 6천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:7882e732a2d5:20261101",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "강북구 번동 기산그린 59.94㎡ 4억 5천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193014",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193014",
-      "event_at": "2026-11-01T02:58:27+00:00",
-      "matched_entities": {
-        "Location": [
-          "강북"
-        ],
-        "Market": [
-          "실거래가"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "실거래가"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "강북",
-      "complex_name": "",
-      "building": "",
-      "area": 59.94,
-      "transaction_price": 400000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "강북구 번동 기산그린 59.94㎡ 4억 5천만원… 최근 3년 신고가 [MAI부동산]",
-      "competition_rate": null,
-      "property_type": "부동산",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:5b145f4c3ba3:20261101",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": true,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "성북구 월곡래미안루나밸리 84.88㎡ 12억 2500만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193013",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193013",
+      "title": "중랑구 망우동 중랑숲리가 59.978㎡, 최근 3년 신고가 6억 6250만원 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193010",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193010",
       "event_at": "2026-11-01T02:58:27+00:00",
       "matched_entities": {
         "Market": [
           "실거래가"
-        ],
-        "Developer": [
-          "래미안"
         ],
         "PropertyGeneral": [
           "부동산",
@@ -10709,13 +12129,13 @@
       "region_name": "KR",
       "complex_name": "",
       "building": "",
-      "area": 84.88,
-      "transaction_price": 1200000000.0,
+      "area": 59.978,
+      "transaction_price": 600000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "성북구 월곡래미안루나밸리 84.88㎡ 12억 2500만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "중랑구 망우동 중랑숲리가 59.978㎡, 최근 3년 신고가 6억 6250만원 [MAI부동산]",
       "competition_rate": null,
       "property_type": "부동산",
       "listing_count": null,
@@ -10723,7 +12143,7 @@
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:5d7e06014871:20261101",
+      "event_key": "transaction_record:2ce0aeccc7e7:20261101",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -10805,20 +12225,19 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "transaction_record",
-      "title": "성북구 석관동 두산 54.55㎡ 9억 1천만원… 최근 3년 신고가 [MAI부동산]",
-      "url": "https://www.mk.co.kr/news/realestate/12193012",
-      "source_url": "https://www.mk.co.kr/news/realestate/12193012",
+      "title": "성북구 월곡래미안루나밸리 84.88㎡ 12억 2500만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193013",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193013",
       "event_at": "2026-11-01T02:58:27+00:00",
       "matched_entities": {
-        "PropertyType": [
-          "아파트"
-        ],
         "Market": [
           "실거래가"
         ],
+        "Developer": [
+          "래미안"
+        ],
         "PropertyGeneral": [
           "부동산",
-          "아파트",
           "실거래가"
         ]
       },
@@ -10827,21 +12246,255 @@
       "region_name": "KR",
       "complex_name": "",
       "building": "",
-      "area": 54.55,
-      "transaction_price": 900000000.0,
+      "area": 84.88,
+      "transaction_price": 1200000000.0,
       "transaction_type": "",
       "deal_date": "",
       "report_date": "",
       "project_id": "",
-      "project_name": "성북구 석관동 두산 54.55㎡ 9억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "project_name": "성북구 월곡래미안루나밸리 84.88㎡ 12억 2500만원… 최근 3년 신고가 [MAI부동산]",
       "competition_rate": null,
-      "property_type": "apartment",
+      "property_type": "부동산",
       "listing_count": null,
       "permit_date": "",
       "completion_date": "",
       "canonical_key": "",
       "canonical_key_status": "missing",
-      "event_key": "transaction_record:dc25d0e8a62c:20261101",
+      "event_key": "transaction_record:5d7e06014871:20261101",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "강북구 번동 기산그린 59.94㎡ 4억 5천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193014",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193014",
+      "event_at": "2026-11-01T02:58:27+00:00",
+      "matched_entities": {
+        "Location": [
+          "강북"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "강북",
+      "complex_name": "",
+      "building": "",
+      "area": 59.94,
+      "transaction_price": 400000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강북구 번동 기산그린 59.94㎡ 4억 5천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:5b145f4c3ba3:20261101",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "광진구 광장동 현대3 74.92㎡ 18억 6천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193009",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193009",
+      "event_at": "2026-11-01T02:58:27+00:00",
+      "matched_entities": {
+        "Location": [
+          "광진"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "광진",
+      "complex_name": "",
+      "building": "",
+      "area": 74.92,
+      "transaction_price": 1800000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "광진구 광장동 현대3 74.92㎡ 18억 6천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:7882e732a2d5:20261101",
+      "required_field_proxy": {
+        "region_code": false,
+        "complex_name": false,
+        "area": true,
+        "transaction_price": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "region_code",
+        "complex_name"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
+      "title": "강북구 번동 해모로아파트 84.93㎡, 6억 9500만원에 거래… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193015",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193015",
+      "event_at": "2026-11-01T02:58:27+00:00",
+      "matched_entities": {
+        "Location": [
+          "강북"
+        ],
+        "PropertyType": [
+          "아파트"
+        ],
+        "Market": [
+          "준공"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "아파트"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "강북",
+      "complex_name": "",
+      "building": "",
+      "area": 84.93,
+      "transaction_price": 600000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "강북구 번동 해모로아파트 84.93㎡, 6억 9500만원에 거래… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "apartment",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:107ab8c8a58e",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:0849b03bb1e9:20261101",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "transaction_record",
+      "title": "용산구 용산롯데캐슬센터포레 59.79㎡ 21억 9천만원… 최근 3년 신고가 [MAI부동산]",
+      "url": "https://www.mk.co.kr/news/realestate/12193008",
+      "source_url": "https://www.mk.co.kr/news/realestate/12193008",
+      "event_at": "2026-11-01T02:58:27+00:00",
+      "matched_entities": {
+        "Location": [
+          "용산"
+        ],
+        "Market": [
+          "실거래가"
+        ],
+        "Developer": [
+          "롯데캐슬"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "실거래가"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "용산",
+      "complex_name": "",
+      "building": "",
+      "area": 59.79,
+      "transaction_price": 2100000000.0,
+      "transaction_type": "",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "용산구 용산롯데캐슬센터포레 59.79㎡ 21억 9천만원… 최근 3년 신고가 [MAI부동산]",
+      "competition_rate": null,
+      "property_type": "부동산",
+      "listing_count": null,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "",
+      "canonical_key_status": "missing",
+      "event_key": "transaction_record:fef4f2164e12:20261101",
       "required_field_proxy": {
         "region_code": false,
         "complex_name": false,
@@ -11015,6 +12668,70 @@
       "producer_role": "",
       "info_purpose": [],
       "event_model": "presale_competition",
+      "title": "계양신도시 첫 민간 공급…이번주 전국 4928가구 청약",
+      "url": "https://www.mk.co.kr/news/realestate/12192818",
+      "source_url": "https://www.mk.co.kr/news/realestate/12192818",
+      "event_at": "2026-10-31T22:52:30+00:00",
+      "matched_entities": {
+        "PropertyType": [
+          "토지",
+          "분양",
+          "임대"
+        ],
+        "Policy": [
+          "청약"
+        ],
+        "Market": [
+          "공급"
+        ],
+        "PropertyGeneral": [
+          "부동산",
+          "토지",
+          "분양",
+          "청약"
+        ]
+      },
+      "signal_basis": "article_text_signal",
+      "region_code": "",
+      "region_name": "KR",
+      "complex_name": "",
+      "building": "",
+      "area": null,
+      "transaction_price": null,
+      "transaction_type": "sale",
+      "deal_date": "",
+      "report_date": "",
+      "project_id": "",
+      "project_name": "계양신도시 첫 민간 공급…이번주 전국 4928가구 청약",
+      "competition_rate": null,
+      "property_type": "land",
+      "listing_count": 4928,
+      "permit_date": "",
+      "completion_date": "",
+      "canonical_key": "property_project:title:2e03428465be",
+      "canonical_key_status": "title_proxy",
+      "event_key": "presale_competition:d6e166c5219b:20261031",
+      "required_field_proxy": {
+        "project_id": false,
+        "competition_rate": false,
+        "region_code": false,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "project_id",
+        "competition_rate",
+        "region_code"
+      ]
+    },
+    {
+      "source": "매일경제 부동산",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "presale_competition",
       "title": "\"신축 전세도 현금부자만\"… 대출규제 역설",
       "url": "https://www.mk.co.kr/news/realestate/12192817",
       "source_url": "https://www.mk.co.kr/news/realestate/12192817",
@@ -11060,70 +12777,6 @@
       "canonical_key": "property_project:title:1a7843fc3c38",
       "canonical_key_status": "title_proxy",
       "event_key": "presale_competition:f1049baf66d4:20261031",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "계양신도시 첫 민간 공급…이번주 전국 4928가구 청약",
-      "url": "https://www.mk.co.kr/news/realestate/12192818",
-      "source_url": "https://www.mk.co.kr/news/realestate/12192818",
-      "event_at": "2026-10-31T22:52:30+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "토지",
-          "분양",
-          "임대"
-        ],
-        "Policy": [
-          "청약"
-        ],
-        "Market": [
-          "공급"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "토지",
-          "분양",
-          "청약"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "계양신도시 첫 민간 공급…이번주 전국 4928가구 청약",
-      "competition_rate": null,
-      "property_type": "land",
-      "listing_count": 4928,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:2e03428465be",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:d6e166c5219b:20261031",
       "required_field_proxy": {
         "project_id": false,
         "competition_rate": false,
@@ -11614,818 +13267,6 @@
         "complex_name",
         "area"
       ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "This Historic Church Condo for Sale Hides a Private 85-Foot Bell Tower Lounge",
-      "url": "https://www.realtor.com/news/unique-homes/dc-sanctuary-church-penthouse-bell-tower-for-sale",
-      "source_url": "https://www.realtor.com/news/unique-homes/dc-sanctuary-church-penthouse-bell-tower-for-sale",
-      "event_at": "2026-10-31T06:04:00+00:00",
-      "matched_entities": {
-        "Market": [
-          "sale"
-        ],
-        "PropertyGeneral": [
-          "condo"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 1.67,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "This Historic Church Condo for Sale Hides a Private 85-Foot Bell Tower Lounge",
-      "competition_rate": null,
-      "property_type": "condo",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:realtor-com-news:condo",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:ed6cd3b43dc4:20261031",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "Inside Tall Timber: You Can Only Reach This Hand-Built Colorado Estate by Train or Helicopter",
-      "url": "https://www.realtor.com/news/unique-homes/tall-timber-colorado-resort-train-helicopter-access-25m-sale",
-      "source_url": "https://www.realtor.com/news/unique-homes/tall-timber-colorado-resort-train-helicopter-access-25m-sale",
-      "event_at": "2026-10-31T05:30:00+00:00",
-      "matched_entities": {
-        "Market": [
-          "sale"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 25.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Inside Tall Timber: You Can Only Reach This Hand-Built Colorado Estate by Train or Helicopter",
-      "competition_rate": null,
-      "property_type": "home",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:realtor-com-news:home",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:1f1cf0e0c5b8:20261031",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "\"집 내놔도 안 팔려요\"…서울 아파트 매물 8만건 쌓였다",
-      "url": "https://www.hankyung.com/article/2026103174997",
-      "source_url": "https://www.hankyung.com/article/2026103174997",
-      "event_at": "2026-10-30T19:21:10+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "아파트"
-        ],
-        "Market": [
-          "매물",
-          "트렌드"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "집",
-          "아파트"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "집 내놔도 안 팔려요",
-      "competition_rate": 21.0,
-      "property_type": "apartment",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:한경-부동산:apartment",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:7c2921d9a73f:20261030",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "permit_completion",
-      "title": "재건축 아파트값 '억' 소리나게 떨어져…몸테크 열풍 끝? [이슬기의 새집다오]",
-      "url": "https://www.hankyung.com/article/2026102938986",
-      "source_url": "https://www.hankyung.com/article/2026102938986",
-      "event_at": "2026-10-30T16:30:02+00:00",
-      "matched_entities": {
-        "Location": [
-          "강남",
-          "서초",
-          "송파",
-          "압구정",
-          "대치"
-        ],
-        "PropertyType": [
-          "아파트",
-          "주택",
-          "신축",
-          "매매",
-          "재건축",
-          "재개발"
-        ],
-        "Policy": [
-          "세금"
-        ],
-        "Market": [
-          "상승",
-          "하락",
-          "급등",
-          "급락",
-          "조정",
-          "준공",
-          "트렌드"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "집",
-          "아파트",
-          "주택",
-          "매매",
-          "가격",
-          "재개발",
-          "재건축"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
-      "complex_name": "",
-      "building": "",
-      "area": 76.0,
-      "transaction_price": 2450000000.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "재건축 아파트값 '억' 소리나게 떨어져…몸테크 열풍 끝? [이슬기의 새집다오]",
-      "competition_rate": null,
-      "property_type": "apartment",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:11680:title:25adc2c1460e",
-      "canonical_key_status": "title_proxy",
-      "event_key": "permit_completion:d02b26b6d4a0:20261030",
-      "required_field_proxy": {
-        "project_id": false,
-        "region_code": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "“광교신도시 마지막 공급… ‘광교 자연앤 센트레빌’ 수요자 발길 이어져",
-      "url": "https://www.mk.co.kr/news/realestate/12191946",
-      "source_url": "https://www.mk.co.kr/news/realestate/12191946",
-      "event_at": "2026-10-30T16:30:00+00:00",
-      "matched_entities": {
-        "Location": [
-          "광교"
-        ],
-        "PropertyType": [
-          "주택"
-        ],
-        "Policy": [
-          "청약"
-        ],
-        "Market": [
-          "공급",
-          "수요"
-        ],
-        "PropertyGeneral": [
-          "주택",
-          "청약"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "광교",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "“광교신도시 마지막 공급… ‘광교 자연앤 센트레빌’ 수요자 발길 이어져",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:02fe00878faf",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:8b7b3fd3dd72:20261030",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "We Bought a $4K Boat To Turn Into a Tiny Home in Massachusetts—Now We’re Selling It for $140K",
-      "url": "https://www.realtor.com/news/first-person/massachusetts-houseboat-turned-tiny-home-renovation-for-sale",
-      "source_url": "https://www.realtor.com/news/first-person/massachusetts-houseboat-turned-tiny-home-renovation-for-sale",
-      "event_at": "2026-10-30T08:47:36+00:00",
-      "matched_entities": {
-        "Market": [
-          "home"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 4.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "We Bought a $4K Boat To Turn Into a Tiny Home in Massachusetts—Now We’re Selling It for $140K",
-      "competition_rate": null,
-      "property_type": "home",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:939d095db0ea:20261030",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": false,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name",
-        "area"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "Lady Gaga’s Former New York City Penthouse in the Iconic Hit Factory Building Is Available for $7 Million",
-      "url": "https://www.realtor.com/news/celebrity-real-estate/lady-gaga-former-new-york-city-penthouse-for-sale",
-      "source_url": "https://www.realtor.com/news/celebrity-real-estate/lady-gaga-former-new-york-city-penthouse-for-sale",
-      "event_at": "2026-10-30T07:24:14+00:00",
-      "matched_entities": {
-        "Market": [
-          "home"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 7.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Lady Gaga’s Former New York City Penthouse in the Iconic Hit Factory Building Is Available for $7 Million",
-      "competition_rate": null,
-      "property_type": "home",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "",
-      "canonical_key_status": "missing",
-      "event_key": "transaction_record:1d719413e226:20261030",
-      "required_field_proxy": {
-        "region_code": false,
-        "complex_name": false,
-        "area": false,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "complex_name",
-        "area"
-      ]
-    },
-    {
-      "source": "PropertyWire UK",
-      "source_type": "rss",
-      "trust_tier": "T3_professional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "Five isolated rural properties listed across England and Wales",
-      "url": "https://www.propertywire.com/news/five-isolated-rural-properties-listed-across-england-and-wales",
-      "source_url": "https://www.propertywire.com/news/five-isolated-rural-properties-listed-across-england-and-wales",
-      "event_at": "2026-10-30T03:02:01+00:00",
-      "matched_entities": {
-        "Market": [
-          "sale"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 195000.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Five isolated rural properties listed across England and Wales",
-      "competition_rate": null,
-      "property_type": "home",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:propertywire-uk:home",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:c426190665df:20261030",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "permit_completion",
-      "title": "Homeowner Wins City Permit Battle Over His ‘Spooktacular’ Halloween Display",
-      "url": "https://www.realtor.com/news/trends/raleigh-homeowner-permits-oakwood-halloween-display",
-      "source_url": "https://www.realtor.com/news/trends/raleigh-homeowner-permits-oakwood-halloween-display",
-      "event_at": "2026-10-30T02:23:00+00:00",
-      "matched_entities": {
-        "PropertyGeneral": [
-          "homeowner"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "Homeowner Wins City Permit Battle Over His ‘Spooktacular’ Halloween Display",
-      "competition_rate": null,
-      "property_type": "homeowner",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:6d2e9300d7a2",
-      "canonical_key_status": "title_proxy",
-      "event_key": "permit_completion:62eb30834c11:20261030",
-      "required_field_proxy": {
-        "project_id": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "region_code"
-      ]
-    },
-    {
-      "source": "한경 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "'나홀로 아파트'의 반전 … 거래 늘고 신고가",
-      "url": "https://www.hankyung.com/article/2026102941721",
-      "source_url": "https://www.hankyung.com/article/2026102941721",
-      "event_at": "2026-10-30T01:48:03+00:00",
-      "matched_entities": {
-        "Location": [
-          "영등포",
-          "동작"
-        ],
-        "PropertyType": [
-          "아파트",
-          "매매",
-          "재건축"
-        ],
-        "Market": [
-          "시세",
-          "상승",
-          "급등",
-          "거래량",
-          "수요"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "집",
-          "아파트",
-          "매매",
-          "가격",
-          "시세",
-          "재건축"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "영등포",
-      "complex_name": "",
-      "building": "",
-      "area": 84.0,
-      "transaction_price": 1100000000.0,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "나홀로 아파트",
-      "competition_rate": null,
-      "property_type": "apartment",
-      "listing_count": 300,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:4ca4061f93a8",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:1ec0f4e52a19:20261030",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "‘재개발 이주비 대출’ 숨통 트일까…홍지선 “HUG 보증 지원 협의”",
-      "url": "https://www.mk.co.kr/news/realestate/12191903",
-      "source_url": "https://www.mk.co.kr/news/realestate/12191903",
-      "event_at": "2026-10-30T01:20:38+00:00",
-      "matched_entities": {
-        "PropertyType": [
-          "주택",
-          "재개발",
-          "정비사업"
-        ],
-        "Policy": [
-          "대출"
-        ],
-        "Market": [
-          "공급",
-          "착공"
-        ],
-        "PropertyGeneral": [
-          "주택",
-          "대출",
-          "재개발"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "KR",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "‘재개발 이주비 대출’ 숨통 트일까…홍지선 “HUG 보증 지원 협의”",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": 1000,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:bb71ab522174",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:bc4490478825:20261030",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
-    },
-    {
-      "source": "Realtor.com News",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "listing_inventory",
-      "title": "More Choices, Less Stress: Rising Housing Inventory Gives Homebuyers Room To Breathe",
-      "url": "https://www.realtor.com/news/trends/rising-housing-inventory-gives-homebuyers-choices-september-2026",
-      "source_url": "https://www.realtor.com/news/trends/rising-housing-inventory-gives-homebuyers-choices-september-2026",
-      "event_at": "2026-10-30T00:00:00+00:00",
-      "matched_entities": {
-        "Market": [
-          "housing",
-          "inventory"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "US",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "sale",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "More Choices, Less Stress: Rising Housing Inventory Gives Homebuyers Room To Breathe",
-      "competition_rate": null,
-      "property_type": "home",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "listing_inventory:source:realtor-com-news:home",
-      "canonical_key_status": "source_proxy",
-      "event_key": "listing_inventory:1f1cf0e0c5b8:20261030",
-      "required_field_proxy": {
-        "region_code": false,
-        "property_type": true,
-        "listing_count": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "region_code",
-        "listing_count"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "transaction_record",
-      "title": "갈아타기 고민된다면 … 내년 2~3월 강남급매 노려볼만",
-      "url": "https://www.mk.co.kr/news/realestate/12191792",
-      "source_url": "https://www.mk.co.kr/news/realestate/12191792",
-      "event_at": "2026-10-29T23:43:33+00:00",
-      "matched_entities": {
-        "Location": [
-          "강남",
-          "압구정"
-        ],
-        "PropertyType": [
-          "아파트"
-        ],
-        "Market": [
-          "급매"
-        ],
-        "PropertyGeneral": [
-          "아파트",
-          "가격"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "11680",
-      "region_name": "강남",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": 2000000000.0,
-      "transaction_type": "",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "갈아타기 고민된다면 … 내년 2~3월 강남급매 노려볼만",
-      "competition_rate": null,
-      "property_type": "apartment",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_region:11680",
-      "canonical_key_status": "region_proxy",
-      "event_key": "transaction_record:137f5f811141:20261029",
-      "required_field_proxy": {
-        "region_code": true,
-        "complex_name": false,
-        "area": false,
-        "transaction_price": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "complex_name",
-        "area"
-      ]
-    },
-    {
-      "source": "매일경제 부동산",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "",
-      "info_purpose": [],
-      "event_model": "presale_competition",
-      "title": "\"공급 의지 긍정적\" vs “당장 전세난 못풀어\"",
-      "url": "https://www.mk.co.kr/news/realestate/12191789",
-      "source_url": "https://www.mk.co.kr/news/realestate/12191789",
-      "event_at": "2026-10-29T23:43:32+00:00",
-      "matched_entities": {
-        "Location": [
-          "마곡"
-        ],
-        "PropertyType": [
-          "주택",
-          "전세"
-        ],
-        "Market": [
-          "공급"
-        ],
-        "PropertyGeneral": [
-          "부동산",
-          "주택",
-          "전세"
-        ]
-      },
-      "signal_basis": "article_text_signal",
-      "region_code": "",
-      "region_name": "마곡",
-      "complex_name": "",
-      "building": "",
-      "area": null,
-      "transaction_price": null,
-      "transaction_type": "rent",
-      "deal_date": "",
-      "report_date": "",
-      "project_id": "",
-      "project_name": "공급 의지 긍정적",
-      "competition_rate": null,
-      "property_type": "housing",
-      "listing_count": null,
-      "permit_date": "",
-      "completion_date": "",
-      "canonical_key": "property_project:title:5af0b56e5400",
-      "canonical_key_status": "title_proxy",
-      "event_key": "presale_competition:6c95e9693490:20261029",
-      "required_field_proxy": {
-        "project_id": false,
-        "competition_rate": false,
-        "region_code": false,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "project_id",
-        "competition_rate",
-        "region_code"
-      ]
     }
   ],
   "source_activation_items": [
@@ -12577,7 +13418,7 @@
       "event_model": "transaction_record",
       "source": "아파트실거래가",
       "title": "실거래가부터 집 구하기까지, 호갱노노",
-      "event_key": "transaction_record:88c77a29dcd3:20261106"
+      "event_key": "transaction_record:88c77a29dcd3:20261107"
     },
     {
       "reason": "proxy_canonical_key",
@@ -12596,83 +13437,140 @@
       "canonical_key_status": "title_proxy"
     },
     {
-      "reason": "missing_canonical_key",
-      "event_model": "transaction_record",
-      "source": "Realtor.com News",
-      "title": "5 Historic ‘Minimansions’ Under $400K Where You Get 3,000+ Square Feet for the Price of a Starter Home",
-      "event_key": "transaction_record:fd585daf93b7:20261106"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "transaction_record",
-      "source": "Realtor.com News",
-      "title": "5 Historic ‘Minimansions’ Under $400K Where You Get 3,000+ Square Feet for the Price of a Starter Home",
-      "signal_basis": "article_text_signal"
-    },
-    {
       "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
-      "source": "Realtor.com News",
-      "title": "New Laws Could Add an Estimated 103,000 Homes a Year, Study Finds",
-      "canonical_key": "property_project:title:19b2b423ad4c",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "“앞날이 캄캄”…당첨 기쁨은 잠깐, 대출 금리에 한숨만",
+      "canonical_key": "property_project:title:28f2e5d273f7",
       "canonical_key_status": "title_proxy"
     },
     {
       "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
-      "source": "Realtor.com News",
-      "title": "New Laws Could Add an Estimated 103,000 Homes a Year, Study Finds",
+      "event_model": "presale_competition",
+      "source": "매일경제 부동산",
+      "title": "“앞날이 캄캄”…당첨 기쁨은 잠깐, 대출 금리에 한숨만",
       "signal_basis": "article_text_signal"
     },
     {
       "reason": "proxy_canonical_key",
-      "event_model": "permit_completion",
+      "event_model": "presale_competition",
       "source": "매일경제 부동산",
-      "title": "263억 찍고 ‘한국 최고가 아파트’ 올랐는데…“로열층은 1층” [슈퍼 리치의 아파트]",
-      "canonical_key": "property_project:title:f00bba39a5a7",
+      "title": "“찬바람 이긴 청약 열기”…‘한화포레나 지제역’ 견본주택에 내방객 북적",
+      "canonical_key": "property_project:title:3b582f0853f0",
       "canonical_key_status": "title_proxy"
     },
     {
       "reason": "news_or_community_proxy_source",
-      "event_model": "permit_completion",
+      "event_model": "presale_competition",
       "source": "매일경제 부동산",
-      "title": "263억 찍고 ‘한국 최고가 아파트’ 올랐는데…“로열층은 1층” [슈퍼 리치의 아파트]",
+      "title": "“찬바람 이긴 청약 열기”…‘한화포레나 지제역’ 견본주택에 내방객 북적",
       "signal_basis": "article_text_signal"
     },
     {
       "reason": "proxy_canonical_key",
       "event_model": "listing_inventory",
-      "source": "PropertyWire UK",
-      "title": "Five inverted-layout homes on market across England",
-      "canonical_key": "listing_inventory:source:propertywire-uk:home",
-      "canonical_key_status": "source_proxy"
+      "source": "매일경제 부동산",
+      "title": "강남 급매물 35억 ‘뚝’ 떨어졌는데…집값 3.5억 ‘껑충’ 뛰는 곳 보니",
+      "canonical_key": "listing_inventory:11680:apartment",
+      "canonical_key_status": "region_proxy"
     },
     {
       "reason": "news_or_community_proxy_source",
       "event_model": "listing_inventory",
-      "source": "PropertyWire UK",
-      "title": "Five inverted-layout homes on market across England",
+      "source": "매일경제 부동산",
+      "title": "강남 급매물 35억 ‘뚝’ 떨어졌는데…집값 3.5억 ‘껑충’ 뛰는 곳 보니",
       "signal_basis": "article_text_signal"
     },
     {
       "reason": "missing_canonical_key",
       "event_model": "transaction_record",
-      "source": "Realtor.com News",
-      "title": "An 18th-Century Connecticut Estate With ‘Little Women’ Ties Lists for $1.5 Million—Hidden Treasures Included",
-      "event_key": "transaction_record:2392953eefcd:20261106"
+      "source": "매일경제 부동산",
+      "title": "성동구 이편한세상금호파크힐스 84.957㎡ 23억 3500만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:cb2ffc0217bb:20261106"
     },
     {
       "reason": "news_or_community_proxy_source",
       "event_model": "transaction_record",
-      "source": "Realtor.com News",
-      "title": "An 18th-Century Connecticut Estate With ‘Little Women’ Ties Lists for $1.5 Million—Hidden Treasures Included",
+      "source": "매일경제 부동산",
+      "title": "성동구 이편한세상금호파크힐스 84.957㎡ 23억 3500만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "성동구 옥수동 래미안 옥수 리버젠 59.84㎡ 24억 7천만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:2939e62e7b76:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "성동구 옥수동 래미안 옥수 리버젠 59.84㎡ 24억 7천만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "동대문구 이문동 대림e-편한세상 84.972㎡ 12억 6500만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:8331f3274965:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "동대문구 이문동 대림e-편한세상 84.972㎡ 12억 6500만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "중랑구 신내동 라이프미성 59.6㎡ 5억 3800만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:9a7b0ec9becc:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "중랑구 신내동 라이프미성 59.6㎡ 5억 3800만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "중랑구 면목동금호어울림아파트 84.87㎡ 8억 9500만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:85f6d2cfbf2e:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "중랑구 면목동금호어울림아파트 84.87㎡ 8억 9500만원 거래… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "permit_completion",
+      "source": "매일경제 부동산",
+      "title": "영등포구 영등포중흥에스클래스 84.95㎡ 16억 4500만원… 최근 3년 신고가 [MAI부동산]",
+      "canonical_key": "property_project:title:67b7baf6f6d3",
+      "canonical_key_status": "title_proxy"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "permit_completion",
+      "source": "매일경제 부동산",
+      "title": "영등포구 영등포중흥에스클래스 84.95㎡ 16억 4500만원… 최근 3년 신고가 [MAI부동산]",
       "signal_basis": "article_text_signal"
     },
     {
       "reason": "proxy_canonical_key",
       "event_model": "transaction_record",
       "source": "매일경제 부동산",
-      "title": "엎친데 덮친 강남 아파트…반포 원베일리도 14.5억 뚝",
+      "title": "강남구 래미안포레 84.99㎡ 22억 4천만원 거래… 최근 3년 신고가 [MAI부동산]",
       "canonical_key": "property_region:11680",
       "canonical_key_status": "region_proxy"
     },
@@ -12680,201 +13578,134 @@
       "reason": "news_or_community_proxy_source",
       "event_model": "transaction_record",
       "source": "매일경제 부동산",
-      "title": "엎친데 덮친 강남 아파트…반포 원베일리도 14.5억 뚝",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "영등포 2.2억·강북 1.2억…재초환 억대 부담금에 '닥공' 발목",
-      "canonical_key": "property_project:11680:title:472f65551a8e",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "영등포 2.2억·강북 1.2억…재초환 억대 부담금에 '닥공' 발목",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "미니신도시 변신하는 시흥 거모…'엘리프 더프라임' 338가구 공급",
-      "canonical_key": "property_project:title:4e0efda67e55",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "미니신도시 변신하는 시흥 거모…'엘리프 더프라임' 338가구 공급",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "여의도 '목화' 49층 416가구로 재건축",
-      "canonical_key": "property_project:title:ea4b59961a21",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "여의도 '목화' 49층 416가구로 재건축",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "강남에 분양가 40억 아파트 등장…'30가구 룰' 뭐길래",
-      "canonical_key": "property_project:11680:title:e07000070264",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "강남에 분양가 40억 아파트 등장…'30가구 룰' 뭐길래",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "GH, 가평 전원주택용지 25필지 추첨 공급",
-      "canonical_key": "property_project:title:a02a07f964d4",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "GH, 가평 전원주택용지 25필지 추첨 공급",
+      "title": "강남구 래미안포레 84.99㎡ 22억 4천만원 거래… 최근 3년 신고가 [MAI부동산]",
       "signal_basis": "article_text_signal"
     },
     {
       "reason": "missing_canonical_key",
-      "event_model": "listing_inventory",
-      "source": "PropertyWire UK",
-      "title": "UK property sales hold steady despite market pessimism",
-      "event_key": "listing_inventory:d4413cabf2e4:20261105"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "listing_inventory",
-      "source": "PropertyWire UK",
-      "title": "UK property sales hold steady despite market pessimism",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "여의도 '목화아파트' 재건축 통합심의 통과, 416가구로",
-      "canonical_key": "property_project:title:3ce54216426c",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "여의도 '목화아파트' 재건축 통합심의 통과, 416가구로",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "“계약금 만으로 내 집 마련”…삼환기업, ‘화서역 호수공원 아너스빌’ 공급",
-      "canonical_key": "property_project:title:1397387af46a",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "“계약금 만으로 내 집 마련”…삼환기업, ‘화서역 호수공원 아너스빌’ 공급",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "경기 남부 아파트값 질주 속...시니어주택·지분적립형 등 신규 분양",
-      "canonical_key": "property_project:41135:title:2576730db1d8",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "매일경제 부동산",
-      "title": "경기 남부 아파트값 질주 속...시니어주택·지분적립형 등 신규 분양",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
       "event_model": "transaction_record",
       "source": "매일경제 부동산",
-      "title": "“20억 하던 강남 아파트가 14억?”…강남 소형 아파트까지 가격 ‘뚝’",
-      "canonical_key": "property_region:11680",
-      "canonical_key_status": "region_proxy"
+      "title": "구로구 개봉동 한마을 149.97㎡ 13억 1천만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:fad0863203d2:20261106"
     },
     {
       "reason": "news_or_community_proxy_source",
       "event_model": "transaction_record",
       "source": "매일경제 부동산",
-      "title": "“20억 하던 강남 아파트가 14억?”…강남 소형 아파트까지 가격 ‘뚝’",
+      "title": "구로구 개봉동 한마을 149.97㎡ 13억 1천만원… 최근 3년 신고가 [MAI부동산]",
       "signal_basis": "article_text_signal"
     },
     {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "홍지선 장관 \"수도권 공급 80%는 민간…업계 애로 신속히 풀겠다\"",
-      "canonical_key": "property_project:title:e883f695eae4",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "홍지선 장관 \"수도권 공급 80%는 민간…업계 애로 신속히 풀겠다\"",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "계룡건설, '엘리프 시흥 더프라임' 338가구 분양",
-      "canonical_key": "property_project:title:081b5414217f",
-      "canonical_key_status": "title_proxy"
-    },
-    {
-      "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
-      "source": "한경 부동산",
-      "title": "계룡건설, '엘리프 시흥 더프라임' 338가구 분양",
-      "signal_basis": "article_text_signal"
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "presale_competition",
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
       "source": "매일경제 부동산",
-      "title": "엘리베이터까지 차별화…건설사, 특화상품 내세우며 디자인 경쟁",
-      "canonical_key": "property_project:title:e1e6c6e4c601",
+      "title": "관악구 신림동 동부 7억 1800만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:9fe0aa0b30c5:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "관악구 신림동 동부 7억 1800만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "구로구 고척LIG리가2차 59.95㎡ 10억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:9bec0b94c4f9:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "구로구 고척LIG리가2차 59.95㎡ 10억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "강동구 둔촌동 초원동아 59.63㎡ 8억 8700만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:c288c36b3b7e:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "강동구 둔촌동 초원동아 59.63㎡ 8억 8700만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "permit_completion",
+      "source": "매일경제 부동산",
+      "title": "구로구 개봉동 한진 84.96㎡ 8억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "canonical_key": "property_project:title:51e0393891e9",
       "canonical_key_status": "title_proxy"
     },
     {
       "reason": "news_or_community_proxy_source",
-      "event_model": "presale_competition",
+      "event_model": "permit_completion",
       "source": "매일경제 부동산",
-      "title": "엘리베이터까지 차별화…건설사, 특화상품 내세우며 디자인 경쟁",
+      "title": "구로구 개봉동 한진 84.96㎡ 8억 8천만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "도봉구 창동 삼성래미안 66.48㎡ 9억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:7909f36c7594:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "도봉구 창동 삼성래미안 66.48㎡ 9억 3천만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 하계동 한신1 전용 27㎡ 3억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:f0f76b0c1d7a:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 하계동 한신1 전용 27㎡ 3억 9500만원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 중계동 경남 74.2㎡ 9억원… 최근 3년 신고가 [MAI부동산]",
+      "event_key": "transaction_record:d8b7482fe012:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 중계동 경남 74.2㎡ 9억원… 최근 3년 신고가 [MAI부동산]",
+      "signal_basis": "article_text_signal"
+    },
+    {
+      "reason": "missing_canonical_key",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 중계동 현대(6차) 59.84㎡, 6억 4천만원 `최근 3년 신고가` [MAI부동산]",
+      "event_key": "transaction_record:2c48663cd8b9:20261106"
+    },
+    {
+      "reason": "news_or_community_proxy_source",
+      "event_model": "transaction_record",
+      "source": "매일경제 부동산",
+      "title": "노원구 중계동 현대(6차) 59.84㎡, 6억 4천만원 `최근 3년 신고가` [MAI부동산]",
       "signal_basis": "article_text_signal"
     }
   ],
